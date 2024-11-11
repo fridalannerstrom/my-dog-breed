@@ -15,5 +15,6 @@ body {
 
 h1 {
     font-family: 'HV-cocktail', sans-serif;
-    font-size: 2rem;
+    font-size: 5rem;
+    letter-spacing: 3px;
 }
