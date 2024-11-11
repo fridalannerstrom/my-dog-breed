@@ -33,13 +33,6 @@ body {
     display: flex;
 }
 
-.basic-text {
-    border: 1px solid green;
-    width: 70%;
-    padding: 30px 0px 60px;
-    text-align: center;
-}
-
 .main-content {
     background: #F6EDE1;
     border: 1px solid blue;
@@ -49,12 +42,19 @@ body {
     flex-direction: column;
 }
 
-/* Headings */
+/* Headings and text */
 
 h1 {
     font-family: 'HV-cocktail', sans-serif;
     font-size: 5rem;
     letter-spacing: 3px;
+}
+
+.basic-text {
+    border: 1px solid green;
+    width: 70%;
+    padding: 30px 0px 60px;
+    text-align: center;
 }
 
 /* Buttons */
