@@ -7,14 +7,50 @@
          url('/assets/fonts/HVCocktail-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
-  }
+}
+
+/* General Styling */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
 body {
+    min-height: 100vh;
     background: #F6EDE1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.flex {
+    display: flex;
 }
 
 h1 {
     font-family: 'HV-cocktail', sans-serif;
     font-size: 5rem;
     letter-spacing: 3px;
+}
+
+.main-content {
+        background: #F6EDE1;
+        border: 1px solid blue;
+}
+
+.dog-image-container {
+    border: 1px solid red;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+}
+
+.dog-image-container img {
+    width: 100px;
+}
+
+p {
+    text-align: center;
 }
