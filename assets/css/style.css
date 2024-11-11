@@ -33,10 +33,29 @@ body {
     display: flex;
 }
 
+.basic-text {
+    border: 1px solid green;
+    width: 70%;
+    padding: 30px 0px 60px;
+    text-align: center;
+}
+
+/* Headings */
+
 h1 {
     font-family: 'HV-cocktail', sans-serif;
     font-size: 5rem;
     letter-spacing: 3px;
+}
+
+/* Buttons */
+
+.dark-button {
+    color: white;
+    background-color: #3F322A; 
+    padding: 20px;
+    border-radius: 100px;
+    text-decoration: none;
 }
 
 .main-content {
@@ -44,6 +63,7 @@ h1 {
         border: 1px solid blue;
         align-items: center; 
         justify-content: center;
+        text-align: center;
 }
 
 .dog-image-container {
@@ -55,15 +75,4 @@ h1 {
 
 .dog-image-container img {
     width: 100px;
-}
-
-p {
-    text-align: center;
-}
-
-a {
-    color: white;
-    background-color: #3F322A; 
-    padding: 20px;
-    border-radius: 100px;
 }
