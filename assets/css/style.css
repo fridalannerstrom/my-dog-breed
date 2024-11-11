@@ -40,6 +40,15 @@ body {
     text-align: center;
 }
 
+.main-content {
+    background: #F6EDE1;
+    border: 1px solid blue;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
 /* Headings */
 
 h1 {
@@ -58,16 +67,7 @@ h1 {
     text-decoration: none;
 }
 
-/* Structure */
-
-.main-content {
-        background: #F6EDE1;
-        border: 1px solid blue;
-        align-items: center; 
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-}
+/* Intro page */
 
 .dog-image-container {
     border: 1px solid red;
