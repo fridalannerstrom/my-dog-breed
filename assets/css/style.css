@@ -53,8 +53,9 @@ h1 {
 .basic-text {
     border: 1px solid green;
     width: 70%;
-    padding: 30px 0px 60px;
+    padding: 10px 0px 30px;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 /* Buttons */
