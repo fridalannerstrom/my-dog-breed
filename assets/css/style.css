@@ -108,6 +108,24 @@ h1 {
     .dog-image-container img {
         width: 80px;
     }
-    
+
+  }
+
+/* Mobile */
+
+@media only screen and (max-width: 600px) {
+
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .basic-text {
+        font-size: 0.9rem;
+    }
+
+    .dog-image-container img {
+        width: 70px;
+    }
 
   }
