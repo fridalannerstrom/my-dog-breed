@@ -38,6 +38,8 @@ h1 {
 .main-content {
         background: #F6EDE1;
         border: 1px solid blue;
+        align-items: center; 
+        justify-content: center;
 }
 
 .dog-image-container {
@@ -53,4 +55,11 @@ h1 {
 
 p {
     text-align: center;
+}
+
+a {
+    color: white;
+    background-color: #3F322A; 
+    padding: 20px;
+    border-radius: 100px;
 }
