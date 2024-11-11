@@ -1,3 +1,19 @@
+/* Custom font */
+
+@font-face {
+    font-family: 'HV-Cocktail';
+    src: url('/assets/fonts/HVCocktail-Regular.woff2') format('woff2'),
+         url('/assets/fonts/HVCocktail-Regular.woff') format('woff'),
+         url('/assets/fonts/HVCocktail-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body {
     background: #F6EDE1;
+}
+
+h1 {
+    font-family: 'HV-cocktail', sans-serif;
+    font-size: 2rem;
 }
