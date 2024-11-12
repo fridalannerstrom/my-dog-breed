@@ -35,7 +35,6 @@ body {
 
 .main-content {
     background: #F6EDE1;
-    border: 1px solid blue;
     align-items: center; 
     justify-content: center;
     text-align: center;
@@ -52,7 +51,6 @@ h1 {
 }
 
 .basic-text {
-    border: 1px solid green;
     width: 70%;
     padding: 10px 0px 30px;
     text-align: center;
@@ -80,7 +78,6 @@ h1 {
 /* Intro page */
 
 .dog-image-container {
-    border: 1px solid red;
     flex-direction: row;
     align-items: center; 
     justify-content: center;
