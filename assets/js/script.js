@@ -26,11 +26,8 @@ let dogBreeds = [
 
 // Count score with quiz
 
-document.getElementById("dogQuiz").addEventListener("submit", function(event)) {
-
     //Get the value
 
     let experience = document.querySelector('input[name="experience"]:checked').value;
 
     console.log(experience);
-}
