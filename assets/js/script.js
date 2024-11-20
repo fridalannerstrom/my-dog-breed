@@ -24,6 +24,18 @@ let dogBreeds = [
     }
 ];
 
+// Remove intro when start quiz is clicked
+
+let startButton = document.getElementById("start-button");
+let introContent = document.getElementById("intro");
+let quizContent = document.getElementById("quiz");
+
+startButton.addEventListener("click", function () {
+
+    intro.classList.add("display-none"); // adds display none to intro
+    quiz.classList.remove("display-none"); // removes display none from quiz
+    
+});
 
 
 // Multi step form
