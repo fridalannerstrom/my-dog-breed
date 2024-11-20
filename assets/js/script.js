@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
     let nextButton = document.getElementById("next-button");
     let prevButton = document.getElementById("prev-button");
 
-    // Get the first step
+    // Get the first step (index 0)
     let currentStep = 0; 
 
     // Show/hide step based on "currentStep", adding active class to current step
