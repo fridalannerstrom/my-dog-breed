@@ -42,6 +42,14 @@ body {
     padding: 50px;
 }
 
+.quiz-container {
+    border: 1px solid red;
+}
+
+.display-none {
+    display: none;
+}
+
 /* Headings and text */
 
 h1 {

@@ -24,6 +24,8 @@ let dogBreeds = [
     }
 ];
 
+
+
 // Multi step form
 
 document.addEventListener("DOMContentLoaded", function () { // Wait for HTML document to load so all classes are available
@@ -52,11 +54,13 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
 
     // function for adding steps
     nextButton.addEventListener("click", function () {
+
         if (currentStep < steps.length - 1) { // checks if its not the last step
             currentStep++; // Add 1 to currentStep
             showStep(currentStep); // Show next step
+            
         } else {
-            window.location.href = "result.html";
+            displayResults();
         }
     });
 
@@ -72,10 +76,52 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
     showStep(currentStep);
 });
 
-// Count score with quiz
 
-    //Get the value
+// Count score in quiz
 
-    let experience = document.querySelector('input[name="experience"]:checked').value;
+function updateScores(stepElement) {
+    // Find all inputs in the current step
+    let inputs = stepElement.querySelectorAll("input[type='radio'], input[type='checkbox']");
+    let selectedValue = null;
 
-    console.log(experience);
+    // Check the input value
+    inputs.forEach(input => {
+        if (input.checked) {
+            selectedValue = input;
+        }
+    });
+    
+    // Get breeds from data-breeds 
+    let breedsToUpdate = selectedValue.dataset.breeds.split(",");
+
+    // Update each breed selected by 1 
+    breedsToUpdate.forEach(breedName => {
+        let breed = dogBreeds.find(b => b.name === breedName.trim());
+        if (breed) {
+            breed.score += 1; // Add 1 
+        }
+    });
+
+    return true; 
+}
+
+// Function for showing the results
+function displayResults() {
+    // Sortera hundraserna baserat på poäng i fallande ordning
+    const sortedBreeds = dogBreeds.sort((a, b) => b.score - a.score);
+
+    // Hitta resultatområdet
+    const resultContainer = document.getElementById("result");
+
+    // Generera resultat-HTML
+    resultContainer.innerHTML = `
+        <h2>Your Best Match: ${sortedBreeds[0].name}</h2>
+        <p>Other matches:</p>
+        <ul>
+            ${sortedBreeds.slice(1).map(breed => `<li>${breed.name} (Score: ${breed.score})</li>`).join("")}
+        </ul>
+    `;
+
+    // Visa resultatområdet
+    resultContainer.style.display = "block";
+}

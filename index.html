@@ -7,7 +7,12 @@
     <title>Dog Breed Quiz</title>
 </head>
 <body>
-    <div class="main-content flex">
+
+    <div id="quiz-container">
+
+    <!-- Introduction -->
+
+    <div class="main-content flex" id="intro">
         <div class="dog-image-container">
             <img src="assets/images/dog-grand.webp" alt="An illustration of a Great Dane">
             <img src="assets/images/dog-chi.webp" alt="An illustration of a Chihuahua">
@@ -18,7 +23,50 @@
     <h1>Find your ideal dog breed</h1>
     <p class="basic-text flex">Try our quiz to discover the best dog breed for you. Remember, finding the
         right dog means choosing for your lifestyle, not just appearance.</p>
-        <a class="dark-button" href="quiz.html">Start Quiz</a>
+        <a class="dark-button">Start Quiz</a>
+    </div>
+
+    <!-- Quiz -->
+
+    <div class="main-content flex display-none" id="quiz">
+
+        <!-- Question 1 -->
+        
+        <div class="step active">
+        <h1 class="subpage-heading">How experienced are you with dogs?</h1>
+            <input type="radio" id="beginner" name="experience" data-breeds="Pug">
+            <label for="beginner">Beginner</label>
+            <input type="radio" id="experienced" name="experience" data-breeds="Beagle">
+            <label for="experienced">Experienced</label>
+            <input type="radio" id="very_experienced" name="experience" data-breeds="Labrador">
+            <label for="very_experienced">Very experienced</label>
+        </div>
+
+        <!-- Question 2 -->
+
+        <div class="step">
+        <h1 class="subpage-heading">How experienced are you with dogs?</h1>
+        <form id="dogQuiz">
+            <input type="radio" id="beginner" name="experience" data-breeds="Pug">
+            <label for="beginner">Beginner</label>
+            <input type="radio" id="experienced" name="experience" data-breeds="Beagle">
+            <label for="experienced">Experienced</label>
+            <input type="radio" id="very_experienced" name="experience" data-breeds="Labrador">
+            <label for="very_experienced">Very experienced</label>
+        </div>
+
+        <!-- Navigation Buttons -->
+
+        <div class="navigation">
+            <a class="dark-button" id="prev-button" style="display: none;">Previous</a>
+            <a class="dark-button" id="next-button">Next</a>
+        </div>
+
+
+        <div id="result" style="display: none;"></div>
+
+    </div>
+        
     </div>
 
     <script src="assets/js/script.js"></script>
