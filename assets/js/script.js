@@ -121,17 +121,16 @@ function updateScores(stepElement) {
 }
 
 
-
-
 // Function for showing the results
+
 function displayResults() {
     // Sortera hundraserna baserat på poäng i fallande ordning
     let sortedBreeds = dogBreeds.sort((a, b) => b.score - a.score);
 
-    // Hitta resultatområdet
+    // Get the result container
     let resultContainer = document.getElementById("best-match-content");
 
-    // Generera resultat-HTML
+    // Create result content
     resultContainer.innerHTML = `<h2>Your Best Match:</h2>
     <ul>
     ${scores.slice(1).map(breed => `<li>${breed.name} (Score: ${breed.score})</li>`).join("")}
