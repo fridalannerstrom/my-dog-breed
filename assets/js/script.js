@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
             currentStep++; // Add 1 to currentStep
             showStep(currentStep); // Show next step
         } else {
-            alert("Form submitted!"); // CHANGE THIS TO A REDIRECT LATER
+            window.location.href = "result.html";
         }
     });
 
