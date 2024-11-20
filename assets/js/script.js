@@ -29,12 +29,13 @@ let dogBreeds = [
 let startButton = document.getElementById("start-button");
 let introContent = document.getElementById("intro");
 let quizContent = document.getElementById("quiz");
+let result = document.getElementById("result");
 
 startButton.addEventListener("click", function () {
 
     intro.classList.add("display-none"); // adds display none to intro
     quiz.classList.remove("display-none"); // removes display none from quiz
-    
+
 });
 
 
@@ -72,7 +73,8 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
             showStep(currentStep); // Show next step
             
         } else {
-            displayResults();
+            quiz.classList.add("display-none"); // adds display none from quiz
+            result.classList.remove("display-none"); // removes display none from result
         }
     });
 
@@ -117,6 +119,8 @@ function updateScores(stepElement) {
     return true; 
 }
 
+/* 
+
 // Function for showing the results
 function displayResults() {
     // Sortera hundraserna baserat på poäng i fallande ordning
@@ -136,4 +140,4 @@ function displayResults() {
 
     // Visa resultatområdet
     resultContainer.style.display = "block";
-}
+}  */
