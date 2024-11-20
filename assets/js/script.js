@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
         } else {
             quiz.classList.add("display-none"); // adds display none from quiz
             result.classList.remove("display-none"); // removes display none from result
+            displayResults()
         }
     });
 
@@ -119,25 +120,21 @@ function updateScores(stepElement) {
     return true; 
 }
 
-/* 
+
+
 
 // Function for showing the results
 function displayResults() {
     // Sortera hundraserna baserat på poäng i fallande ordning
-    const sortedBreeds = dogBreeds.sort((a, b) => b.score - a.score);
+    let sortedBreeds = dogBreeds.sort((a, b) => b.score - a.score);
 
     // Hitta resultatområdet
-    const resultContainer = document.getElementById("result");
+    let resultContainer = document.getElementById("best-match-content");
 
     // Generera resultat-HTML
-    resultContainer.innerHTML = `
-        <h2>Your Best Match: ${sortedBreeds[0].name}</h2>
-        <p>Other matches:</p>
-        <ul>
-            ${sortedBreeds.slice(1).map(breed => `<li>${breed.name} (Score: ${breed.score})</li>`).join("")}
-        </ul>
-    `;
+    resultContainer.innerHTML = `<h2>Your Best Match:</h2>
+    <ul>
+    ${scores.slice(1).map(breed => `<li>${breed.name} (Score: ${breed.score})</li>`).join("")}
+    </ul> ` ;
 
-    // Visa resultatområdet
-    resultContainer.style.display = "block";
-}  */
+}  
