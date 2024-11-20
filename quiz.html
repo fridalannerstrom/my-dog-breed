@@ -10,7 +10,8 @@
     <div class="main-content flex">
 
         <!-- Question 1 -->
-
+        
+        <div class="step active">
         <h1 class="subpage-heading">How experienced are you with dogs?</h1>
             <input type="radio" id="beginner" name="experience">
             <label for="beginner">Beginner</label>
@@ -18,9 +19,11 @@
             <label for="experienced">Experienced</label>
             <input type="radio" id="very_experienced" name="experience">
             <label for="very_experienced">Very experienced</label>
+        </div>
 
         <!-- Question 2 -->
 
+        <div class="step">
         <h1 class="subpage-heading">How experienced are you with dogs?</h1>
         <form id="dogQuiz">
             <input type="radio" id="beginner" name="experience">
@@ -29,8 +32,14 @@
             <label for="experienced">Experienced</label>
             <input type="radio" id="very_experienced" name="experience">
             <label for="very_experienced">Very experienced</label>
+        </div>
 
-        <a class="dark-button" id="next-button">Next</a>
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+            <a class="dark-button" id="prev-button" style="display: none;">Previous</a>
+            <a class="dark-button" id="next-button">Next</a>
+        </div>
+
     </div>
 
     <script src="assets/js/script.js"></script>
