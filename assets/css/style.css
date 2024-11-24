@@ -89,6 +89,10 @@ h2 {
     text-decoration: none;
 }
 
+.navigation {
+    margin-top: 30px;
+}
+
 /* Intro page */
 
 .dog-image-container {
