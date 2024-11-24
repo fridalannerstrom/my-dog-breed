@@ -61,7 +61,7 @@ let dogBreeds = [{
         independence: 2
     },
     {
-        name: "Poodle (Standard, Miniature, Toy)",
+        name: "Poodle",
         size: "Small–Large",
         weight: "2.7–32 kg",
         height: "25–56 cm",
