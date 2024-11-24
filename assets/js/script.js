@@ -11,7 +11,9 @@ let dogBreeds = [
         temperament: "Friendly, outgoing, intelligent",
         score: 0, 
         description: "The Labrador Retriever is a friendly, outgoing, and intelligent breed, known for its versatility and loyalty. Originally bred as a working dog, Labradors excel in various roles, from family pets to guide dogs. With their gentle nature and eagerness to please, they are great with children and other pets. Labradors are highly energetic, making them perfect companions for active families who enjoy outdoor adventures, yet they also thrive in a loving home environment.", 
-        img: "assets/images/dog-labrador.webp" 
+        img: "assets/images/dog-labrador.webp",
+        activity: 5,
+        trainability: 5
     },
     { 
         name: "Beagle", 
@@ -23,7 +25,9 @@ let dogBreeds = [
         temperament: "Curious, friendly, playful",
         score: 0, 
         description: "The Beagle is a friendly, energetic breed known for its playful nature and keen sense of smell. With its expressive eyes and gentle temperament, it’s a perfect companion for active families, thriving on walks, playtime, and affection. Loyal and good with kids, the Beagle is a lovable addition to any home.", 
-        img: "assets/images/dog-beagle.webp" 
+        img: "assets/images/dog-beagle.webp",
+        activity: 3,
+        trainability: 3
     },
     { 
         name: "Pug", 
@@ -35,7 +39,9 @@ let dogBreeds = [
         temperament: "Charming, affectionate, mischievous",
         score: 0, 
         description: "The Pug is a small, affectionate breed known for its charming personality and distinctive wrinkled face. Bred as a companion dog, Pugs adore being around people and are incredibly loyal. They are playful yet adaptable, thriving in both small apartments and larger homes. With their cheerful nature and amusing antics, Pugs bring joy and warmth to any family.", 
-        img: "assets/images/dog-pug.webp" 
+        img: "assets/images/dog-pug.webp",
+        activity: 1,
+        trainability: 1
     }
 ];
 
@@ -162,4 +168,54 @@ function displayResults() {
     resultBreedLifespan.innerHTML = `<b>Lifespan:</b> ${bestMatch.lifespan}` ;
     resultBreedTemperament.innerHTML = `<b>Temperament:</b> ${bestMatch.temperament}` ;
 
+    setRatingActivity()
+    setRatingTrainability()
+
+    // function for paw in icon list
+    function setRatingActivity() {
+
+        // Get the category
+        let categoryActivity = document.getElementById("activity"); 
+
+        // Hämta alla "paws" för den specifika kategorin
+        let pawIcons = document.querySelectorAll(`#activity .fa-paw`);
+
+        console.log(pawIcons);
+    
+        // Loopar igenom varje ikon och sätter klass baserat på poängen
+        pawIcons.forEach((paw, index) => {
+            if (index < bestMatch.activity) {
+              paw.classList.add("full"); // Aktiverade poäng
+            } else {
+                paw.classList.remove("full"); // Inaktiverade poäng
+            }
+
+        
+        });
+    }
+
+    // function for paw in icon list
+        function setRatingTrainability() {
+
+            // Get the category
+            let categoryTrainability = document.getElementById("trainability"); 
+    
+            // Hämta alla "paws" för den specifika kategorin
+            let pawIcons = document.querySelectorAll(`#trainability .fa-paw`);
+    
+            console.log(pawIcons);
+        
+            // Loopar igenom varje ikon och sätter klass baserat på poängen
+            pawIcons.forEach((paw, index) => {
+                if (index < bestMatch.trainability) {
+                  paw.classList.add("full"); // Aktiverade poäng
+                } else {
+                    paw.classList.remove("full"); // Inaktiverade poäng
+                }
+    
+            
+            });
+        }
+
 }  
+
