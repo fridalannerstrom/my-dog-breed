@@ -3,21 +3,36 @@
 let dogBreeds = [
     { 
         name: "Labrador", 
-        size: "large", 
+        size: "Large", 
+        weight: "25–36 kg",
+        height: "55–62 cm",
+        coat: "Short, dense, water-resistant",
+        lifespan: "10–12 years",
+        temperament: "Friendly, outgoing, intelligent",
         score: 0, 
         description: "The Labrador Retriever is a friendly, outgoing, and highly adaptable breed, known for its intelligence, loyalty, and suitability as a family pet or working dog.", 
         img: "assets/images/dog-cocker.webp" 
     },
     { 
         name: "Beagle", 
-        size: "medium", 
+        size: "Medium", 
+        weight: "9–14 kg",
+        height: "33–38 cm",
+        coat: "Short, dense, water-resistant",
+        lifespan: "12–15 years",
+        temperament: "Curious, friendly, playful",
         score: 0, 
         description: "The Beagle is a small to medium-sized breed known for its friendly personality, strong sense of smell, and playful energy.", 
         img: "assets/images/dog-doodle.webp" 
     },
     { 
         name: "Pug", 
-        size: "small", 
+        size: "Small", 
+        weight: "6–8 kg",
+        height: "25–33 cm",
+        coat: "Short, smooth",
+        lifespan: "12–15 years",
+        temperament: "Charming, affectionate, mischievous",
         score: 0, 
         description: "The Pug is a small, affectionate breed known for its charming personality, wrinkled face, and adaptability to both small and large households.", 
         img: "assets/images/dog-grand.webp" 
@@ -125,6 +140,7 @@ function displayResults() {
 
     let resultBreed = document.querySelector("#best-match-content h2"); // Get the breed H2 tag
     let resultBreedDescription = document.querySelector("#best-match-content p"); // Get the breed p tag
+    let resultBreedSize = document.getElementById("size"); // Get the size li item
     let imageContainer = document.getElementById("best-match-image"); // Get the image container
 
     let maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
@@ -134,5 +150,6 @@ function displayResults() {
     resultBreed.textContent = `${bestMatch.name}`;
     resultBreedDescription.textContent = `${bestMatch.description}`;
     imageContainer.innerHTML = `<img src="${bestMatch.img}"> ` ;
+    resultBreedSize.innerHTML = `<b>Size:</b> ${bestMatch.size}` ;
 
 }  

@@ -118,7 +118,7 @@ h2 {
     background-color: white;
     border-radius: 10px;
     flex-direction: row;
-    padding: 70px;
+    padding: 50px;
     width: 1200px;
 }
 
@@ -141,6 +141,16 @@ h2 {
     border: 1px solid green;
     width: 35%;
     text-align: left;
+}
+
+.result-text {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin: 10px 0px;
+}
+
+#dogbreed-information {
+    list-style-type: none;
 }
 
 /* Tablet */
