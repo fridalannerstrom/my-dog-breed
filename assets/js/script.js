@@ -10,8 +10,8 @@ let dogBreeds = [
         lifespan: "10–12 years",
         temperament: "Friendly, outgoing, intelligent",
         score: 0, 
-        description: "The Labrador Retriever is a friendly, outgoing, and highly adaptable breed, known for its intelligence, loyalty, and suitability as a family pet or working dog.", 
-        img: "assets/images/dog-cocker.webp" 
+        description: "The Labrador Retriever is a friendly, outgoing, and intelligent breed, known for its versatility and loyalty. Originally bred as a working dog, Labradors excel in various roles, from family pets to guide dogs. With their gentle nature and eagerness to please, they are great with children and other pets. Labradors are highly energetic, making them perfect companions for active families who enjoy outdoor adventures, yet they also thrive in a loving home environment.", 
+        img: "assets/images/dog-labrador.webp" 
     },
     { 
         name: "Beagle", 
@@ -22,8 +22,8 @@ let dogBreeds = [
         lifespan: "12–15 years",
         temperament: "Curious, friendly, playful",
         score: 0, 
-        description: "The Beagle is a small to medium-sized breed known for its friendly personality, strong sense of smell, and playful energy.", 
-        img: "assets/images/dog-doodle.webp" 
+        description: "The Beagle is a friendly, energetic breed known for its playful nature and keen sense of smell. With its expressive eyes and gentle temperament, it’s a perfect companion for active families, thriving on walks, playtime, and affection. Loyal and good with kids, the Beagle is a lovable addition to any home.", 
+        img: "assets/images/dog-beagle.webp" 
     },
     { 
         name: "Pug", 
@@ -34,8 +34,8 @@ let dogBreeds = [
         lifespan: "12–15 years",
         temperament: "Charming, affectionate, mischievous",
         score: 0, 
-        description: "The Pug is a small, affectionate breed known for its charming personality, wrinkled face, and adaptability to both small and large households.", 
-        img: "assets/images/dog-grand.webp" 
+        description: "The Pug is a small, affectionate breed known for its charming personality and distinctive wrinkled face. Bred as a companion dog, Pugs adore being around people and are incredibly loyal. They are playful yet adaptable, thriving in both small apartments and larger homes. With their cheerful nature and amusing antics, Pugs bring joy and warmth to any family.", 
+        img: "assets/images/dog-pug.webp" 
     }
 ];
 
