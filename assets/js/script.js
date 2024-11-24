@@ -13,7 +13,13 @@ let dogBreeds = [
         description: "The Labrador Retriever is a friendly, outgoing, and intelligent breed, known for its versatility and loyalty. Originally bred as a working dog, Labradors excel in various roles, from family pets to guide dogs. With their gentle nature and eagerness to please, they are great with children and other pets. Labradors are highly energetic, making them perfect companions for active families who enjoy outdoor adventures, yet they also thrive in a loving home environment.", 
         img: "assets/images/dog-labrador.webp",
         activity: 5,
-        trainability: 5
+        trainability: 5,
+        friendliness: 5,
+        grooming: 5,
+        shedding: 5,
+        barking: 5,
+        protective: 5,
+        independence: 5
     },
     { 
         name: "Beagle", 
@@ -168,54 +174,29 @@ function displayResults() {
     resultBreedLifespan.innerHTML = `<b>Lifespan:</b> ${bestMatch.lifespan}` ;
     resultBreedTemperament.innerHTML = `<b>Temperament:</b> ${bestMatch.temperament}` ;
 
-    setRatingActivity()
-    setRatingTrainability()
+    // All functions for paw icon list
+    setRating("activity", bestMatch.activity);
+    setRating("trainability", bestMatch.trainability);
+    setRating("friendliness", bestMatch.friendliness);
+    setRating("grooming", bestMatch.grooming);
+    setRating("shedding", bestMatch.shedding);
+    setRating("barking", bestMatch.barking);
+    setRating("protective", bestMatch.protective);
+    setRating("independence", bestMatch.independence);
 
     // function for paw in icon list
-    function setRatingActivity() {
+    function setRating(category, score) {
 
-        // Get the category
-        let categoryActivity = document.getElementById("activity"); 
-
-        // Hämta alla "paws" för den specifika kategorin
-        let pawIcons = document.querySelectorAll(`#activity .fa-paw`);
-
-        console.log(pawIcons);
-    
-        // Loopar igenom varje ikon och sätter klass baserat på poängen
-        pawIcons.forEach((paw, index) => {
-            if (index < bestMatch.activity) {
-              paw.classList.add("full"); // Aktiverade poäng
-            } else {
-                paw.classList.remove("full"); // Inaktiverade poäng
-            }
-
+        // Get all paws in the list
+        let pawIcons = document.querySelectorAll(`#${category} .fa-paw`);
         
+        // Loop through each paw while less than score
+        pawIcons.forEach((paw, index) => {
+            if (index < score) {
+                paw.classList.add("full"); // set full class
+            } 
         });
     }
-
-    // function for paw in icon list
-        function setRatingTrainability() {
-
-            // Get the category
-            let categoryTrainability = document.getElementById("trainability"); 
-    
-            // Hämta alla "paws" för den specifika kategorin
-            let pawIcons = document.querySelectorAll(`#trainability .fa-paw`);
-    
-            console.log(pawIcons);
-        
-            // Loopar igenom varje ikon och sätter klass baserat på poängen
-            pawIcons.forEach((paw, index) => {
-                if (index < bestMatch.trainability) {
-                  paw.classList.add("full"); // Aktiverade poäng
-                } else {
-                    paw.classList.remove("full"); // Inaktiverade poäng
-                }
-    
-            
-            });
-        }
 
 }  
 
