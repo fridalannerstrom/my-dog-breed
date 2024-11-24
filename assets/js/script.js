@@ -140,7 +140,12 @@ function displayResults() {
 
     let resultBreed = document.querySelector("#best-match-content h2"); // Get the breed H2 tag
     let resultBreedDescription = document.querySelector("#best-match-content p"); // Get the breed p tag
-    let resultBreedSize = document.getElementById("size"); // Get the size li item
+    let resultBreedSize = document.getElementById("size"); 
+    let resultBreedWeight = document.getElementById("weight"); 
+    let resultBreedHeight = document.getElementById("height"); 
+    let resultBreedCoat = document.getElementById("coat"); 
+    let resultBreedLifespan = document.getElementById("lifespan"); 
+    let resultBreedTemperament = document.getElementById("temperament"); 
     let imageContainer = document.getElementById("best-match-image"); // Get the image container
 
     let maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
@@ -151,5 +156,10 @@ function displayResults() {
     resultBreedDescription.textContent = `${bestMatch.description}`;
     imageContainer.innerHTML = `<img src="${bestMatch.img}"> ` ;
     resultBreedSize.innerHTML = `<b>Size:</b> ${bestMatch.size}` ;
+    resultBreedWeight.innerHTML = `<b>Weight:</b> ${bestMatch.weight}` ;
+    resultBreedHeight.innerHTML = `<b>Height:</b> ${bestMatch.height}` ;
+    resultBreedCoat.innerHTML = `<b>Coat:</b> ${bestMatch.coat}` ;
+    resultBreedLifespan.innerHTML = `<b>Lifespan:</b> ${bestMatch.lifespan}` ;
+    resultBreedTemperament.innerHTML = `<b>Temperament:</b> ${bestMatch.temperament}` ;
 
 }  
