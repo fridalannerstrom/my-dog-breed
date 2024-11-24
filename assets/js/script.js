@@ -39,7 +39,7 @@ startButton.addEventListener("click", function () {
 });
 
 
-// Multi step form
+// function for multi step form
 
 document.addEventListener("DOMContentLoaded", function () { // Wait for HTML document to load so all classes are available
 
@@ -119,48 +119,17 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
 });
 
 
-// Count score in quiz
-
-function updateScores(stepElement) {
-    // Find all inputs in the current step
-    let inputs = stepElement.querySelectorAll("input[type='radio'], input[type='checkbox']");
-    let selectedValue = null;
-
-    // Check the input value
-    inputs.forEach(input => {
-        if (input.checked) {
-            selectedValue = input;
-        }
-    });
-    
-    // Get breeds from data-breeds 
-    let breedsToUpdate = selectedValue.dataset.breeds.split(",");
-
-    // Update each breed selected by 1 
-    breedsToUpdate.forEach(breedName => {
-        let breed = dogBreeds.find(b => b.name === breedName.trim());
-        if (breed) {
-            breed.score += 1; // Add 1 
-        }
-    });
-
-    return true; 
-}
-
-
-// Function for showing the results
+// function for showing the results
 
 function displayResults() {
-    // Sortera hundraserna baserat på poäng i fallande ordning
-    let sortedBreeds = dogBreeds.sort((a, b) => b.score - a.score);
 
-    // Get the result container
-    let resultContainer = document.getElementById("best-match-content");
+    let resultContainer = document.getElementById("best-match-content"); // Get the result container
 
+    let maxScore = Math.max(...dogBreeds.map(breed => breed.score));
+    let bestMatch = dogBreeds.find(breed => breed.score === maxScore);
+
+    console.log (maxScore)
     // Create result content
-    resultContainer.innerHTML = `<h2>Your Best Match:</h2>
-    <ul>
-    ${scores.slice(1).map(breed => `<li>${breed.name} (Score: ${breed.score})</li>`).join("")}
-    </ul> ` ;
+    resultContainer.innerHTML = `<h2>${bestMatch.name}</h2> ` ;
 
 }  
