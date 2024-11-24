@@ -148,9 +148,27 @@ h2 {
 #best-match-list {
     border: 1px solid #FCDCB2;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     width: 35%;
-    text-align: left;
+}
+
+#list-objects {
+    border: 1px solid green;
+    width: 50%;
+}
+
+#list-icons {
+    text-align: right;
+    border: 1px solid green;
+    width: 50%;
+}
+
+#list-icons li, #list-objects li {
+    margin-bottom: 10px;
+}
+
+#list-icons i {
+    padding: 0px 2px;
 }
 
 .result-text {
