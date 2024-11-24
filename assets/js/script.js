@@ -6,21 +6,21 @@ let dogBreeds = [
         size: "large", 
         score: 0, 
         description: "The Labrador Retriever is a friendly, outgoing, and highly adaptable breed, known for its intelligence, loyalty, and suitability as a family pet or working dog.", 
-        img: "https://example.com/labrador.jpg" 
+        img: "assets/images/dog-cocker.webp" 
     },
     { 
         name: "Beagle", 
         size: "medium", 
         score: 0, 
         description: "The Beagle is a small to medium-sized breed known for its friendly personality, strong sense of smell, and playful energy.", 
-        img: "https://example.com/beagle.jpg" 
+        img: "assets/images/dog-doodle.webp" 
     },
     { 
         name: "Pug", 
         size: "small", 
         score: 0, 
         description: "The Pug is a small, affectionate breed known for its charming personality, wrinkled face, and adaptability to both small and large households.", 
-        img: "https://example.com/pug.jpg" 
+        img: "assets/images/dog-grand.webp" 
     }
 ];
 
@@ -124,12 +124,13 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
 function displayResults() {
 
     let resultContainer = document.getElementById("best-match-content"); // Get the result container
+    let imageContainer = document.getElementById("best-match-image"); // Get the image container
 
-    let maxScore = Math.max(...dogBreeds.map(breed => breed.score));
-    let bestMatch = dogBreeds.find(breed => breed.score === maxScore);
+    let maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
+    let bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
 
-    console.log (maxScore)
     // Create result content
     resultContainer.innerHTML = `<h2>${bestMatch.name}</h2> ` ;
+    imageContainer.innerHTML = `<img src="${bestMatch.img}"> ` ;
 
 }  
