@@ -181,6 +181,16 @@ h2 {
     list-style-type: none;
 }
 
+/* paw icon list */
+
+.fa-paw {
+    opacity: 0.2;
+}
+
+.full {
+    opacity: 1;
+}
+
 /* Tablet */
 
 @media only screen and (max-width: 900px) {
