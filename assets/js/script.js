@@ -82,9 +82,10 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
                 dogBreeds[index].score += points;
             });
     
-            console.log("Uppdaterade poäng:", dogBreeds);
+            console.log(dogBreeds);
+
         } else {
-            alert("Please select an option before proceeding."); // Meddela om inget är valt
+            alert("Please select an option before proceeding."); // Warning if nothings been selected
         }
     }
 
