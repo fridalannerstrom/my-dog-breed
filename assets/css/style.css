@@ -138,7 +138,17 @@ h2 {
 }
 
 #best-match-list {
-    border: 1px solid green;
+    border: 1px solid #FCDCB2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 35%;
+    text-align: left;
+}
+
+#best-match-list {
+    border: 1px solid #FCDCB2;
+    border-radius: 10px;
+    padding: 20px;
     width: 35%;
     text-align: left;
 }
@@ -149,7 +159,7 @@ h2 {
     margin: 10px 0px;
 }
 
-#dogbreed-information {
+.remove-bullets {
     list-style-type: none;
 }
 
