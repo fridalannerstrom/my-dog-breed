@@ -12,14 +12,14 @@ let dogBreeds = [
         score: 0, 
         description: "The Labrador Retriever is a friendly, outgoing, and intelligent breed, known for its versatility and loyalty. Originally bred as a working dog, Labradors excel in various roles, from family pets to guide dogs. With their gentle nature and eagerness to please, they are great with children and other pets. Labradors are highly energetic, making them perfect companions for active families who enjoy outdoor adventures, yet they also thrive in a loving home environment.", 
         img: "assets/images/dog-labrador.webp",
-        activity: 5,
-        trainability: 5,
+        activity: 4,
+        trainability: 4,
         friendliness: 5,
-        grooming: 5,
-        shedding: 5,
-        barking: 5,
-        protective: 5,
-        independence: 5
+        grooming: 3,
+        shedding: 4,
+        barking: 3,
+        protective: 3,
+        independence: 2
     },
     { 
         name: "Beagle", 
@@ -33,7 +33,13 @@ let dogBreeds = [
         description: "The Beagle is a friendly, energetic breed known for its playful nature and keen sense of smell. With its expressive eyes and gentle temperament, it’s a perfect companion for active families, thriving on walks, playtime, and affection. Loyal and good with kids, the Beagle is a lovable addition to any home.", 
         img: "assets/images/dog-beagle.webp",
         activity: 3,
-        trainability: 3
+        trainability: 3,
+        friendliness: 4,
+        grooming: 2,
+        shedding: 3,
+        barking: 4,
+        protective: 2,
+        independence: 3
     },
     { 
         name: "Pug", 
@@ -46,8 +52,14 @@ let dogBreeds = [
         score: 0, 
         description: "The Pug is a small, affectionate breed known for its charming personality and distinctive wrinkled face. Bred as a companion dog, Pugs adore being around people and are incredibly loyal. They are playful yet adaptable, thriving in both small apartments and larger homes. With their cheerful nature and amusing antics, Pugs bring joy and warmth to any family.", 
         img: "assets/images/dog-pug.webp",
-        activity: 1,
-        trainability: 1
+        activity: 2,
+        trainability: 3,
+        friendliness: 4,
+        grooming: 3,
+        shedding: 2,
+        barking: 3,
+        protective: 2,
+        independence: 3
     }
 ];
 
