@@ -65,14 +65,39 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
     nextButton.textContent = stepIndex === steps.length - 1 ? "Submit" : "Next"; // Changes from "next" to "submit" on last step
     }
 
-    // function for adding steps
+    //function for counting points
+
+    function calculatePoints() {
+        let currentStepElement = steps[currentStep]; // Get the current step information
+        let selectedOption = currentStepElement.querySelector("input[type='radio']:checked", "input[type='checklist']:checked"); // Get the selected value 
+
+        console.log(selectedOption);
+    
+        if (selectedOption) { // Check if somethings been selected
+            let points = selectedOption.dataset.points; // Get the list of points to add to each breed
+            let pointsArray = points.split(",").map(Number); // Makes an array of the poinst selected
+    
+            // Add point to the correct dog breed
+            pointsArray.forEach((points, index) => {
+                dogBreeds[index].score += points;
+            });
+    
+            console.log("Uppdaterade poäng:", dogBreeds);
+        } else {
+            alert("Please select an option before proceeding."); // Meddela om inget är valt
+        }
+    }
+
+    // function for next button
     nextButton.addEventListener("click", function () {
 
         if (currentStep < steps.length - 1) { // checks if its not the last step
+            calculatePoints(); // count points for dog breeds
             currentStep++; // Add 1 to currentStep
             showStep(currentStep); // Show next step
             
         } else {
+            calculatePoints(); // count points for dog breeds
             quiz.classList.add("display-none"); // adds display none from quiz
             result.classList.remove("display-none"); // removes display none from result
             displayResults()
@@ -89,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
 
     // Show first step
     showStep(currentStep);
+
 });
 
 
