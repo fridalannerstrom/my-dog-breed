@@ -123,14 +123,16 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
 
 function displayResults() {
 
-    let resultContainer = document.getElementById("best-match-content"); // Get the result container
+    let resultBreed = document.querySelector("#best-match-content h2"); // Get the breed H2 tag
+    let resultBreedDescription = document.querySelector("#best-match-content p"); // Get the breed p tag
     let imageContainer = document.getElementById("best-match-image"); // Get the image container
 
     let maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
     let bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
 
     // Create result content
-    resultContainer.innerHTML = `<h2>${bestMatch.name}</h2> ` ;
+    resultBreed.textContent = `${bestMatch.name}`;
+    resultBreedDescription.textContent = `${bestMatch.description}`;
     imageContainer.innerHTML = `<img src="${bestMatch.img}"> ` ;
 
 }  
