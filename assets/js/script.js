@@ -460,26 +460,28 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
             });
         });
 
-            console.log(dogBreeds);
+        return true; // Returnera true om val gjorts
 
         } else {
             alert("Please select an option before proceeding."); // Warning if nothings been selected
+            return false; // return false if no option selected
         }
     }
 
     // function for next button
     nextButton.addEventListener("click", function () {
 
-        if (currentStep < steps.length - 1) { // checks if its not the last step
-            calculatePoints(); // count points for dog breeds
-            currentStep++; // Add 1 to currentStep
-            showStep(currentStep); // Show next step
+        if (calculatePoints()) { // checks if somethings been selected
+            if (currentStep < steps.length - 1) { // checks if its not the last step
+                calculatePoints(); // count points for dog breeds
+                currentStep++; // Add 1 to currentStep
+                showStep(currentStep); // Show next step
 
-        } else {
-            calculatePoints(); // count points for dog breeds
-            quiz.classList.add("display-none"); // adds display none from quiz
-            result.classList.remove("display-none"); // removes display none from result
-            displayResults()
+            } else {
+                quiz.classList.add("display-none"); // adds display none from quiz
+                result.classList.remove("display-none"); // removes display none from result
+                displayResults()
+            }
         }
     });
 
