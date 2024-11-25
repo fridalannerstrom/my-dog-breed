@@ -171,18 +171,20 @@
 
         <div class="step">
             <h2>What size of dog are you most comfortable with?</h2>
-                <input type="checkbox" id="small" name="size" data-points="0,0,0,0,0,0,0,5,5,5,0,5,0,5,0,0,0,5,0,5">
+                <input type="radio" id="small" name="size" data-points="-100,-100,-100,-100,-100,-100,-100,0,0,0,-100,0,-100,0,-100,-100,-100,0,-100,0">
                 <label for="small">Small
                     Up to 10 kg</label>
-                <input type="checkbox" id="medium" name="size" data-points="5,5,0,5,0,0,0,0,0,0,5,0,0,0,0,5,5,0,0,0">
+                <input type="radio" id="medium" name="size" data-points="0,0,-100,0,-100,-100,-100,-100,-100,-100,0,-100,-100,-100,-100,0,0,-100,-100,-100">
                 <label for="medium">Medium
                     10–25 kg</label>
-                <input type="checkbox" id="large" name="size" data-points="5,5,5,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,5,0">
+                <input type="radio" id="large" name="size" data-points="0,0,0,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,0,-100,-100,-100,0,-100">
                 <label for="large">Large
                     25–45 kg</label>
-                <input type="checkbox" id="extra-large" name="size" data-points="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0">
+                <input type="radio" id="extra-large" name="size" data-points="-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,0,-100">
                 <label for="extra-large">Extra Large
                     over 45 kg</label>
+                <input type="radio" id="dont-matter" name="size" data-points="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+                <label for="dont-matter">Size doesn't matter</label>
             </div>
 
         <!-- Question 11 -->
