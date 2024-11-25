@@ -447,18 +447,18 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
 
     function calculatePoints() {
         let currentStepElement = steps[currentStep]; // Get the current step information
-        let selectedOption = currentStepElement.querySelector("input[type='radio']:checked", "input[type='checklist']:checked"); // Get the selected value 
+        let selectedOptions = currentStepElement.querySelectorAll("input[type='radio']:checked, input[type='checkbox']:checked");  // Get the selected value 
 
-        console.log(selectedOption);
-
-        if (selectedOption) { // Check if somethings been selected
-            let points = selectedOption.dataset.points; // Get the list of points to add to each breed
-            let pointsArray = points.split(",").map(Number); // Makes an array of the poinst selected
+        if (selectedOptions.length > 0) { // Check if somethings been selected
+            selectedOptions.forEach(option => {
+                let points = option.dataset.points; // Get the list of points to add to each breed
+                let pointsArray = points.split(",").map(Number); // Makes an array of the poinst selected
 
             // Add point to the correct dog breed
             pointsArray.forEach((points, index) => {
                 dogBreeds[index].score += points;
             });
+        });
 
             console.log(dogBreeds);
 
