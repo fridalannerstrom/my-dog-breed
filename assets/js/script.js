@@ -1,8 +1,6 @@
 // Import dog breeds from seperate js file
 import { dogBreeds } from './dogData.js'; 
 
-console.log(dogBreeds);
-
 // Remove intro when start quiz is clicked
 
 let startButton = document.getElementById("start-button");

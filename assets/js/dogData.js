@@ -1,5 +1,3 @@
-// set all dog breeds
-
 export const dogBreeds = [
     {
         name: "Labrador",
@@ -402,5 +400,3 @@ export const dogBreeds = [
         independence: 3
     }
 ];
-
-console.log(dogBreeds);
