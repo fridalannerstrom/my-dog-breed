@@ -1,5 +1,5 @@
 // Import dog breeds from seperate js file
-import { dogBreeds } from './dogData';
+import { dogBreeds } from './dogData.js'; 
 
 console.log(dogBreeds);
 
