@@ -1,5 +1,7 @@
-// Import dog breeds from seperate js file
+// Import dog breeds and questions from seperate js file
 import { dogBreeds } from './dogData.js'; 
+import { questions } from './questions.js'; 
+
 
 // Remove intro when start quiz is clicked
 
