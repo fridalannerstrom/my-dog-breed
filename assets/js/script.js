@@ -2,6 +2,8 @@
 import { dogBreeds } from './dogData.js'; 
 import { questions } from './questions.js'; 
 
+console.log(questions);
+
 
 // Remove intro when start quiz is clicked
 
