@@ -20,38 +20,37 @@ startButton.addEventListener("click", function () {
 
 const quizContainer = document.getElementById('questions-container');
 
-questions.forEach((questionObj, questionIndex) => {
-    const questionDiv = document.createElement('div');
-    questionDiv.classList.add('step');
-    if (questionIndex === 0) questionDiv.classList.add('active'); // Endast första frågan aktiv från början
+questions.forEach((questionObj, questionIndex) => { // Looping through all the questions and giving it an index
+    const questionDiv = document.createElement('div'); // Creating a new div
+    questionDiv.classList.add('step'); // Giving the div the class step
+    if (questionIndex === 0) questionDiv.classList.add('active'); // giving the first div the class active
 
-    const questionHeading = document.createElement('h2');
-    questionHeading.textContent = questionObj.question;
-    questionDiv.appendChild(questionHeading);
+    const questionHeading = document.createElement('h2'); // Create a heading for the question
+    questionHeading.textContent = questionObj.question; // Getting the question from the question object
+    questionDiv.appendChild(questionHeading); // Set the text in the h2 heading
 
-    const answers = questionObj.answers;
-    Object.keys(answers).forEach((key, index) => {
-        const answer = answers[key];
+    const answers = questionObj.answers; // Get the answer object
+    Object.keys(answers).forEach((key, index) => { // Loop through all answer options
+        const answer = answers[key]; // Get the answer option
 
-        // Skapa radio-knappen
-        const radioInput = document.createElement('input');
-        radioInput.type = 'radio';
-        radioInput.id = `${key}-${questionIndex}`;
-        radioInput.name = `question-${questionIndex}`;
-        radioInput.dataset.points = JSON.stringify(answer.values);
-        questionDiv.appendChild(radioInput);
+        // Creating the radio button
+        const radioInput = document.createElement('input');  // Create input element
+        radioInput.type = 'radio'; // Setting the input type
+        radioInput.id = `${key}-${questionIndex}`;  // Giving it an id
+        radioInput.name = `question-${questionIndex}`; // Giving it a name
+        radioInput.dataset.points = JSON.stringify(answer.values); // Get the points for each dog breed to count result
+        questionDiv.appendChild(radioInput); // Put this radio button in the question div
 
-        // Skapa etiketten
-        const label = document.createElement('label');
-        label.setAttribute('for', `${key}-${questionIndex}`);
-        label.textContent = answer.text;
-        questionDiv.appendChild(label);
+        // Creating the label
+        const label = document.createElement('label'); // Create the label element
+        label.setAttribute('for', `${key}-${questionIndex}`); // Connecting the label with the input id
+        label.textContent = answer.text; // Giving the label the answer text
+        questionDiv.appendChild(label); // Put the label in the question div
 
-        // Lägg till en radbrytning
-        questionDiv.appendChild(document.createElement('br'));
     });
 
-    quizContainer.appendChild(questionDiv);
+    quizContainer.appendChild(questionDiv); // Put the complete div in the quiz container
+
 });
 
     // Get relevant HTML elements
