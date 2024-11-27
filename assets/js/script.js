@@ -19,9 +19,11 @@ startButton.addEventListener("click", function () {
 
 });
 
-// function for multi step form
+// Generate questions in HTML 
 
-document.addEventListener("DOMContentLoaded", function () { // Wait for HTML document to load so all classes are available
+const quizContainer = document.getElementById('quiz');
+
+
 
     // Get relevant HTML elements
     let steps = document.querySelectorAll(".step"); // Gives a list over all steps
@@ -97,8 +99,6 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for HTML doc
 
     // Show first step
     showStep(currentStep);
-
-});
 
 
 // function for showing the results
