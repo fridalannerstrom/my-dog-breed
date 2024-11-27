@@ -114,6 +114,15 @@ h2 {
     display: block; /* Show only the active step */
 }
 
+/* Inputs */
+
+input[type="text"] {
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: 500px;
+}
+
 /* results */
 
 .best-match-container {
