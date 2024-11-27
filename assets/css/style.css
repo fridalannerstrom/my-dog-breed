@@ -53,6 +53,7 @@ h2 {
     font-family: 'Caprasimo', sans-serif;
     font-size: 2.5rem;
     letter-spacing: 2px;
+    margin-bottom: 30px;
 }
 
 .subheading {
@@ -68,6 +69,8 @@ h2 {
     text-align: center;
     font-weight: 400;
     margin-top: 10px;
+    margin-top: -20px;
+    margin-bottom: 30px;
 }
 
 .basic-text {
@@ -138,12 +141,12 @@ input[type="radio"] {
 
 label {
     background-color: white;
-    padding: 15px 20px; /* Inre marginal */
+    padding: 15px 20px; 
     border-radius: 10px;
     border: 2px solid white;
-    margin: 5px 0; /* Yttre marginal */
-    cursor: pointer; /* Gör etiketter klickbara */
-    text-align: center; /* Centrera texten */
+    margin: 5px 0; 
+    cursor: pointer; 
+    text-align: center; 
 }
 
 .block {
@@ -152,21 +155,16 @@ label {
 
 .inline {
     display: inline; 
+    font-weight: 600;
 }
-
-
 
 input[type="radio"]:checked + label {
     border-color: #3F322A;
     background-color: #F5F5F5;
 }
 
-.answers-container {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column; /* Placera alternativen vertikalt */
-    gap: 15px; /* Avstånd mellan alternativen */
-    padding: 10px; /* Lägg till inre marginal */
+.subtext {
+    font-weight: 400;
 }
 
 /* results */

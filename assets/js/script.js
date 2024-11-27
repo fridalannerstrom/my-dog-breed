@@ -57,7 +57,6 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
 
     // Create a div for answers
     const answersDiv = document.createElement('div');
-    answersDiv.classList.add('answers-container'); // Add a class for styling
 
     if (questionObj.type === "text") {
         // Create text input
@@ -82,14 +81,13 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
             const label = document.createElement('label');
             label.setAttribute('for', `${key}-${questionIndex}`);
             label.classList.add(`${display}`); // Add a class for styling
-            label.textContent = answer.text;
+            label.innerHTML = `${answer.text}${answer.subtext ? `<br><span class="subtext">${answer.subtext}</span>` : ''}`;
 
             questionDiv.appendChild(input);
             questionDiv.appendChild(label);
         });
     }
 
-    questionDiv.appendChild(answersDiv);
     quizContainer.appendChild(questionDiv);
 
 });

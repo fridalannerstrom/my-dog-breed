@@ -82,9 +82,11 @@ export const questions = [
     {
         question: "How much time can you spend exercising your dog daily?",
         type: "radio",
+        display: "inline",
         answers: {
             option1: {
-                text: "1–2 hours or more (I love being active outdoors!)",
+                text: "1–2 hours or more",
+                subtext: "I love being active outdoors!",
                 values: {
                     labrador: 5, 
                     goldenRetriever: 5,
