@@ -1049,7 +1049,7 @@ export const questions = [
     },
     {
         question: "How important is obedience and trainability to you?",
-        type: "checkbox",
+        type: "radio",
         answers: {
             option1: {
                 text: "Very important – I want to train my dog to be highly obedient.",
