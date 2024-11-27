@@ -23,7 +23,39 @@ startButton.addEventListener("click", function () {
 
 const quizContainer = document.getElementById('quiz');
 
+questions.forEach((questionObj, questionIndex) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.classList.add('step');
+    if (questionIndex === 0) questionDiv.classList.add('active'); // Endast första frågan aktiv från början
 
+    const questionHeading = document.createElement('h2');
+    questionHeading.textContent = questionObj.question;
+    questionDiv.appendChild(questionHeading);
+
+    const answers = questionObj.answers;
+    Object.keys(answers).forEach((key, index) => {
+        const answer = answers[key];
+
+        // Skapa radio-knappen
+        const radioInput = document.createElement('input');
+        radioInput.type = 'radio';
+        radioInput.id = `${key}-${questionIndex}`;
+        radioInput.name = `question-${questionIndex}`;
+        radioInput.dataset.points = JSON.stringify(answer.values);
+        questionDiv.appendChild(radioInput);
+
+        // Skapa etiketten
+        const label = document.createElement('label');
+        label.setAttribute('for', `${key}-${questionIndex}`);
+        label.textContent = answer.text;
+        questionDiv.appendChild(label);
+
+        // Lägg till en radbrytning
+        questionDiv.appendChild(document.createElement('br'));
+    });
+
+    quizContainer.appendChild(questionDiv);
+});
 
     // Get relevant HTML elements
     let steps = document.querySelectorAll(".step"); // Gives a list over all steps
@@ -53,16 +85,27 @@ const quizContainer = document.getElementById('quiz');
         let currentStepElement = steps[currentStep]; // Get the current step information
         let selectedOptions = currentStepElement.querySelectorAll("input[type='radio']:checked, input[type='checkbox']:checked");  // Get the selected value 
 
-        if (selectedOptions.length > 0) { // Check if somethings been selected
-            selectedOptions.forEach(option => {
-                let points = option.dataset.points; // Get the list of points to add to each breed
-                let pointsArray = points.split(",").map(Number); // Makes an array of the poinst selected
+        const breeds = [
+            "labrador", "goldenRetriever", "germanShepherd", "poodle", "bulldog", 
+            "beagle", "boxer", "chihuahua", "dachshund", "cavalierKingCharlesSpaniel", 
+            "borderCollie", "shihTzu", "siberianHusky", "yorkshireTerrier", 
+            "rottweiler", "corgi", "australianShepherd", "maltese", 
+            "greatDane", "pug"
+        ];
 
-            // Add point to the correct dog breed
-            pointsArray.forEach((points, index) => {
-                dogBreeds[index].score += points;
+        const totalScores = {};
+
+        if (selectedOptions.length > 0) { // Check if somethings been selected
+            inputs.forEach(input => {
+                // Dela poängen till en array
+                const points = input.dataset.points.split(',').map(Number);
+        
+                // Lägg till poängen till rätt hundras
+                points.forEach((score, index) => {
+                    const breed = breeds[index];
+                    totalScores[breed] = (totalScores[breed] || 0) + score;
+                });
             });
-        });
 
         return true; //return true if somethings been selected
 
