@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;
-    font-family: poppins;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .flex {
@@ -54,7 +54,7 @@ h2 {
 }
 
 .subheading {
-    font-family: work-sans;
+    font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.2px;
     font-weight: 600;
