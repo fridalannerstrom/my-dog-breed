@@ -154,8 +154,13 @@ label {
 }
 
 .inline {
-    display: inline; 
+    display: inline-block; 
     font-weight: 600;
+    display: column;
+    width: 30%;
+    max-height: 150px;
+    margin: 0px 5px;
+    padding: 30px;
 }
 
 input[type="radio"]:checked + label {
@@ -165,6 +170,7 @@ input[type="radio"]:checked + label {
 
 .subtext {
     font-weight: 400;
+    font-size: 0.8rem;
 }
 
 /* results */

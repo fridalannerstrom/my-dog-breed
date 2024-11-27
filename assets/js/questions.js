@@ -106,7 +106,8 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "30 minutes–1 hour (I enjoy a daily walk.)",
+                text: "30 minutes–1 hour",
+                subtext: "I enjoy a daily walk",
                 values: {
                     labrador: 2, 
                     goldenRetriever: 3,
@@ -127,7 +128,8 @@ export const questions = [
                 }
             },
             option3: {
-                text: "Less than 30 minutes (I prefer a more relaxed lifestyle.)",
+                text: "Less than 30 minutes",
+                subtext: "I prefer a more relaxed lifestyle",
                 values: {
                     poodle: 2,
                     bulldog: 5,
