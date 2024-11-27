@@ -48,6 +48,17 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
     questionHeading.textContent = questionObj.question; // Getting the question from the question object
     questionDiv.appendChild(questionHeading); // Set the text in the h2 heading
 
+    if (questionObj.subHeading) {
+        const subHeading = document.createElement('h3');
+        subHeading.classList.add('subheading', 'quiz-subheading'); // Add the subheading classes
+        subHeading.textContent = questionObj.subHeading; // Set the subheading text
+        questionDiv.appendChild(subHeading); // Set the h3 subheading
+    }
+
+    // Add a <br> element after <h2>
+    const brElement = document.createElement('br');
+    questionDiv.appendChild(brElement);
+
     if (questionObj.type === "text") {
         // Create text input
         const input = document.createElement('input');

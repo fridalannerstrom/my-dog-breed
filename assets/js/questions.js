@@ -504,6 +504,7 @@ export const questions = [
     {
         question: "Do you have children or other pets at home?",
         type: "checkbox",
+        subHeading: "Feel free to choose multiple options",
         answers: {
             option1: {
                 text: "Young children Up to 10 years old",
@@ -590,6 +591,7 @@ export const questions = [
     {
         question: "What is important to you in a dog?",
         type: "checkbox",
+        subHeading: "Feel free to choose multiple options",
         answers: {
             option1: {
                 text: "Being loyal and protective",
@@ -757,6 +759,7 @@ export const questions = [
     {
         question: "What sizes of dog are you comfortable with?",
         type: "checkbox",
+        subHeading: "Feel free to choose multiple options",
         answers: {
             option1: {
                 text: "Small Up to 10 kg",
@@ -1131,6 +1134,7 @@ export const questions = [
     {
         question: "How would you describe your personality?",
         type: "checkbox",
+        subHeading: "Feel free to choose multiple options",
         answers: {
             option1: {
                 text: "Active and outgoing",
