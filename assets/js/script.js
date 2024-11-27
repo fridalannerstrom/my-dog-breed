@@ -48,28 +48,35 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
     questionHeading.textContent = questionObj.question; // Getting the question from the question object
     questionDiv.appendChild(questionHeading); // Set the text in the h2 heading
 
-    const answers = questionObj.answers; // Get the answer object
-    Object.keys(answers).forEach((key, index) => { // Loop through all answer options
-        const answer = answers[key]; // Get the answer option
+    if (questionObj.type === "text") {
+        // Create text input
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = `text-${questionIndex}`;
+        input.placeholder = questionObj.placeholder;
+        questionDiv.appendChild(input);
+    } else if (questionObj.type === "radio" || questionObj.type === "checkbox") {
+        // Create radio and checkboxes
+        const answers = questionObj.answers;
+        Object.keys(answers).forEach((key, index) => {
+            const answer = answers[key];
 
-        // Creating the radio button
-        const radioInput = document.createElement('input');  // Create input element
-        radioInput.type = 'radio'; // Setting the input type
-        radioInput.id = `${key}-${questionIndex}`;  // Giving it an id
-        radioInput.name = `question-${questionIndex}`; // Giving it a name
-        radioInput.dataset.points = JSON.stringify(answer.values); // Get the points for each dog breed to count result
-        questionDiv.appendChild(radioInput); // Put this radio button in the question div
+            const input = document.createElement('input');
+            input.type = questionObj.type; // Check if radio or checkbox
+            input.id = `${key}-${questionIndex}`;
+            input.name = `question-${questionIndex}`; // Needed for radio input
+            input.dataset.points = JSON.stringify(answer.values);
 
-        // Creating the label
-        const label = document.createElement('label'); // Create the label element
-        label.setAttribute('for', `${key}-${questionIndex}`); // Connecting the label with the input id
-        label.textContent = answer.text; // Giving the label the answer text
-        questionDiv.appendChild(label); // Put the label in the question div
+            const label = document.createElement('label');
+            label.setAttribute('for', `${key}-${questionIndex}`);
+            label.textContent = answer.text;
 
-    });
+            questionDiv.appendChild(input);
+            questionDiv.appendChild(label);
+        });
+    }
 
-    quizContainer.appendChild(questionDiv); // Put the complete div in the quiz container
-
+    quizContainer.appendChild(questionDiv);
 });
 
 let steps = document.querySelectorAll(".step"); // Gives a list over all steps after they have been created
@@ -78,7 +85,22 @@ let steps = document.querySelectorAll(".step"); // Gives a list over all steps a
 
     function calculatePoints() {
         let currentStepElement = steps[currentStep]; // Get the current step
-        let selectedOptions = currentStepElement.querySelectorAll("input[type='radio']:checked"); // Get the selected option
+        let selectedOptions = currentStepElement.querySelectorAll("input:checked"); // Get the selected option
+        let textInputs = currentStepElement.querySelectorAll("input[type='text']");
+
+        // Check it it's a text input
+        if (textInputs.length > 0) {
+            const nameInput = textInputs[0]; // One text input per question
+        if (!nameInput.value.trim()) {
+            alert("Please enter your name.");
+            return false;
+        }
+
+        /* 
+        // Spara användarens namn
+        sessionStorage.setItem("userName", nameInput.value.trim());  */
+        return true;
+    }
     
         // Check if option has been selected
         if (selectedOptions.length === 0) {

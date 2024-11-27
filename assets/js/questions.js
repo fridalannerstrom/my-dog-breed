@@ -1,6 +1,12 @@
 export const questions = [
     {
+        question: "What's your name?",
+        type: "text",
+        placeholder: "Enter your name"
+    },
+    {
         question: "How big is your living space?",
+        type: "radio",
         answers: {
             option1: {
                 text: "A large house with a garden",
@@ -74,6 +80,7 @@ export const questions = [
 
     {
         question: "How much time can you spend exercising your dog daily?",
+        type: "radio",
         answers: {
             option1: {
                 text: "1–2 hours or more (I love being active outdoors!)",
@@ -137,6 +144,7 @@ export const questions = [
 
     {
         question: "How much experience do you have with dogs?",
+        type: "radio",
         answers: {
             option1: {
                 text: "I’m completely new to dogs. I’ve never owned or interacted much with dogs before.",
