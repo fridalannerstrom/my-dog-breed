@@ -149,9 +149,11 @@ export const questions = [
     {
         question: "How much experience do you have with dogs?",
         type: "radio",
+        display: "inline",
         answers: {
             option1: {
-                text: "I’m completely new to dogs. I’ve never owned or interacted much with dogs before.",
+                text: "I’m completely new to dogs.",
+                subtext: " I’ve never owned or interacted much with dogs before",
                 values: {
                     poodle: 2,
                     bulldog: 3,
