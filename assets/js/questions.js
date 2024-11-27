@@ -2,11 +2,12 @@ export const questions = [
     {
         question: "What's your name?",
         type: "text",
-        placeholder: "Enter your name"
+        placeholder: "Enter your name",
     },
     {
         question: "How big is your living space?",
         type: "radio",
+        display: "block",
         answers: {
             option1: {
                 text: "A large house with a garden",

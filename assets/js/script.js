@@ -55,9 +55,9 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         questionDiv.appendChild(subHeading); // Set the h3 subheading
     }
 
-    // Add a <br> element after <h2>
-    const brElement = document.createElement('br');
-    questionDiv.appendChild(brElement);
+    // Create a div for answers
+    const answersDiv = document.createElement('div');
+    answersDiv.classList.add('answers-container'); // Add a class for styling
 
     if (questionObj.type === "text") {
         // Create text input
@@ -71,6 +71,7 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         const answers = questionObj.answers;
         Object.keys(answers).forEach((key, index) => {
             const answer = answers[key];
+            const display = questionObj.display;
 
             const input = document.createElement('input');
             input.type = questionObj.type; // Check if radio or checkbox
@@ -80,6 +81,7 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
 
             const label = document.createElement('label');
             label.setAttribute('for', `${key}-${questionIndex}`);
+            label.classList.add(`${display}`); // Add a class for styling
             label.textContent = answer.text;
 
             questionDiv.appendChild(input);
@@ -87,7 +89,9 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         });
     }
 
+    questionDiv.appendChild(answersDiv);
     quizContainer.appendChild(questionDiv);
+
 });
 
 let steps = document.querySelectorAll(".step"); // Gives a list over all steps after they have been created

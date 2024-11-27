@@ -29,6 +29,8 @@ body {
     text-align: center;
     flex-direction: column;
     padding: 50px;
+    border: 1px solid red;
+    width: 1000px;
 }
 
 .quiz-container {
@@ -128,6 +130,43 @@ input[type="text"] {
     border-radius: 10px;
     width: 500px;
     font-family: poppins;
+}
+
+input[type="radio"] {
+    display: none; 
+}
+
+label {
+    background-color: white;
+    padding: 15px 20px; /* Inre marginal */
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 5px 0; /* Yttre marginal */
+    cursor: pointer; /* Gör etiketter klickbara */
+    text-align: center; /* Centrera texten */
+}
+
+.block {
+    display: block; 
+}
+
+.inline {
+    display: inline; 
+}
+
+
+
+input[type="radio"]:checked + label {
+    border-color: #3F322A;
+    background-color: #F5F5F5;
+}
+
+.answers-container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column; /* Placera alternativen vertikalt */
+    gap: 15px; /* Avstånd mellan alternativen */
+    padding: 10px; /* Lägg till inre marginal */
 }
 
 /* results */
