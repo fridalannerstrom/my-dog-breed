@@ -2,9 +2,6 @@
 import { dogBreeds } from './dogData.js'; 
 import { questions } from './questions.js'; 
 
-console.log(questions);
-
-
 // Remove intro when start quiz is clicked
 
 let startButton = document.getElementById("start-button");
@@ -15,13 +12,13 @@ let result = document.getElementById("result");
 startButton.addEventListener("click", function () {
 
     intro.classList.add("display-none"); // adds display none to intro
-    quiz.classList.remove("display-none"); // removes display none from quiz
+    quizContent.classList.remove("display-none"); // removes display none from quiz
 
 });
 
 // Generate questions in HTML 
 
-const quizContainer = document.getElementById('quiz');
+const quizContainer = document.getElementById('questions-container');
 
 questions.forEach((questionObj, questionIndex) => {
     const questionDiv = document.createElement('div');

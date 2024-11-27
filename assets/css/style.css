@@ -32,7 +32,7 @@ body {
 }
 
 .quiz-container {
-    border: 1px solid red;
+    display: none;
 }
 
 .display-none {
