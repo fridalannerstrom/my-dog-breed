@@ -108,7 +108,7 @@ export const dogBreeds = [
         lifespan: "12–15 years",
         temperament: "Curious, friendly, playful",
         score: 0,
-        description: "",
+        description: "The Beagle is a medium-sized, friendly, and energetic breed originally bred for hunting small game. Known for its excellent sense of smell and sociable nature, it makes a great family pet. Beagles are playful, loyal, and thrive with regular exercise and mental stimulation. Their short coat is easy to maintain, and they often come in tricolor or bicolor patterns.",
         img: "assets/images/beagle.webp",
         activity: 3,
         trainability: 3,
