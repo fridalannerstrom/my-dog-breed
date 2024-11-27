@@ -77,49 +77,41 @@ let steps = document.querySelectorAll(".step"); // Gives a list over all steps a
     //function for counting points
 
     function calculatePoints() {
-        let currentStepElement = steps[currentStep]; // Get the current step information
-        let selectedOptions = currentStepElement.querySelectorAll("input[type='radio']:checked, input[type='checkbox']:checked");  // Get the selected value 
-
-        const breeds = [
-            "labrador", "goldenRetriever", "germanShepherd", "poodle", "bulldog", 
-            "beagle", "boxer", "chihuahua", "dachshund", "cavalierKingCharlesSpaniel", 
-            "borderCollie", "shihTzu", "siberianHusky", "yorkshireTerrier", 
-            "rottweiler", "corgi", "australianShepherd", "maltese", 
-            "greatDane", "pug"
-        ];
-
-        const totalScores = {};
-
-        if (selectedOptions.length > 0) { // Check if somethings been selected
-            inputs.forEach(input => {
-                // Dela poängen till en array
-                const points = input.dataset.points.split(',').map(Number);
-        
-                // Lägg till poängen till rätt hundras
-                points.forEach((score, index) => {
-                    const breed = breeds[index];
-                    totalScores[breed] = (totalScores[breed] || 0) + score;
-                });
-            });
-
-        return true; //return true if somethings been selected
-
-        } else {
-            alert("Please select an option before proceeding."); // Warning if nothings been selected
-            return false; // return false if no option selected
+        let currentStepElement = steps[currentStep]; // Get the current step
+        let selectedOptions = currentStepElement.querySelectorAll("input[type='radio']:checked"); // Get the selected option
+    
+        // Check if option has been selected
+        if (selectedOptions.length === 0) {
+            alert("Please select an option before proceeding."); // Warning if nothing has been selected
+            return false; // Stop function
         }
+    
+        // Go through all options
+        selectedOptions.forEach(option => {
+            // Get score from data point in object
+            const points = JSON.parse(option.dataset.points);
+    
+            // Add the score in dog breeds
+            dogBreeds.forEach(breed => {
+                if (points[breed.name.toLowerCase()]) { // Check if dog breed is in option
+                    breed.score += points[breed.name.toLowerCase()]; // Add point to dog breed
+                }
+            });
+        });
+    
+        return true; // Return true to show that function worked and progress can go on
     }
 
-    console.log(nextButton);
-    console.log(steps);
-    
+
+
     // function for next button
     nextButton.addEventListener("click", function () {
 
             if (currentStep < steps.length - 1) { // checks if its not the last step
-                currentStep++; // Add 1 to currentStep
-                showStep(currentStep); // Show next step
-
+                if (calculatePoints()) { // Controll that score has been calculated
+                    currentStep++; // Go to next step
+                    showStep(currentStep); // Show next step
+                }
             } else {
                 quiz.classList.add("display-none"); // adds display none from quiz
                 result.classList.remove("display-none"); // removes display none from result
