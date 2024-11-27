@@ -2,12 +2,15 @@
 import { dogBreeds } from './dogData.js'; 
 import { questions } from './questions.js'; 
 
-// Remove intro when start quiz is clicked
-
 let startButton = document.getElementById("start-button");
 let introContent = document.getElementById("intro");
 let quizContent = document.getElementById("quiz");
 let result = document.getElementById("result");
+let nextButton = document.getElementById("next-button");
+let prevButton = document.getElementById("prev-button");
+let currentStep = 0;
+
+// Remove intro when start quiz is clicked
 
 startButton.addEventListener("click", function () {
 
@@ -15,6 +18,22 @@ startButton.addEventListener("click", function () {
     quizContent.classList.remove("display-none"); // removes display none from quiz
 
 });
+
+
+    // Show/hide step based on "currentStep", adding active class to current step
+    function showStep(stepIndex) { // parameter stepIndex gives the number of the current step
+        steps.forEach((step, index) => { // forEach goes through each step, index shows number for relevant step
+            if (index === stepIndex) {
+                step.classList.add("active"); // adds active class to current step
+            } else {
+                step.classList.remove("active"); // removes active class from non current step
+            }
+        });
+
+        prevButton.style.display = stepIndex === 0 ? "none" : "inline-block"; // Hide prev button from first question
+        nextButton.textContent = stepIndex === steps.length - 1 ? "Submit" : "Next"; // Changes from "next" to "submit" on last step
+    }
+
 
 // Generate questions in HTML 
 
@@ -53,27 +72,7 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
 
 });
 
-    // Get relevant HTML elements
-    let steps = document.querySelectorAll(".step"); // Gives a list over all steps
-    let nextButton = document.getElementById("next-button");
-    let prevButton = document.getElementById("prev-button");
-
-    // Get the first step (index 0)
-    let currentStep = 0;
-
-    // Show/hide step based on "currentStep", adding active class to current step
-    function showStep(stepIndex) { // parameter stepIndex gives the number of the current step
-        steps.forEach((step, index) => { // forEach goes through each step, index shows number for relevant step
-            if (index === stepIndex) {
-                step.classList.add("active"); // adds active class to current step
-            } else {
-                step.classList.remove("active"); // removes active class from non current step
-            }
-        });
-
-        prevButton.style.display = stepIndex === 0 ? "none" : "inline-block"; // Hide prev button from first question
-        nextButton.textContent = stepIndex === steps.length - 1 ? "Submit" : "Next"; // Changes from "next" to "submit" on last step
-    }
+let steps = document.querySelectorAll(".step"); // Gives a list over all steps after they have been created
 
     //function for counting points
 
@@ -111,12 +110,13 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         }
     }
 
+    console.log(nextButton);
+    console.log(steps);
+    
     // function for next button
     nextButton.addEventListener("click", function () {
 
-        if (calculatePoints()) { // checks if somethings been selected
             if (currentStep < steps.length - 1) { // checks if its not the last step
-                calculatePoints(); // count points for dog breeds
                 currentStep++; // Add 1 to currentStep
                 showStep(currentStep); // Show next step
 
@@ -125,8 +125,7 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
                 result.classList.remove("display-none"); // removes display none from result
                 displayResults()
             }
-        }
-    });
+        });
 
     // function for going back steps
     prevButton.addEventListener("click", function () {
@@ -137,7 +136,7 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
     });
 
     // Show first step
-    showStep(currentStep);
+    showStep(currentStep); 
 
 
 // function for showing the results
