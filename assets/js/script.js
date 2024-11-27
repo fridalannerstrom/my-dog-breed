@@ -97,7 +97,7 @@ let steps = document.querySelectorAll(".step"); // Gives a list over all steps a
         }
 
         /* 
-        // Spara användarens namn
+        // Save username - maybe later? 
         sessionStorage.setItem("userName", nameInput.value.trim());  */
         return true;
     }

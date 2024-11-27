@@ -233,5 +233,97 @@ export const questions = [
                 }
             }
         }
+    },
+    {
+        question: "Do you have children or other pets at home?",
+        type: "checkbox",
+        answers: {
+            option1: {
+                text: "Young children Up to 10 years old",
+                values: {
+                    poodle: 2,
+                    bulldog: 3,
+                    chihuahua: 4,
+                    dachshund: 2,
+                    cavalierKingCharlesSpaniel: 5,
+                    shihTzu: 4,
+                    yorkshireTerrier: 5,
+                    maltese: 5,
+                    pug: 5
+                }
+            }, 
+            option2: {
+                text: "Teenagers 11-18 years old",
+                values: {
+                    labrador: 1, 
+                    goldenRetriever: 2,
+                    poodle: 2,
+                    bulldog: 5,
+                    beagle: 2,
+                    boxer: 2,
+                    chihuahua: 5,
+                    dachshund: 3,
+                    cavalierKingCharlesSpaniel: 5,
+                    borderCollie: 1,
+                    shihTzu: 5,
+                    yorkshireTerrier: 5,
+                    corgi: 3,
+                    australianShepherd: 2,
+                    maltese: 5,
+                    greatDane: 2,
+                    pug: 5
+                }
+            },
+            option3: {
+                text: "Other dogs Other dogs at home",
+                values: {
+                    labrador: 3, 
+                    goldenRetriever: 4,
+                    germanShepherd: 3,
+                    poodle: 3,
+                    bulldog: 5,
+                    beagle: 4,
+                    boxer: 4,
+                    chihuahua: 5,
+                    dachshund: 4,
+                    cavalierKingCharlesSpaniel: 5,
+                    borderCollie: 3,
+                    shihTzu: 5,
+                    siberianHusky: 2,
+                    yorkshireTerrier: 3,
+                    rottweiler: 2,
+                    corgi: 4,
+                    australianShepherd: 3,
+                    maltese: 5,
+                    greatDane: 3,
+                    pug: 5
+                }
+            },
+            option4: {
+                text: "Other pets Cats and/or other",
+                values: {
+                    labrador: 5, 
+                    goldenRetriever: 5,
+                    germanShepherd: 5,
+                    poodle: 5,
+                    bulldog: 5,
+                    beagle: 5,
+                    boxer: 5,
+                    chihuahua: 5,
+                    dachshund: 5,
+                    cavalierKingCharlesSpaniel: 5,
+                    borderCollie: 5,
+                    shihTzu: 5,
+                    siberianHusky: 5,
+                    yorkshireTerrier: 5,
+                    rottweiler: 5,
+                    corgi: 5,
+                    australianShepherd: 5,
+                    maltese: 5,
+                    greatDane: 5,
+                    pug: 5
+                }
+            }
+        }
     }
 ];
