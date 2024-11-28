@@ -67,8 +67,9 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         input.placeholder = questionObj.placeholder;
 
         const label = document.createElement('label');
-        label.setAttribute('for', `text-${questionIndex}`);
         label.classList.add(`display-none`); // Add a class for styling
+        label.setAttribute('for', `text-${questionIndex}`);
+        label.innerHTML = `Username`;
 
         questionDiv.appendChild(input);
         questionDiv.appendChild(label);
