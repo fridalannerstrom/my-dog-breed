@@ -81,7 +81,11 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
             const label = document.createElement('label');
             label.setAttribute('for', `${key}-${questionIndex}`);
             label.classList.add(`${display}`); // Add a class for styling
-            label.innerHTML = `${answer.text}${answer.subtext ? `<br><span class="subtext">${answer.subtext}</span>` : ''}`;
+            label.innerHTML = `
+                ${answer.image ? `<img src="${answer.image}" alt="" class="answer-image"><br>` : ''}
+                ${answer.text}
+                ${answer.subtext ? `<br><span class="subtext">${answer.subtext}</span>` : ''}`;
+
 
             questionDiv.appendChild(input);
             questionDiv.appendChild(label);

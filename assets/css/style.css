@@ -164,7 +164,6 @@ input[type="checkbox"] {
     display: inline-block; 
     font-weight: 600;
     max-width: 300px;
-    max-height: 150px;
     margin: 5px 5px;
     padding: 30px;
     line-height: 20px;
@@ -178,6 +177,12 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 .subtext {
     font-weight: 400;
     font-size: 0.8rem;
+}
+
+.answer-image {
+    height: 90px;
+    width: 90px;
+    margin-bottom: 10px;
 }
 
 /* results */

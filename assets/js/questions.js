@@ -617,7 +617,8 @@ export const questions = [
         display: "inline",
         answers: {
             option1: {
-                text: "Being loyal and protective",
+                text: "Being loyal and protective of loved ones",
+                image: "assets/images/german-shepherd.webp",
                 values: {
                     labrador: 4, 
                     goldenRetriever: 4,
@@ -643,6 +644,7 @@ export const questions = [
             }, 
             option2: {
                 text: "Being social and friendly with everyone",
+                image: "assets/images/poodle.webp",
                 values: {
                     labrador: 10,
                     goldenRetriever: 10,
@@ -668,6 +670,7 @@ export const questions = [
             },
             option3: {
                 text: "Being independent and easygoing",
+                image: "assets/images/pug.webp",
                 values: {
                     labrador: 3,
                     goldenRetriever: 3,
@@ -692,7 +695,8 @@ export const questions = [
                 }
             },
             option4: {
-                text: "Being energetic and full of life",
+                text: "Being energetic, active and full of life",
+                image: "assets/images/border-collie.webp",
                 values: {
                     labrador: 4,
                     goldenRetriever: 4,
