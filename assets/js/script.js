@@ -93,7 +93,7 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
             label.innerHTML = `
                 ${answer.image ? `<img src="${answer.image}" alt="" class="answer-image"><br>` : ''}
                 ${answer.text}
-                ${answer.subtext ? `<br><span class="subtext">${answer.subtext}</span>` : ''}`;
+                ${answer.subtext ? `<br><p class="subtext">${answer.subtext}</p>` : ''}`;
 
 
             questionDiv.appendChild(input);
