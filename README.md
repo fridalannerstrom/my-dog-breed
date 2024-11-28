@@ -1,20 +1,19 @@
 
-![Sunne Dogcare Mockup](assets/images/documentation/mockup.png)
+![Sunne Dogcare Mockup](assets/images/documentation/responsive.png)
 
-![Logotype](assets/images/documentation/logotype.png)
+# Welcome to "Which Dog Breed is Right for You?" Quiz!
+This quiz is designed to help you discover the perfect dog breed for your lifestyle and personality. Developed by [Sunne Dogcare](https://fridalannerstrom.github.io/dogsitter/), it reflects our belief that choosing a dog is one of the most important decisions a future dog owner can make. By understanding your needs, habits, and preferences, we hope to guide you toward a breed that will thrive in your care.
 
-[Sunne Dogcare](https://fridalannerstrom.github.io/dogsitter/) is a website created for my growing dog-sitting service in Sunne, Sweden. As the demand for dog-sitting has continued to increase, I decided to turn my passion into a business, and this project was the perfect opportunity to get started on a website for my dog care service.
+As a dog sitter, I see firsthand the consequences of impulsive dog purchases. Too often, people choose a breed based on looks, trends, or recommendations from friends without considering the breed’s unique characteristics and compatibility with their lifestyle. While I love caring for these dogs, I can’t help but wish that more owners had made informed decisions from the start.
 
-The goal of the site is to provide potential clients with an easy way to explore the services I offer, get to know me and my dogs, and contact me directly for bookings or questions. I wanted the website to reflect the personal touch I bring to my business, so I chose photos and a warm, inviting design to make dog owners feel comfortable and confident when they leave their pets in my care.
+This quiz is our way of promoting thoughtful dog ownership. By answering a series of fun and insightful questions, you’ll gain a better understanding of which breed aligns with your daily life, ensuring a harmonious and happy relationship between you and your future furry friend.
 
-Sunne Dogcare is presented with a modern yet friendly aesthetic, focusing on trust and reliability, while also making sure all necessary information is easily accessible and understood. 
+[Find your paw-fect match with this quiz! 🐾](https://fridalannerstrom.github.io/my-dog-breed/) 
 
 # Table of content
 
 1. [User Experience (UX)](#user-experience-ux)
    - [Goals](#Goals) 
-   - [User Stories](#user-stories) 
-   - [Wireframes](#wireframes) 
    - [Graphic Design & Color Scheme](#graphic-design--color-scheme) 
    - [UI/UX Design](#uiux-design) 
 
@@ -55,231 +54,151 @@ Sunne Dogcare is presented with a modern yet friendly aesthetic, focusing on tru
 
 # User Experience (UX)
 
-## Goals
+## Purpose of the Quiz
 
-The goal of Sunne Dogcare is to offer a warm, welcoming, and trustworthy dog-sitting service for dog owners in Sunne and surrounding areas. The website is aimed not only at current dog owners but also at new or potential dog owners who might be looking for a dog-sitting solution before they commit to getting a dog, especially for times when they’re at work or busy.
+This quiz has one simple goal: to help you discover which dog breed is the best match for your lifestyle and personality. There are no distractions, no unnecessary elements, and no clutter — just a clean and straightforward experience. A single clear button invites users to start the quiz, with concise, engaging text to guide them.
+
+While we provide a link back to Sunne Dogcare for those interested, this is not intended to act as an advertisement for the service. The focus remains solely on helping potential dog owners make thoughtful decisions about their future furry companions.
 
 ### Target Group:
 
-- **Dogowners in Sunne and surrounding areas**
-- **Soon-to-be dogowners in Sunne and surrounding areas**
+- **Potential dog owners** - Individuals considering getting a dog but are unsure which breed suits their lifestyle and personality best.
+- **First-Time dog owners** - People who have never owned a dog before and need guidance to make an informed decision.
+- **Curious dog enthusiasts** - Dog lovers who may already have a dog but are curious about which other breeds might be a good match for them.
 
-### User Goals:
+### How the quiz achieves its goal
+We’ve designed the quiz with simplicity and accessibility in mind, ensuring users can focus entirely on the task at hand. Here’s how:
 
-- **Read about services:**  Visitors should easily find details about the services offered, how the process works, and what it costs.
-- **Book a service:**  Provide a simple and straightforward way for users to book dog-sitting for their pets.
-- **Read about Sunne Dogcare:**  Let users get to know the dog-sitter, the dogs on the property, and what the environment looks like, helping them feel comfortable before making a booking.
+| Feature | Description | 
+| ------- | ----------- | 
+| **Bright, Inviting Colors** | We use soft, natural tones to create a welcoming environment. | 
+| **Illustrations of beautiful dogs** | Eye-catching visuals enhance the user experience and make the quiz enjoyable. |
+| **Bold and clear text** | Short, simple instructions ensure users can easily follow along without confusion. | 
+| **Straightforward Call-to-Action** | A single, prominent button directs users to start the quiz. |
+| **Clear and Simple Questions** | Designed to be easy to understand, ensuring a smooth flow from start to finish. | 
+| **Overview of Top Dog Breed** | After completing the quiz, users are presented with their best match and receive clear, concise information about the breed. | 
+| **Discover Additional Matches** | Users can also see their other top three potential breeds for broader insights and more options. | 
 
-### Business Goals:
-
-- **Provide clear information about services:**  Clearly and simply communicate the services offered, making it easy for visitors to understand what Sunne Dogcare provides and how it works.
-- **Enable easy booking:**  Ensure that visitors can easily book dog-sitting services.
-- **Attract new customers:**  Make the website inviting and informative, especially for new dog owners or first-time visitors, as returning customers are likely already convinced.
-- **Build trust:** Create a welcoming and reassuring atmosphere with happy dogs and professional services, so that dog owners feel comfortable and confident leaving their pets with us.
-
-### How Sunne Dogcare achieves these goals:
-
-| Feature | Description | Reinforces goal |
-| ------- | ----------- | --------------- |
-| **Personal touch** | Introduce the dog-sitter right away with personal photos, also a personal about page introducing the farm and animals, and social media | *Build trust* and *Read about Sunne Dogcare* |
-| **Gallery of happy dogs** | Showcase happy dogs in a gallery to highlight the positive environment | *Attract new customers* |
-| **Simplify services** | Focus on just three clear, easy-to-book services to avoid overwhelming users | *Enable easy booking* and *Read about services* |
-| **Clear service information** | Use bullet points to present services with clear descriptions and pricing. Link to service page reappears in several places | *Provide clear information about services* and *Read about services* |
-| **Visual aids** | Use icons to make information easy to understand and visually engaging | *Provide clear information about services* and *Read about Sunne Dogcare* |
-| **Easy booking page** | A dedicated booking page with minimal fields makes booking quick and simple. | *Enable easy booking* and *Book a service* |
-| **Light, natural colors** | Use warm, natural colors to create a friendly, rural feel, matching the environment | *Build trust* |
-
-
-## User Stories
-1. **As a dog owner,** I want to easily find information about the different dog-sitting services available, so I can choose the best option for my dog.
-2. **As a potential dog owner,** I want to learn about the dog-sitter and see photos of the farm, so I can feel confident that I have a reliable dog-sitting solution in place before deciding to get a dog.
-3. **As a busy dog owner,** I want a simple and clear booking process, so I can quickly schedule dog-sitting without filling out unnecessary forms.
-4. **As a first-time visitor to the site,** I want to see the happy and welcoming environment through photos and descriptions, so I feel reassured about leaving my dog in good hands.
-5. **As a returning customer,** I want easy access to the booking page, so I can quickly schedule a service I already know and trust.
-6. **As a dog owner,** I want to clearly see the prices for each service, so I can plan my budget without surprises.
-7. **As a dog owner,** I want to follow the dog-sitter’s social media to stay updated on the services and see more of the dogs being cared for, so I can feel connected to the service.
-8. **As a dog owner,** I want to feel confident that my dog is in safe hands, so I can relax knowing they are well cared for while I'm away.
-
-## Wireframes
-Wireframes were created using [Adobe XD](https://adobexdplatform.com/), with a strong focus on the user goals, business goals, and user stories. These wireframes serve as the foundation for the design and structure of the website.
-
-<details>
-  <summary>📱 Click to view Mobile Wireframes</summary>
-
-  ![Mobile Wireframe 1](assets/images/documentation/wireframes-mobile-1.png)
-  ![Mobile Wireframe 2](assets/images/documentation/wireframes-mobile-2.png)
-
-</details>
-
-<details>
-  <summary>💻 Click to view Tablet Wireframes</summary>
-
-  ![Tablet Wireframe 1](assets/images/documentation/wireframes-tablet-1.png)
-  ![Tablet Wireframe 2](assets/images/documentation/wireframes-tablet-2.png)
-  
-</details>
-
-<details>
-  <summary>🖥️ Click to view Desktop Wireframes</summary>
-
-  ![Desktop Wireframe 1](assets/images/documentation/wireframes-desktop-1.png)
-  ![Desktop Wireframe 2](assets/images/documentation/wireframes-desktop-2.png)
-
-</details>
 
 ## Graphic Design & Color Scheme
-The design, fonts, and media are all focused on creating a warm, trustworthy feel that reflects nature and the calm of the surrounding forest. The goal is to make the user feel secure and confident in the services, while keeping things professional. At the same time, the design ensures that the message is clear and easy to take in quickly, so users can find what they need without any hassle.
 
-### Colors
+The design of this quiz is intentionally simple, with a strong focus on text and illustrations. By avoiding distractions, the user can focus entirely on the content. The overall feel is warm, light, fresh, and trustworthy, brought to life through charming illustrations of various dog breeds.
 
-- **Primary Color:** The design primarily uses three shades of green as the main color. Green was chosen for its strong association with nature, conveying a sense of calm and reliability —q ualities that align well with the values of a dog-sitting service in a rural setting. Additionally, green represents safety and harmony, which are qualities that Sunne Dogcare wants to convey to its users.
-- **Secondary Color:** A warm, light color is used as the secondary color to add warmth to the design. This shade leans towards orange, a color often linked with happiness and positivity, which complements the joyful and caring atmosphere of the business.
-- **Base Colors:** Black and white are employed as the base colors. Black adds contrast and elegance, helping to ground the design and highlight key elements, while white brings clarity and simplicity, ensuring that the overall message is clear and easy to read. 
+### Color Scheme
 
-Together, these colors create a balanced and professional look, enhancing the user experience without overwhelming the content.
+- **Primary Colors:** Warm shades of brown set the tone for the quiz. Brown was chosen for its natural, earthy feel, evoking the outdoors, animals, and a connection to dogs. Many dogs are brown themselves, making this color both symbolic and relatable.
+- **Neutral Accents:** Supporting neutral tones provide balance and ensure the content remains the primary focus without overwhelming the user.
+
+Together, these colors create a natural and inviting atmosphere that aligns perfectly with the theme of dog ownership.
 
  ![Colors](assets/images/documentation/colors.png)
 
 ### Fonts
 
-#### Fonts choosen
-- **Lora** for headings – a serif font that conveys a professional and trustworthy impression, adding a sense of seriousness and reliability to the site. 
-- **Work Sans** for paragraph text – a basic and modern sans-serif font chosen for its readability, particularly on screens and smaller devices.
+- **Headline Font (Caprasimo):** Large, bold, and eye-catching, this font is used for titles, questions, and results to immediately grab attention. Its slightly playful curves soften the boldness, adding a friendly yet professional tone.
+- **Body Text Font (Poppins):** A clean and widely used sans-serif font, chosen for its excellent readability on all devices. It complements the boldness of Caprasimo, ensuring paragraphs and subheadings remain easy to read and visually appealing.
 
-By combining a serif and a sans-serif font, the design achieves a balanced look that feels both professional and approachable, as well as inviting and personal. These two fonts complement each other well, enhancing the overall user experience.
-
-#### Fonts styling
-
-- **Lora** for headings (H1, H2)
-- **Work Sans** for paragraphs and H3 (Work Sans used instead of Lora for H3 due to better readability).
-- **Highlighted text** is Work Sans in bold green
-- **Topic Tag**, to help users quickly identify content, has a green background and light, uppercase text in Work Sans.
-- **Links** are underlined in green with arrow icon.
-- **CTA Buttons** come in two styles: Light, with white background and black text, and Dark, with green background and white text. Both light and dark have the same hover style.
+This pairing strikes the perfect balance, guiding the user’s eye naturally from headlines to supporting information.
 
  ![Fonts](assets/images/documentation/fonts.png)
 
+### Headings, Buttons and Links
+
+- **Caprasimo** for headings (H1, H2)
+- **Poppins** for paragraphs and H3 (Poppins used instead of Caprasimo for H3 due to better readability).
+- **Links** are styled in brown with an underline, maintaining a cohesive design that aligns with the overall aesthetic.
+- **Buttons** Large and brown buttons are used consistently throughout the quiz. Their prominent size and simplicity make them stand out, ensuring users can easily interact with the quiz.
+
  ![Headings, text and buttons](assets/images/documentation/heading-text-buttons.png)
 
-### Logotype
-The logo for Sunne Dogcare uses the font [Hot Mess by Sam Parrett](https://www.behance.net/gallery/79231099/Hot-Mess-SVG-Font). This slightly messy, handwritten font was chosen to create a contrast with the otherwise clean and polished design of the brand. The playful, informal style of the font reflects the more unpredictable and sometimes chaotic nature of dog-sitting, making it a fitting choice for the brand.
+ ### Icons
 
- ![Logotype](assets/images/documentation/logotype.png)
-
-### Icons
-
-The icons used throughout the design are from [Font Awesome](https://fontawesome.com/) in the bold solid style. Icons are an important part of the branding, as they help convey messages in a simpler and more visual way. The icons chosen are closely associated with dogs and nature, such as a bone, paw print, and forest.
+A single type of icon, a paw print from [Font Awesome](https://fontawesome.com/) is used to provide visual cues. For example, a breed’s energy level might be represented by five paw prints, with the number of filled paw prints indicating the level of activity. This simple visual system makes it quick and easy for users to interpret important information about each breed.
 
  ![Icons](assets/images/documentation/icons.png)
 
-### Media
+### Illustrations
 
-The images used on the site will focus on dogs highlighting themes of nature, forest, warmth, and joy. The photos will predominantly feature green and natural bright tones to align with the overall design, avoiding sharp or overly bright colors. Warm, earthy hues will be prioritized to create a welcoming and soothing atmosphere, reinforcing the connection to the countryside and the caring environment that Sunne Dogcare offers. All images will have rounded borders to create a softer and more welcoming feel.
+Instead of photographs, the quiz features illustrations of various dog breeds. These illustrations, sourced from [Flaticon.com](https://www.flaticon.com/) and created by [Maxim Kulikov](https://www.flaticon.com/authors/maxim-kulikov), bring a cohesive and playful touch to the design. The illustrations represent each breed accurately while maintaining a unified artistic style, enhancing the overall user experience.
 
-The images are sourced from [Unsplash](https://unsplash.com/) via an Unsplash+ subscription.
-
- ![Media](assets/images/documentation/photos.png)
-
-Additionally, some background images are used with a subtle green overlay.
-
- ![Background with overlay](assets/images/documentation/green-background.png)
+ ![Illustrations](assets/images/documentation/illustrations.png)
 
 ## UI/UX Design
 
-The final mockups for the UI were created using [Adobe XD](https://adobexdplatform.com/). The design focuses on a clean and light aesthetic with a clear information hierarchy. Call-to-Actions (CTAs) are designed to be noticeable, encouraging interaction. The overall design aims to provide an intuitive and positive experience for the users.
+The focus of the UI/UX design process for this quiz was to create a versatile and intuitive interface that accommodates different types of questions and results. Since the exact wording of the quiz questions is still being refined, the primary goal was to establish a design framework that supports various question formats. This includes:
 
-<details>
-  <summary>📱 Click to view Mobile UI</summary>
+| Purpose | Description | 🖥️ Desktop | 💻 Tablet | 📱 Mobile |
+| ------- | ----------- | ------- | ------ | ------ |
+| **Checkbox questions** | For questions where users can select multiple answers. | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **Radio Button question** | Information about services  | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **Image-Based answers** | Display of dog-related images | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **Text-Based answers with descriptions** | Information about the business | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **Text-Based answers without descriptions** | Contact form for inquiries | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
 
- ![UI Mobile 1](assets/images/documentation/uimobile-1.png)
- ![UI Mobile 2](assets/images/documentation/uimobile-2.png)
+In addition to the question layouts, the quiz consists of three main page elements. Each page is designed for clarity and usability, ensuring a seamless experience. Below is an overview of their purpose:
 
-</details>
+| Purpose | Description | 🖥️ Desktop | 💻 Tablet | 📱 Mobile |
+| ------- | ----------- | ------- | ------ | ------ |
+| **Intro page** | Landing page with a clear CTA to start the quiz. | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **Result page** | Displays the best match, additional breeds, and key details. | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **404** | Error page with a message and navigation back to the main page. | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
 
-<details>
-  <summary>💻 Click to view Tablet UI</summary>
-
- ![UI Tablet 1](assets/images/documentation/uitablet-1.png)
- ![UI Tablet 2](assets/images/documentation/uitablet-2.png)
-
-</details>
-
-<details>
-  <summary>🖥️ Click to view Desktop UI</summary>
-
- ![UI Desktop 1](assets/images/documentation/ui-desktop-1.png)
- ![UI Desktop 2](assets/images/documentation/ui-desktop-2.png)
-
-</details>
-
+The final design for the UI were created using [Adobe XD](https://adobexdplatform.com/). The overall goal was to create a clean, engaging, and accessible design that guides users seamlessly through the quiz while keeping the experience visually appealing and user-friendly. This structure ensures flexibility for adjustments as the content evolves, without compromising the design's functionality or aesthetics.
 
 ---
 
 
 # Features
 
-The website consists of a total of <strong>7 pages</strong> using one of three types of page layouts; *homepage, subpage* or *notification page.* 
+The website consists of a total of <strong>3 page sections</strong> and <strong>2 pages</strong>.
 
-| Page | Purpose | Layout | Screenshot |
-| ---- | ------- | ------ | ----------- |
-| **Index** | Main landing page | Homepage | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **Services** | Information about services  | Subpage | ![Services Layout](assets/images/documentation/services.png) | 
-| **Gallery** | Display of dog-related images | Subpage | ![Gallery Layout](assets/images/documentation/gallery.png) | 
-| **About** | Information about the business | Subpage | ![About Layout](assets/images/documentation/about.png) | 
-| **Contact & Booking** | Contact form for inquiries | Subpage | ![Contact Layout](assets/images/documentation/contact.png) | 
-| **Thank you** | Confirmation after form submit | Notification Page | ![Thank You Layout](assets/images/documentation/thankyou.png) | 
-| **404** | Error message for wrong pages | Notification Page | ![404 Layout](assets/images/documentation/404.png) | 
+## Pages
 
-## Page Elements
+| Page | Purpose | 🖥️ Screenshot |
+| ---- | ------- | ----------- |
+| **Index** | Serves as the main landing page for the quiz. | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **404** | Redirects users from broken links back to index page. | ![Services Layout](assets/images/documentation/services.png) | 
 
-⚠️ The responsive design is implemented using flexbox with a primary breakpoint at 768px. However, certain sections have additional breakpoints, as described in more detail in this chapter.
+### Sections on index page
 
-### All pages
+| Page section | Purpose | 🖥️ Screenshot |
+| ------------ | ------- | ---------- | 
+| **Intro** | Welcomes users and introduces the quiz with a clear CTA. | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **Quiz** | Displays interactive questions for users to determine their best dog match. | ![Services Layout](assets/images/documentation/services.png) | 
+| **Result** | Presents the user's top dog breed match, other breeds and friends breed match | ![Gallery Layout](assets/images/documentation/gallery.png) | 
 
-#### Navigation 
+## Key Elements
 
-| Device | Description | Screenshot |
-| ------ | ----------- | ---------- | 
-| **Desktop** | Full navigation menu with all links visible, including a header notice to highlight important messages | ![Navigation Desktop](assets/images/documentation/navigation-desktop.png) | 
-| **Mobile** | Collapsed navigation, icon for dropdown, header notice still visable  | ![Navigation Mobile](assets/images/documentation/navigation-mobile.png) | 
-| **Mobile Dropdown** | Expanded dropdown below header notice with all links visible, right-aligned to facilitate thumb navigation | ![Navigation Dropdown](assets/images/documentation/navigation-dropdown.png) | 
+### Intro
 
-#### Footer
+The Intro section is designed to immediately capture the user's attention and set the tone for the quiz. Here's a breakdown of its key elements:
 
-| Device | Description | Screenshot |
-| ------ | ----------- | ---------- | 
-| **Desktop** | Footer with contact information displayed side by side, navigation and social links | ![Footer Desktop](assets/images/documentation/footer-desktop.png) | 
-| **Mobile** | Footer with contact information stacked vertically for better readability, navigation and social links  | ![Footer Mobile](assets/images/documentation/footer-mobile.png) | 
+| Section | Description | 📱 Mobile | 💻 Tablet | 🖥️ Desktop |
+| ------- | ----------- | ------ | ------ | ------- |
+| **Intro** | The Intro immediately engages users with charming illustrations of various dog breeds, creating a welcoming and relevant atmosphere. A bold title, "Find your ideal dog breed," clearly communicates the purpose of the quiz, while a brief supporting text explains its goal: helping users discover the best dog breed for their lifestyle and personality. The design is centered around a clear call-to-action button, "Start Quiz," which stands out prominently, guiding users to begin their journey effortlessly. | ![Hero mobile](assets/images/documentation/hero-section-mobile.png) | ![Hero Desktop](assets/images/documentation/hero-image.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
 
-### Index
+### Quiz
 
-The index page serves as the primary landing page for most visitors. Its main objective is to introduce Sunne Dogcare and immediately engage potential clients with a clear and inviting presentation. The page is designed to guide users seamlessly towards booking services, providing a welcoming first impression of the digsitter, services and gallery.
+The quiz is designed with a consistent layout to ensure an intuitive and seamless user experience. Each question type is presented in a clear and engaging format, with concise content and a logical flow. To maintain user focus, the design uses minimal distractions while providing visually distinct formats for different question types. Below is a breakdown of the quiz sections:
 
-| Section | Description | Mobile | Desktop |
-| ------- | ----------- | ------ | ------- |
-| **Hero Section** | Hero section with a CTA button leading to the booking page. | ![Hero mobile](assets/images/documentation/hero-section-mobile.png) | ![Hero Desktop](assets/images/documentation/hero-image.png) | 
-| **About Me Section** | Section introducing the dog sitter.  | ![About Mobile](assets/images/documentation/about-section-mobile.png) | ![About Desktop](assets/images/documentation/about-section.png) | 
-| **Services Section** | Section describing the services offered. | ![Services Mobile](assets/images/documentation/services-section-mobile.png) | ![Services Desktop](assets/images/documentation/services-section-desktop.png) | 
-| **Gallery Section** | Photo gallery showcasing images of dogs. | ![Gallery Mobile](assets/images/documentation/gallery-section-mobile.png) | ![Gallery Desktop](assets/images/documentation/gallery-section.png) | 
-| **CTA Box** | Call-to-action box with a link to the services page. | ![CTA Mobile](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop](assets/images/documentation/cta-section.png) | 
+| Section | Description | 📱 Mobile | 💻 Tablet | 🖥️ Desktop |
+| ------- | ----------- | --------- | ------ | ---------- |
+| **Text input** | Questions where users provide free-text answers, featuring a clean and simple layout. | ![Hero Mobile Subpage](assets/images/documentation/subpage-hero-mobile.png) | ![Hero Desktop Subpage](assets/images/documentation/subpage-hero-desktop.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Answers without description** | Questions with clear answer options but no additional descriptions. | ![Intro Mobile Subpage](assets/images/documentation/subpage-intro-mobile.png) | ![Intro Desktop Subpage](assets/images/documentation/subpage-intro-desktop.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Answers with description** | Questions offering answers with accompanying short descriptions for clarity. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Answers with images** | Visual questions where users select from image-based answer options. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
 
-### Subpage
-
-Each subpage follows a consistent layout with a hero section that includes a prominent heading and a descriptive topic tag. Below the hero section, each subpage contains a short description of the content. To guide users towards further action, a CTA box is included at all subpages.
-
-| Section | Description | Mobile | Desktop |
-| ------- | ----------- | ------ | ------- |
-| **Hero Section** | Hero section features a descriptive title and a clear topic tag | ![Hero Mobile Subpage](assets/images/documentation/subpage-hero-mobile.png) | ![Hero Desktop Subpage](assets/images/documentation/subpage-hero-desktop.png) | 
-| **Intro Section** | Introductory section with description of the page’s content | ![Intro Mobile Subpage](assets/images/documentation/subpage-intro-mobile.png) | ![Intro Desktop Subpage](assets/images/documentation/subpage-intro-desktop.png) | 
-| **CTA Box** | Call-to-action box with a link to the services page. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
-
-### Notification Page
+### Result
 
 The notification page does not include a hero section; instead, you are presented with the relevant information immediately. This page is designed to deliver messages without the need for persuasive content or elaborate design elements. The text is written in a playful, dog-themed tone to stay true to the brand and maintain a fun, engaging connection to the dog care business.
 
-| Section | Description | Mobile | Desktop |
-| ------- | ----------- | ------ | ------- |
-| **Main Section** | Heading, paragraph and button to homepage. Image to make the design more visually engaging | ![Thank You Mobile](assets/images/documentation/thankyou-mobile.png) | ![Thank You Desktop](assets/images/documentation/thankyou-desktop.png) | 
+| Section | Description | 📱 Mobile | 💻 Tablet | 🖥️ Desktop |
+| ------- | ----------- | --------- | ------ | ---------- |
+| **Text input** | Questions where users provide free-text answers, featuring a clean and simple layout. | ![Hero Mobile Subpage](assets/images/documentation/subpage-hero-mobile.png) | ![Hero Desktop Subpage](assets/images/documentation/subpage-hero-desktop.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Answers without description** | Questions with clear answer options but no additional descriptions. | ![Intro Mobile Subpage](assets/images/documentation/subpage-intro-mobile.png) | ![Intro Desktop Subpage](assets/images/documentation/subpage-intro-desktop.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Answers with description** | Questions offering answers with accompanying short descriptions for clarity. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Answers with images** | Visual questions where users select from image-based answer options. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+
 
 ## Key Features
 
