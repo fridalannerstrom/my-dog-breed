@@ -194,8 +194,13 @@ function displayResults() {
     const maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
     const bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
 
-        
-    recentResults.unshift({ user: userName, breed: bestMatch.name, breedImage: bestMatch.img, breedDescription: bestMatch.shortDescription }); // Add the user name and result to recentResults
+    // Add the user name and result to recentResults       
+    recentResults.unshift({ 
+        user: userName, 
+        breed: bestMatch.name, 
+        breedImage: bestMatch.img, 
+        breedDescription: 
+        bestMatch.shortDescription }); 
 
     // We only want the 3 latest results
     if (recentResults.length > 3) {
