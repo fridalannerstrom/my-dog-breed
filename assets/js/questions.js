@@ -78,7 +78,6 @@ export const questions = [
             }
         }
     },
-
     {
         question: "How much time can you spend exercising your dog daily?",
         type: "radio",
