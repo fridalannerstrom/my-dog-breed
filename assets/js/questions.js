@@ -360,7 +360,7 @@ export const questions = [
         display: "block",
         answers: {
             option1: {
-                text: "I don’t mind regular brushing and care.",
+                text: "I don’t mind regular brushing and care",
                 values: {
                     labrador: 5, 
                     goldenRetriever: 5,
@@ -385,7 +385,7 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "A few times a month is fine.",
+                text: "A few times a month is fine",
                 values: {
                     labrador: 5, 
                     goldenRetriever: 5,
@@ -410,7 +410,7 @@ export const questions = [
                 }
             },
             option3: {
-                text: "I prefer a dog with low-maintenance grooming.",
+                text: "I prefer a dog with low-maintenance grooming",
                 values: {
                     labrador: 2, 
                     goldenRetriever: 2,
@@ -439,9 +439,10 @@ export const questions = [
     {
         question: "How often are you at home during the day?",
         type: "radio",
+        display: "block",
         answers: {
             option1: {
-                text: "I’m home most of the day.",
+                text: "I’m home most of the day",
                 values: {
                     labrador: 5, 
                     goldenRetriever: 5,
@@ -466,7 +467,7 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "I work from home or have a flexible schedule.",
+                text: "I work from home or have a flexible schedule",
                 values: {
                     labrador: 3, 
                     goldenRetriever: 3,
@@ -491,7 +492,7 @@ export const questions = [
                 }
             },
             option3: {
-                text: "I’m away at work for most of the day.",
+                text: "I’m away at work for most of the day",
                 values: {
                     labrador: -100, 
                     goldenRetriever: -100,
