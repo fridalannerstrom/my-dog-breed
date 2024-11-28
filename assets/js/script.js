@@ -208,6 +208,25 @@ function displayResults() {
     setRating("protective", bestMatch.protective);
     setRating("independence", bestMatch.independence);
 
+    // Top 3 other matches
+        let top3Container = document.getElementById("top-3-container"); // A new container in your HTML for top 3 matches
+        let sortedBreeds = dogBreeds
+            .filter(breed => breed !== bestMatch) // Exclude the best match
+            .sort((a, b) => b.score - a.score) // Sort by score descending
+            .slice(0, 3); // Get the top 3
+
+        // Create cards for each top 3 breed
+        sortedBreeds.forEach(breed => {
+            let card = document.createElement("div");
+            card.classList.add("top-breed-card");
+            card.innerHTML = ` 
+                <div class="top-3-image"><img src="${breed.img}" alt="${breed.name}"></div>
+                <div class="top-3-description"><h3>${breed.name}</h3>
+                <p>${breed.shortDescription}</p></div>
+            `;  // Content in the top 3 breed card
+            top3Container.appendChild(card); // Show the card
+        });
+
     // function for paw in icon list
     function setRating(category, score) {
 
