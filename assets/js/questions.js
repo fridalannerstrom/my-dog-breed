@@ -606,6 +606,12 @@ export const questions = [
                     greatDane: 4,
                     pug: 5
                 }
+            },
+            option5: {
+                text: "None",
+                subtext: "No pets or children",
+                values: { // Does not affect dogs
+                }
             }
         }
     },
