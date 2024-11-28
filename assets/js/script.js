@@ -9,6 +9,7 @@ let result = document.getElementById("result");
 let nextButton = document.getElementById("next-button");
 let prevButton = document.getElementById("prev-button");
 let currentStep = 0;
+let recentResults = []; // Save the username and best match result
 
 // Remove intro when start quiz is clicked
 
@@ -174,6 +175,20 @@ let steps = document.querySelectorAll(".step"); // Gives a list over all steps a
 
 function displayResults() {
 
+    let nameInput = document.querySelector("input[type='text']"); // Get username from input
+    let userName = nameInput ? nameInput.value.trim() : "Anonymous"; // Set Anonymous if no name
+
+    let maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
+    let bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
+
+    // Add the user name and result to recentResults
+    recentResults.unshift({ user: userName, breed: bestMatch.name, breedImage: bestMatch.img, breedDescription: bestMatch.shortDescription });
+
+    // We only want the latest 3
+        if (recentResults.length > 3) {
+            recentResults.pop();
+        }
+
     let resultBreed = document.querySelector("#best-match-content h2"); // Get the breed H2 tag
     let resultBreedDescription = document.querySelector("#best-match-content p"); // Get the breed p tag
     let resultBreedSize = document.getElementById("size");
@@ -183,9 +198,6 @@ function displayResults() {
     let resultBreedLifespan = document.getElementById("lifespan");
     let resultBreedTemperament = document.getElementById("temperament");
     let imageContainer = document.getElementById("best-match-image"); // Get the image container
-
-    let maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
-    let bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
 
     // Create result content
     resultBreed.textContent = `${bestMatch.name}`;
@@ -226,6 +238,20 @@ function displayResults() {
             `;  // Content in the top 3 breed card
             top3Container.appendChild(card); // Show the card
         });
+
+       // Show result for other users
+       let recentResultsContainer = document.getElementById("recent-results-container"); // Skapa eller identifiera en behållare i HTML
+   
+       recentResults.forEach(result => {
+        let resultItem = document.createElement("div");
+        resultItem.classList.add("recent-result-item");
+        resultItem.innerHTML = ` 
+            <img src="${result.breedImage}" alt="${result.breed}">
+            <h3>${result.user} got a ${result.breed}</h3>
+            <p>${result.breedDescription}</p>
+        `;  // Content in the recent results card
+        recentResultsContainer.appendChild(resultItem);
+    });
 
     // function for paw in icon list
     function setRating(category, score) {
