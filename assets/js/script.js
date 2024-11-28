@@ -7,7 +7,6 @@ const quizContent = document.getElementById("quiz");
 const result = document.getElementById("result");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
-const recentResults = []; // Save the username and best match result
 const quizContainer = document.getElementById('questions-container');
 const alertMessage = document.getElementById("alert-container"); 
 
@@ -53,9 +52,6 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         subHeading.textContent = questionObj.subHeading; 
         questionDiv.appendChild(subHeading); 
     }
-
-    // Create a div for answers
-    const answersDiv = document.createElement('div');
 
     if (questionObj.type === "text") {
 
