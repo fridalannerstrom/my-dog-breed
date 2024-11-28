@@ -9,6 +9,7 @@ const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 const recentResults = []; // Save the username and best match result
 const quizContainer = document.getElementById('questions-container');
+const alertMessage = document.getElementById("alert-container"); 
 
 let currentStep = 0;
 
@@ -111,9 +112,9 @@ const steps = document.querySelectorAll(".step"); // Gives a list over all steps
 function calculatePoints() {
 
     try { // Give error if function does not work
-        const currentStepElement = steps[currentStep]; // Get the current step
-        const selectedOptions = currentStepElement.querySelectorAll("input:checked"); // Get the selected option for radio and checkbox
-        const textInputs = currentStepElement.querySelectorAll("input[type='text']"); // Get the value in text field
+        const currentStepElement = steps[currentStep]; 
+        const selectedOptions = currentStepElement.querySelectorAll("input:checked");
+        const textInputs = currentStepElement.querySelectorAll("input[type='text']"); 
 
         // Check it it's a text input
         if (textInputs.length > 0) {
@@ -121,7 +122,7 @@ function calculatePoints() {
             
             // Prevent progression if the username field is empty
             if (!nameInput.value.trim()) {
-                alert("Please enter your name.");
+                alertMessage.classList.remove("display-none");
                 return false;
             }
 
@@ -130,7 +131,7 @@ function calculatePoints() {
     }
 
         if (selectedOptions.length === 0) {
-            alert("Please select an option before proceeding."); 
+            alertMessage.classList.remove("display-none"); 
             return false; 
         }
     
@@ -149,7 +150,7 @@ function calculatePoints() {
         return true; // Return true to show that function worked and progress can go on
 
     } catch(err) {
-        alert("Woops! Something went wrong while calculating points. Please try again.");
+        console.log("Something went wrong")
         return false; // Prevent progress if an error occurred
     }
 }
@@ -159,6 +160,7 @@ nextButton.addEventListener("click", function () {
 
     if (currentStep < steps.length - 1) { // Checks if its not the last step
         if (calculatePoints()) { // Check that score has been calculated
+            alertMessage.classList.add("display-none");
             currentStep++; 
             showStep(currentStep); // Show next step
             }
