@@ -195,6 +195,10 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
     width: 1200px;
 }
 
+.best-match-container h2 {
+    margin-bottom: 0px;
+}
+
 #best-match-image {
     border: 1px solid red;
 }
@@ -252,6 +256,19 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 
 .remove-bullets {
     list-style-type: none;
+}
+
+.more-result-container {
+    border: 1px solid blue;
+    width: 49%;
+    padding: 0px;
+    text-align: left;
+    margin: 0px 5px;
+}
+
+#more-results {
+    flex-direction: row;
+    margin-top: 20px;
 }
 
 /* paw icon list */
