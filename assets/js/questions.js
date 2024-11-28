@@ -152,7 +152,7 @@ export const questions = [
         display: "inline",
         answers: {
             option1: {
-                text: "I’m completely new to dogs.",
+                text: "I’m completely new to dogs",
                 subtext: " I’ve never owned or interacted much with dogs before",
                 values: {
                     poodle: 2,
@@ -246,9 +246,11 @@ export const questions = [
     {
         question: "Do you have any experience training dogs?",
         type: "radio",
+        display: "inline",
         answers: {
             option1: {
-                text: "Extensive training I have trained dogs extensively, including advanced techniques and commands.",
+                text: "Extensive training",
+                subtext: "I have trained dogs extensively, with advanced commands",
                 values: {
                     labrador: 5, 
                     goldenRetriever: 5,
@@ -273,7 +275,8 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "Moderate training I have some experience training dogs and enjoy working on new skills.",
+                text: "Moderate training",
+                subtext: "I have some experience training dogs and enjoy working on new skills",
                 values: {
                     labrador: 4, 
                     goldenRetriever: 4,
@@ -298,7 +301,8 @@ export const questions = [
                 }
             },
             option3: {
-                text: "Basic training I have basic experience, such as teaching commands like 'sit' or 'stay.'",
+                text: "Basic training",
+                subtext: "I have basic experience, such as teaching commands like 'sit' or 'stay'",
                 values: {
                     labrador: 3, 
                     goldenRetriever: 4,
@@ -323,7 +327,8 @@ export const questions = [
                 }
             },
             option4: {
-                text: "No training I have no experience with dog training.",
+                text: "No training ",
+                subtext: "I have no experience with dog training",
                 values: {
                     labrador: 0, 
                     goldenRetriever: 0,
@@ -352,6 +357,7 @@ export const questions = [
     {
         question: "How much time can you dedicate to grooming?",
         type: "radio",
+        display: "block",
         answers: {
             option1: {
                 text: "I don’t mind regular brushing and care.",
