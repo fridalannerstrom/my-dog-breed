@@ -65,7 +65,14 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         input.type = 'text';
         input.id = `text-${questionIndex}`;
         input.placeholder = questionObj.placeholder;
+
+        const label = document.createElement('label');
+        label.setAttribute('for', `text-${questionIndex}`);
+        label.classList.add(`display-none`); // Add a class for styling
+
         questionDiv.appendChild(input);
+        questionDiv.appendChild(label);
+
     } else if (questionObj.type === "radio" || questionObj.type === "checkbox") {
         // Create radio and checkboxes
         const answers = questionObj.answers;
