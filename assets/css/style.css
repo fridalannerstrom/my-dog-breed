@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     background: #F6EDE1;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
@@ -24,7 +24,7 @@ body {
 
 .main-content {
     background: #F6EDE1;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
@@ -37,6 +37,15 @@ body {
 
 .display-none {
     display: none;
+}
+
+.main-width {
+    width: 100%;
+    max-width: 1300px;
+}
+
+.remove-bullets {
+    list-style-type: none;
 }
 
 /* Headings and text */
@@ -79,11 +88,18 @@ h2 {
     font-size: 1.1rem;
 }
 
+.subtext {
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 19px;
+    margin-top: 5px;
+}
+
 /* Buttons */
 
 .dark-button {
     color: white;
-    background-color: #3F322A; 
+    background-color: #3F322A;
     padding: 20px;
     border-radius: 100px;
     text-decoration: none;
@@ -91,7 +107,7 @@ h2 {
 
 .dark-button:hover {
     color: white;
-    background-color: #5E5047; 
+    background-color: #5E5047;
     padding: 20px;
     border-radius: 100px;
     text-decoration: none;
@@ -105,7 +121,7 @@ h2 {
 
 .dog-image-container {
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     margin-bottom: 20px;
 }
@@ -117,11 +133,13 @@ h2 {
 /* Quiz */
 
 .step {
-    display: none; /* Hide all steps by default */
+    display: none;
+    /* Hide all steps by default */
 }
 
 .step.active {
-    display: block; /* Show only the active step */
+    display: block;
+    /* Show only the active step */
 }
 
 /* Inputs */
@@ -135,45 +153,39 @@ input[type="text"] {
 }
 
 input[type="radio"] {
-    display: none; 
+    display: none;
 }
 
 label {
     background-color: white;
-    padding: 15px 20px; 
+    padding: 15px 20px;
     border-radius: 10px;
     border: 2px solid white;
-    margin: 10px 0; 
-    cursor: pointer; 
-    text-align: center; 
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: center;
 }
 
 input[type="checkbox"] {
-    display: none; 
+    display: none;
 }
 
 .block {
-    display: block; 
+    display: block;
 }
 
 .inline {
-    display: inline-block; 
+    display: inline-block;
     font-weight: 600;
     max-width: 300px;
     margin: 5px 5px;
     padding: 30px;
 }
 
-input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
+input[type="radio"]:checked+label,
+input[type="checkbox"]:checked+label {
     border-color: #3F322A;
     background-color: #F5F5F5;
-}
-
-.subtext {
-    font-weight: 400;
-    font-size: 0.8rem;
-    line-height: 19px;
-    margin-top: 5px;
 }
 
 .answer-image {
@@ -182,12 +194,9 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
     margin-bottom: 10px;
 }
 
-.main-width {
-    width: 100%;
-    max-width: 1300px;
-}
+/* Results */
 
-/* results */
+/* Best match */
 
 .best-match-container {
     background-color: white;
@@ -198,9 +207,6 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 
 .best-match-container h2 {
     margin-bottom: 0px;
-}
-
-#best-match-image {
 }
 
 #best-match-image img {
@@ -221,15 +227,6 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
     text-align: left;
 }
 
-#best-match-list {
-    border: 1px solid #FCDCB2;
-    border-radius: 10px;
-    padding: 30px;
-    min-width: 300px;
-    width: 35%;
-    font-size: 1rem;
-}
-
 #list-objects {
     width: 50%;
 }
@@ -239,7 +236,8 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
     width: 50%;
 }
 
-#list-icons li, #list-objects li {
+#list-icons li,
+#list-objects li {
     margin-bottom: 10px;
 }
 
@@ -253,9 +251,7 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
     margin: 10px 0px;
 }
 
-.remove-bullets {
-    list-style-type: none;
-}
+/* Top 3 dog breeds and friends dog breeds */
 
 .more-result-container {
     width: 49%;
@@ -310,6 +306,8 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 #dog-image-container-404 img {
     width: 50%;
 }
+
+/* Responsive */
 
 /* Laptop */
 
@@ -420,7 +418,7 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 
     .main-content {
         background: #F6EDE1;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
         text-align: center;
         flex-direction: column;
@@ -436,9 +434,9 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
     h2 {
         font-size: 2rem;
     }
-    
+
     .inline {
-        display: block; 
+        display: block;
         min-width: 100%;
         margin: 10px 0px;
         font-size: 0.9rem;
@@ -459,34 +457,34 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 
 }
 
-    /* Very small mobile */
+/* Very small mobile */
 
-    @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
 
 
-        h1 {
-            font-size: 2rem;
-        }
+    h1 {
+        font-size: 2rem;
+    }
 
-        #list-objects li {
-            font-size: 0.8rem;
-        }
+    #list-objects li {
+        font-size: 0.8rem;
+    }
 
-        #list-icons li {
-            font-size: 0.8rem;
-        }
-    
-        .top-breed-card {
-            display: block;
-        }
-      }
+    #list-icons li {
+        font-size: 0.8rem;
+    }
 
-          /* remove list on extra small screen */
+    .top-breed-card {
+        display: block;
+    }
+}
 
-    @media only screen and (max-width: 370px) {
+/* remove list on extra small screen */
 
-        #best-match-list {
-           display: none;
-        }
-    
-      }
+@media only screen and (max-width: 370px) {
+
+    #best-match-list {
+        display: none;
+    }
+
+}
