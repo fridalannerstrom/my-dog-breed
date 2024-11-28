@@ -244,11 +244,11 @@ function displayResults() {
    
        recentResults.forEach(result => {
         let resultItem = document.createElement("div");
-        resultItem.classList.add("recent-result-item");
+        resultItem.classList.add("top-breed-card");
         resultItem.innerHTML = ` 
-            <img src="${result.breedImage}" alt="${result.breed}">
-            <h3>${result.user} got a ${result.breed}</h3>
-            <p>${result.breedDescription}</p>
+            <div class="top-3-image"><img src="${result.breedImage}" alt="${result.breed}"></div>
+            <div class="top-3-description"><h3>${result.user} got a ${result.breed}</h3>
+            <p>${result.breedDescription}</p></div>
         `;  // Content in the recent results card
         recentResultsContainer.appendChild(resultItem);
     });
