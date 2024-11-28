@@ -42,132 +42,135 @@
 <body>
 
     <!-- Introduction -->
+    <main>
 
-    <div class="main-content flex" id="intro">
-        <div class="dog-image-container">
-            <img src="assets/images/great-dane.webp" alt="An illustration of a Great Dane">
-            <img src="assets/images/dog-chi.webp" alt="An illustration of a Chihuahua">
-            <img src="assets/images/dog-doodle.webp" alt="An illustration of a Old English Sheepdog">
-            <img src="assets/images/dog-bulldog.webp" alt="An illustration of a Bulldog">
-            <img src="assets/images/dog-cocker.webp" alt="An illustration of a Cocker Spaniel">
-        </div>
-        <h1>Find your ideal dog breed</h1>
-        <p class="basic-text">Take our quiz to discover the perfect dog breed for you, tailored to your lifestyle and personality. 
-            Proudly developed by <a href="https://fridalannerstrom.github.io/dogsitter/" target="_blank" class="link">Sunne Dogcare</a> 
-            to help you find your ideal furry companion.</p>
-        <a class="dark-button" id="start-button">Start Quiz</a>
-    </div>
+        <section class="main-content flex" id="intro">
+            <div class="dog-image-container">
+                <img src="assets/images/great-dane.webp" alt="An illustration of a Great Dane">
+                <img src="assets/images/dog-chi.webp" alt="An illustration of a Chihuahua">
+                <img src="assets/images/dog-doodle.webp" alt="An illustration of a Old English Sheepdog">
+                <img src="assets/images/dog-bulldog.webp" alt="An illustration of a Bulldog">
+                <img src="assets/images/dog-cocker.webp" alt="An illustration of a Cocker Spaniel">
+            </div>
+            <h1>Find your ideal dog breed</h1>
+            <p class="basic-text">Take our quiz to discover the perfect dog breed for you, tailored to your lifestyle and personality. 
+                Proudly developed by <a href="https://fridalannerstrom.github.io/dogsitter/" target="_blank" class="link">Sunne Dogcare</a> 
+                to help you find your ideal furry companion.</p>
+            <a class="dark-button" id="start-button" aria-label="Start the quiz">Start Quiz</a>
+        </section>
 
-    <!-- Quiz -->
+        <!-- Quiz -->
 
-    <div class="main-content flex display-none" id="quiz">
-        <div id="questions-container"></div>
+        <section class="main-content flex display-none" id="quiz">
+            <div id="questions-container"></div>
 
-        <!-- Navigation Buttons -->
+            <!-- Navigation Buttons -->
 
-        <div class="navigation">
-            <a class="dark-button" id="prev-button" style="display: none;">Previous</a>
-            <a class="dark-button" id="next-button">Next</a>
-        </div>
-
-    </div>
-
-    <!-- Result -->
-
-    <div class="main-content main-width display-none" id="result">
-        <p class="subheading">Your best match</p>
-
-        <!-- Best match content -->
-
-        <div class="best-match-container flex main-width">
-            <div id="best-match-image"></div>
-            <div id="best-match-content">
-                <h2>Breed Name</h2>
-                <p class="result-text"></p>
-                <ul class="remove-bullets">
-                    <li id="size"></li>
-                    <li id="weight"></li>
-                    <li id="height"></li>
-                    <li id="coat"></li>
-                    <li id="lifespan"></li>
-                    <li id="temperament"></li>
-                </ul>
+            <div class="navigation">
+                <a class="dark-button" id="prev-button" style="display: none;">Previous</a>
+                <a class="dark-button" id="next-button">Next</a>
             </div>
 
-            <!-- Best match icon list -->
+        </section>
 
-            <div id="best-match-list" class="flex">
-                <div id="list-objects">
+        <!-- Result -->
+
+        <section class="main-content main-width display-none" id="result">
+            <p class="subheading">Your best match</p>
+
+            <!-- Best match content -->
+
+            <div class="best-match-container flex main-width">
+                <div id="best-match-image"></div>
+                <div id="best-match-content">
+                    <h2>Breed Name</h2>
+                    <p class="result-text"></p>
                     <ul class="remove-bullets">
-                        <li>Activity</li>
-                        <li>Trainability</li>
-                        <li>Friendliness</li>
-                        <li>Grooming</li>
-                        <li>Shedding</li>
-                        <li>Barking</li>
-                        <li>Protective</li>
-                        <li>Independence</li>
+                        <li id="size"></li>
+                        <li id="weight"></li>
+                        <li id="height"></li>
+                        <li id="coat"></li>
+                        <li id="lifespan"></li>
+                        <li id="temperament"></li>
                     </ul>
                 </div>
-                <div id="list-icons">
-                    <ul class="remove-bullets">
-                        <li id="activity"><i data-index="1" class="fa-solid fa-paw full"></i><i data-index="2"
-                                class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
-                                data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
-                                class="fa-solid fa-paw"></i></li>
-                        <li id="trainability"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
-                                class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
-                                data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
-                                class="fa-solid fa-paw"></i></li>
-                        <li id="friendliness"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
-                                class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
-                                data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
-                                class="fa-solid fa-paw"></i></li>
-                        <li id="grooming"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
-                                class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
-                                data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
-                                class="fa-solid fa-paw"></i></li>
-                        <li id="shedding"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
-                                class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
-                                data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
-                                class="fa-solid fa-paw"></i></li>
-                        <li id="barking"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
-                                class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
-                                data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
-                                class="fa-solid fa-paw"></i></li>
-                        <li id="protective"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
-                                class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
-                                data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
-                                class="fa-solid fa-paw"></i></li>
-                        <li id="independence"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
-                                class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
-                                data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
-                                class="fa-solid fa-paw"></i></li>
-                    </ul>
+
+                <!-- Best match icon list -->
+
+                <div id="best-match-list" class="flex">
+                    <div id="list-objects">
+                        <ul class="remove-bullets">
+                            <li>Activity</li>
+                            <li>Trainability</li>
+                            <li>Friendliness</li>
+                            <li>Grooming</li>
+                            <li>Shedding</li>
+                            <li>Barking</li>
+                            <li>Protective</li>
+                            <li>Independence</li>
+                        </ul>
+                    </div>
+                    <div id="list-icons">
+                        <ul class="remove-bullets">
+                            <li id="activity"><i data-index="1" class="fa-solid fa-paw full"></i><i data-index="2"
+                                    class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
+                                    data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
+                                    class="fa-solid fa-paw"></i></li>
+                            <li id="trainability"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
+                                    class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
+                                    data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
+                                    class="fa-solid fa-paw"></i></li>
+                            <li id="friendliness"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
+                                    class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
+                                    data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
+                                    class="fa-solid fa-paw"></i></li>
+                            <li id="grooming"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
+                                    class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
+                                    data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
+                                    class="fa-solid fa-paw"></i></li>
+                            <li id="shedding"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
+                                    class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
+                                    data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
+                                    class="fa-solid fa-paw"></i></li>
+                            <li id="barking"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
+                                    class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
+                                    data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
+                                    class="fa-solid fa-paw"></i></li>
+                            <li id="protective"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
+                                    class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
+                                    data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
+                                    class="fa-solid fa-paw"></i></li>
+                            <li id="independence"><i data-index="1" class="fa-solid fa-paw"></i><i data-index="2"
+                                    class="fa-solid fa-paw"></i><i data-index="3" class="fa-solid fa-paw"></i><i
+                                    data-index="4" class="fa-solid fa-paw"></i><i data-index="5"
+                                    class="fa-solid fa-paw"></i></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Top 3 result content -->
+            <!-- Top 3 result content -->
 
-        <div class="flex main-width" id="more-results">
-            <div class="more-result-container">
-                <p class="subheading">Other breeds that also might suit you...</p>
-                <div id="top-3-container"></div>
+            <div class="flex main-width" id="more-results">
+                <div class="more-result-container">
+                    <p class="subheading">Other breeds that also might suit you...</p>
+                    <div id="top-3-container"></div>
+                </div>
+
+                <!-- Frients result content -->            
+
+                <div class="more-result-container">
+                    <p class="subheading">Your friends results</p>
+                    <div id="recent-results-container"></div>
+                </div>
             </div>
 
-            <!-- Frients result content -->            
-
-            <div class="more-result-container">
-                <p class="subheading">Your friends results</p>
-                <div id="recent-results-container"></div>
+             <!-- Redo quiz button -->
+            <div class="flex main-width main-content" id="redo-button">
+                <a class="dark-button" href="index.html">Redo quiz</a>
             </div>
-
-        <!-- Redo quiz button -->
-
-        </div>
-        <div class="flex main-width main-content" id="redo-button"><a class="dark-button" href="index.html">Redo quiz</a></div>
-    </div>
+        </section>
+    </main>
 
     <!-- Scripts -->
 
