@@ -522,9 +522,11 @@ export const questions = [
         question: "Do you have children or other pets at home?",
         type: "checkbox",
         subHeading: "Feel free to choose multiple options",
+        display: "inline",
         answers: {
             option1: {
-                text: "Young children Up to 10 years old",
+                text: "Young children",
+                subtext: " Up to 10 years old",
                 values: {
                     labrador: 3, 
                     goldenRetriever: 3,
@@ -549,12 +551,14 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "Teenagers 11-18 years old", // Teenagers does not matter
-                values: {
+                text: "Teenagers",
+                subtext: "11-18 years old",
+                values: {  // Teenagers does not matter for current dog breeds
                 }
             },
             option3: {
-                text: "Other dogs Other dogs at home",
+                text: "Other dogs",
+                subtext: "Other dogs at home",
                 values: {
                     labrador: 5, 
                     goldenRetriever: 5,
@@ -579,7 +583,8 @@ export const questions = [
                 }
             },
             option4: {
-                text: "Other pets Cats and/or other",
+                text: "Other pets",
+                subtext: "Cats and/or other",
                 values: {
                     labrador: 5, 
                     goldenRetriever: 5,
@@ -609,6 +614,7 @@ export const questions = [
         question: "What is important to you in a dog?",
         type: "checkbox",
         subHeading: "Feel free to choose multiple options",
+        display: "inline",
         answers: {
             option1: {
                 text: "Being loyal and protective",
