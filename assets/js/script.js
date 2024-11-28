@@ -16,7 +16,7 @@ let currentStep = 0;
 // Handle the transition from intro to quiz
 startButton.addEventListener("click", function () {
 
-    intro.classList.add("display-none"); 
+    introContent.classList.add("display-none"); 
     quizContent.classList.remove("display-none"); 
 
 });
@@ -93,7 +93,7 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
             label.setAttribute('for', `${key}-${questionIndex}`);
             label.classList.add(`${display}`); // 
             label.innerHTML = `
-                ${answer.image ? `<img src="${answer.image}" alt="" class="answer-image"><br>` : ''}
+                ${answer.image ? (`<img src="${answer.image}" alt="" class="answer-image"><br>`) : ''}
                 ${answer.text}
                 ${answer.subtext ? `<br><p class="subtext">${answer.subtext}</p>` : ''}`; // Add image and subtext if needed
 
@@ -165,7 +165,7 @@ nextButton.addEventListener("click", function () {
             showStep(currentStep); // Show next step
             }
         } else {
-            quiz.classList.add("display-none"); // Quiz is done, hide quiz
+            quizContent.classList.add("display-none"); // Quiz is done, hide quiz
             result.classList.remove("display-none"); // Remove class to show how result
             displayResults()
         }
@@ -175,6 +175,7 @@ nextButton.addEventListener("click", function () {
 // Function for prev button
 prevButton.addEventListener("click", function () {
     if (currentStep > 0) { // Checks if its not the first step
+        alertMessage.classList.add("display-none");
         currentStep--; 
         showStep(currentStep); // Show prev step
     }
