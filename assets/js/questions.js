@@ -3,7 +3,7 @@ export const questions = [
         question: "What's your name?",
         type: "text",
         placeholder: "Enter your name",
-    },  /*
+    },  
     {
         question: "How big is your living space?",
         type: "radio",
@@ -1285,5 +1285,5 @@ export const questions = [
                 }
             }
         }
-    } */
+    } 
 ]

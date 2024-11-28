@@ -2,14 +2,15 @@
 import { dogBreeds } from './dogData.js'; 
 import { questions } from './questions.js'; 
 
-let startButton = document.getElementById("start-button");
-let introContent = document.getElementById("intro");
-let quizContent = document.getElementById("quiz");
-let result = document.getElementById("result");
-let nextButton = document.getElementById("next-button");
-let prevButton = document.getElementById("prev-button");
+const startButton = document.getElementById("start-button");
+const introContent = document.getElementById("intro");
+const quizContent = document.getElementById("quiz");
+const result = document.getElementById("result");
+const nextButton = document.getElementById("next-button");
+const prevButton = document.getElementById("prev-button");
+const recentResults = []; // Save the username and best match result
+
 let currentStep = 0;
-let recentResults = []; // Save the username and best match result
 
 // Remove intro when start quiz is clicked
 
@@ -105,15 +106,15 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
 
 });
 
-let steps = document.querySelectorAll(".step"); // Gives a list over all steps after they have been created
+const steps = document.querySelectorAll(".step"); // Gives a list over all steps after they have been created
 
     //function for counting points
 
 function calculatePoints() {
         try {
-            let currentStepElement = steps[currentStep]; // Get the current step
-            let selectedOptions = currentStepElement.querySelectorAll("input:checked"); // Get the selected option
-            let textInputs = currentStepElement.querySelectorAll("input[type='text']");
+            const currentStepElement = steps[currentStep]; // Get the current step
+            const selectedOptions = currentStepElement.querySelectorAll("input:checked"); // Get the selected option
+            const textInputs = currentStepElement.querySelectorAll("input[type='text']");
 
             // Check it it's a text input
             if (textInputs.length > 0) {
@@ -187,11 +188,11 @@ function displayResults() {
     // Load recent results from localStorage if available
     let recentResults = JSON.parse(localStorage.getItem("recentResults")) || [];
 
-    let nameInput = document.querySelector("input[type='text']"); // Get username from input
-    let userName = nameInput ? nameInput.value.trim() : "Anonymous"; // Set Anonymous if no name
+    const nameInput = document.querySelector("input[type='text']"); // Get username from input
+    const userName = nameInput ? nameInput.value.trim() : "Anonymous"; // Set Anonymous if no name
 
-    let maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
-    let bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
+    const maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
+    const bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
 
     // Add the user name and result to recentResults
     recentResults.unshift({ user: userName, breed: bestMatch.name, breedImage: bestMatch.img, breedDescription: bestMatch.shortDescription });
@@ -201,15 +202,15 @@ function displayResults() {
             recentResults.pop();
         }
 
-    let resultBreed = document.querySelector("#best-match-content h2"); // Get the breed H2 tag
-    let resultBreedDescription = document.querySelector("#best-match-content p"); // Get the breed p tag
-    let resultBreedSize = document.getElementById("size");
-    let resultBreedWeight = document.getElementById("weight");
-    let resultBreedHeight = document.getElementById("height");
-    let resultBreedCoat = document.getElementById("coat");
-    let resultBreedLifespan = document.getElementById("lifespan");
-    let resultBreedTemperament = document.getElementById("temperament");
-    let imageContainer = document.getElementById("best-match-image"); // Get the image container
+    const resultBreed = document.querySelector("#best-match-content h2"); // Get the breed H2 tag
+    const resultBreedDescription = document.querySelector("#best-match-content p"); // Get the breed p tag
+    const resultBreedSize = document.getElementById("size");
+    const resultBreedWeight = document.getElementById("weight");
+    const resultBreedHeight = document.getElementById("height");
+    const resultBreedCoat = document.getElementById("coat");
+    const resultBreedLifespan = document.getElementById("lifespan");
+    const resultBreedTemperament = document.getElementById("temperament");
+    const imageContainer = document.getElementById("best-match-image"); // Get the image container
 
     // Create result content
     resultBreed.textContent = `${bestMatch.name}`;
@@ -234,14 +235,14 @@ function displayResults() {
 
     // Top 3 other matches
         let top3Container = document.getElementById("top-3-container"); // A new container in your HTML for top 3 matches
-        let sortedBreeds = dogBreeds
+        const sortedBreeds = dogBreeds
             .filter(breed => breed !== bestMatch) // Exclude the best match
             .sort((a, b) => b.score - a.score) // Sort by score descending
             .slice(0, 3); // Get the top 3
 
         // Create cards for each top 3 breed
         sortedBreeds.forEach(breed => {
-            let card = document.createElement("div");
+            const card = document.createElement("div");
             card.classList.add("top-breed-card");
             card.innerHTML = ` 
                 <div class="top-3-image"><img src="${breed.img}" alt="${breed.name}"></div>
@@ -262,7 +263,7 @@ function displayResults() {
 
         // Loop through and add each result
         recentResults.forEach(result => {
-        let resultItem = document.createElement("div");
+        const resultItem = document.createElement("div");
         resultItem.classList.add("top-breed-card");
         resultItem.innerHTML = ` 
             <div class="top-3-image"><img src="${result.breedImage}" alt="${result.breed}"></div>
