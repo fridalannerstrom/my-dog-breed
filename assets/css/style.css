@@ -124,10 +124,6 @@ h2 {
     display: block; /* Show only the active step */
 }
 
-#questions-container {
-    border: 1px solid red;
-}
-
 /* Inputs */
 
 input[type="text"] {
@@ -147,7 +143,7 @@ label {
     padding: 15px 20px; 
     border-radius: 10px;
     border: 2px solid white;
-    margin: 5px 0; 
+    margin: 10px 0; 
     cursor: pointer; 
     text-align: center; 
 }
@@ -203,7 +199,6 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 }
 
 #best-match-image {
-    border: 1px solid red;
 }
 
 #best-match-image img {
@@ -211,7 +206,6 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 }
 
 #best-match-content {
-    border: 1px solid rgb(41, 5, 241);
     text-align: left;
     padding: 0px 30px;
     width: 65%;
@@ -233,13 +227,11 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 }
 
 #list-objects {
-    border: 1px solid green;
     width: 50%;
 }
 
 #list-icons {
     text-align: right;
-    border: 1px solid green;
     width: 50%;
 }
 
@@ -262,7 +254,6 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 }
 
 .more-result-container {
-    border: 1px solid blue;
     width: 49%;
     padding: 0px;
     text-align: left;
@@ -284,7 +275,6 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 }
 
 .top-3-image {
-    border: 1px solid green;
     margin-right: 20px;
 }
 
@@ -300,7 +290,6 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 #recent-results-container {
     overflow: visible !important;
     max-height: none !important;
-    border: 1px solid yellow;
 }
 
 /* paw icon list */
@@ -358,5 +347,4 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
         flex-direction: column;
         padding: 30px;
     }
-
   }
