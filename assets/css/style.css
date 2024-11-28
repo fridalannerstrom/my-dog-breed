@@ -305,6 +305,12 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
     opacity: 1;
 }
 
+/* 404 */
+
+#dog-image-container-404 img {
+    width: 50%;
+}
+
 /* Laptop */
 
 @media only screen and (max-width: 1200px) {
