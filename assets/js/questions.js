@@ -167,7 +167,8 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "I’ve been around dogs casually. I’ve interacted with dogs but never had one of my own.",
+                text: "I’ve been around dogs",
+                subtext: "I’ve interacted with dogs but never had one of my own",
                 values: {
                     labrador: 1, 
                     goldenRetriever: 2,
@@ -189,7 +190,8 @@ export const questions = [
                 }
             },
             option3: {
-                text: "I’ve owned a dog before. I’ve had a dog and know the basics of dog care and training.",
+                text: "I’ve owned a dog before",
+                subtext: "I’ve had a dog and know the basics of dog care and training",
                 values: {
                     labrador: 3, 
                     goldenRetriever: 4,
@@ -214,7 +216,8 @@ export const questions = [
                 }
             },
             option4: {
-                text: "I’m experienced with dogs. I’ve owned and trained multiple dogs and feel confident in my skills.",
+                text: "I’m experienced with dogs",
+                subtext: "I’ve owned and trained multiple dogs and feel confident in my skills.",
                 values: {
                     labrador: 10, 
                     goldenRetriever: 5,
