@@ -1,7 +1,6 @@
 import { dogBreeds } from './dogData.js'; // Import list of dog breed objects with metadata
 import { questions } from './questions.js'; // Import list of questions objects with answer options and metadata
 
-// Set global variables
 const startButton = document.getElementById("start-button");
 const introContent = document.getElementById("intro");
 const quizContent = document.getElementById("quiz");
@@ -9,10 +8,11 @@ const result = document.getElementById("result");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 const recentResults = []; // Save the username and best match result
+const quizContainer = document.getElementById('questions-container');
 
 let currentStep = 0;
 
-// Remove intro when start quiz is clicked
+// Handle the transition from intro to quiz
 startButton.addEventListener("click", function () {
 
     intro.classList.add("display-none"); 
@@ -20,31 +20,29 @@ startButton.addEventListener("click", function () {
 
 });
 
-// Add and remove active class to steps to create multi step form
+// Update the active step and handle navigation button visibility
 function showStep(stepIndex) { 
-    steps.forEach((step, index) => { // forEach goes through each step, index shows number for relevant step
+    steps.forEach((step, index) => { 
         if (index === stepIndex) {
-            step.classList.add("active"); // adds active class to current step
+            step.classList.add("active"); 
         } else {
-            step.classList.remove("active"); // removes active class from non current step
+            step.classList.remove("active"); 
         }
     });
 
-    // Hide and show navigation buttons from first and last step
     prevButton.style.display = stepIndex === 0 ? "none" : "inline-block"; 
     nextButton.textContent = stepIndex === steps.length - 1 ? "Submit" : "Next"; 
 }
 
-// Generate questions in HTML 
-const quizContainer = document.getElementById('questions-container');
+// Generate HTML for quiz questions dynamically based on the `questions` array
 
 questions.forEach((questionObj, questionIndex) => { // Looping through all the questions and giving it an index
     const questionDiv = document.createElement('div'); 
     questionDiv.classList.add('step'); 
     if (questionIndex === 0) questionDiv.classList.add('active'); 
 
-    const questionHeading = document.createElement('h2'); // Create a heading for the question
-    questionHeading.textContent = questionObj.question; // Getting the question from the question object
+    const questionHeading = document.createElement('h2'); 
+    questionHeading.textContent = questionObj.question; 
     questionDiv.appendChild(questionHeading); 
 
     // Add sub heading if needed
@@ -120,9 +118,10 @@ function calculatePoints() {
         // Check it it's a text input
         if (textInputs.length > 0) {
             const nameInput = textInputs[0]; // We only need 1 text input
-
+            
+            // Prevent progression if the username field is empty
             if (!nameInput.value.trim()) {
-                alert("Please enter your name."); // Alert if no name has been entered
+                alert("Please enter your name.");
                 return false;
             }
 
@@ -131,8 +130,8 @@ function calculatePoints() {
     }
 
         if (selectedOptions.length === 0) {
-            alert("Please select an option before proceeding."); // Warning if nothing has been selected
-            return false; // Stop function 
+            alert("Please select an option before proceeding."); 
+            return false; 
         }
     
         // Go through all options
@@ -185,14 +184,16 @@ showStep(currentStep);
 
 // Function for showing the results
 function displayResults() {
+    // Load recent results from localStorage if available
+    let recentResults = JSON.parse(localStorage.getItem("recentResults")) || []; 
 
-    let recentResults = JSON.parse(localStorage.getItem("recentResults")) || []; // Load recent results from localStorage if available
+    // Get username from input
+    const nameInput = document.querySelector("input[type='text']"); 
+    const userName = nameInput ? nameInput.value.trim() : "Anonymous"; 
 
-    const nameInput = document.querySelector("input[type='text']"); // Get username from input
-    const userName = nameInput ? nameInput.value.trim() : "Anonymous"; // Set Anonymous if no name
-
-    const maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
-    const bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
+    // Find the best match
+    const maxScore = Math.max(...dogBreeds.map(breed => breed.score)); 
+    const bestMatch = dogBreeds.find(breed => breed.score === maxScore); 
 
     // Add the user name and result to recentResults       
     recentResults.unshift({ 
