@@ -297,6 +297,12 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
     font-size: 0.8rem;
 }
 
+#recent-results-container {
+    overflow: visible !important;
+    max-height: none !important;
+    border: 1px solid yellow;
+}
+
 /* paw icon list */
 
 .fa-paw {

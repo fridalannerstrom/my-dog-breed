@@ -175,6 +175,9 @@ let steps = document.querySelectorAll(".step"); // Gives a list over all steps a
 
 function displayResults() {
 
+    // Load recent results from localStorage if available
+    let recentResults = JSON.parse(localStorage.getItem("recentResults")) || [];
+
     let nameInput = document.querySelector("input[type='text']"); // Get username from input
     let userName = nameInput ? nameInput.value.trim() : "Anonymous"; // Set Anonymous if no name
 
@@ -239,17 +242,24 @@ function displayResults() {
             top3Container.appendChild(card); // Show the card
         });
 
-       // Show result for other users
-       let recentResultsContainer = document.getElementById("recent-results-container"); // Skapa eller identifiera en behållare i HTML
-   
-       recentResults.forEach(result => {
+        // Save recent results to localStorage
+        localStorage.setItem("recentResults", JSON.stringify(recentResults));
+
+        // Show result for other users
+        let recentResultsContainer = document.getElementById("recent-results-container"); 
+
+        // Clear previous results to avoid duplication
+        recentResultsContainer.innerHTML = "";
+
+        // Loop through and add each result
+        recentResults.forEach(result => {
         let resultItem = document.createElement("div");
         resultItem.classList.add("top-breed-card");
         resultItem.innerHTML = ` 
             <div class="top-3-image"><img src="${result.breedImage}" alt="${result.breed}"></div>
             <div class="top-3-description"><h3>${result.user} got a ${result.breed}</h3>
             <p>${result.breedDescription}</p></div>
-        `;  // Content in the recent results card
+            `;
         recentResultsContainer.appendChild(resultItem);
     });
 
@@ -266,5 +276,4 @@ function displayResults() {
             }
         });
     }
-
 }
