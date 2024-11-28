@@ -725,6 +725,7 @@ export const questions = [
     {
         question: "How do you feel about barking and whining?",
         type: "radio",
+        display: "block",
         answers: {
             option1: {
                 text: "I’m fine with a dog that 'talks' a lot. Barking and whining don’t bother me", // No preference
@@ -786,10 +787,13 @@ export const questions = [
     {
         question: "What sizes of dog are you comfortable with?",
         type: "checkbox",
+        display: "inline",
         subHeading: "Feel free to choose multiple options",
         answers: {
             option1: {
-                text: "Small Up to 10 kg",
+                text: "Small",
+                subtext: "Up to 10 kg",
+                image: "assets/images/maltese.webp",
                 values: {
                     labrador: 0,
                     goldenRetriever: 0,
@@ -814,7 +818,9 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "Medium 10–25 kg",
+                text: "Medium",
+                subtext: "10–25 kg",
+                image: "assets/images/shepherd.webp",
                 values: {
                     labrador: 0,
                     goldenRetriever: 0,
@@ -839,7 +845,9 @@ export const questions = [
                 }
             },
             option3: {
-                text: "Large 25–45 kg",
+                text: "Large",
+                subtext: "25–45 kg",
+                image: "assets/images/dog-labrador.webp",
                 values: {
                     labrador: 200,
                     goldenRetriever: 200,
@@ -864,7 +872,9 @@ export const questions = [
                 }
             },
             option4: {
-                text: "Extra Large over 45 kg",
+                text: "Extra Large",
+                subtext: "Over 45 kg",
+                image: "assets/images/great-dane.webp",
                 values: {
                     labrador: 0,
                     goldenRetriever: 0,
@@ -893,9 +903,11 @@ export const questions = [
     {
         question: "What’s your ideal activity level on weekends?",
         type: "radio",
+        display: "inline",
         answers: {
             option1: {
-                text: "Hiking or other physical activities I enjoy spending my weekends being active outdoors.",
+                text: "Hiking or other activity",
+                subtext: "I enjoy spending my weekends being active outdoors",
                 values: {
                     labrador: 10,
                     goldenRetriever: 10,
@@ -920,7 +932,8 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "Gardening or a long walk I like moderate activities that allow me to unwind while staying active.",
+                text: "Gardening or a long walk",
+                subtext: "I like moderate activities that allow me to unwind while staying active",
                 values: {
                     labrador: 5,
                     goldenRetriever: 5,
@@ -945,7 +958,8 @@ export const questions = [
                 }
             },
             option3: {
-                text: "Family activities and errands My weekends are busy with family commitments and household errands.",
+                text: "Family activities",
+                subtext: "My weekends are busy with family commitments and errands",
                 values: {
                     labrador: 3,
                     goldenRetriever: 3,
@@ -970,7 +984,8 @@ export const questions = [
                 }
             },
             option4: {
-                text: "Relaxing at home and reading a book I prefer a quiet and calm weekend to recharge.",
+                text: "Relaxing at home",
+                subtext: "I prefer a quiet and calm weekend to recharge",
                 values: {
                     labrador: -50,
                     goldenRetriever: -50,
@@ -999,9 +1014,10 @@ export const questions = [
     {
         question: "How important is your dog’s independence?",
         type: "radio",
+        display: "block",
         answers: {
             option1: {
-                text: "I want a dog that is very attached to me and loves being close.",
+                text: "I want a dog that is very attached to me and loves being close",
                 values: {
                     labrador: 5,
                     goldenRetriever: 5,
@@ -1026,7 +1042,7 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "I want a balanced dog – not too dependent, not too independent.",
+                text: "I want a balanced dog – not too dependent, not too independent",
                 values: {
                     labrador: 3,
                     goldenRetriever: 3,
@@ -1051,7 +1067,7 @@ export const questions = [
                 }
             },
             option3: {
-                text: "I prefer a dog that is independent and can handle being alone well.",
+                text: "I prefer a dog that is independent and can handle being alone well",
                 values: {
                     labrador: -10,
                     goldenRetriever: -10,
@@ -1080,9 +1096,11 @@ export const questions = [
     {
         question: "How important is obedience and trainability to you?",
         type: "radio",
+        display: "inline",
         answers: {
             option1: {
-                text: "Very important – I want to train my dog to be highly obedient.",
+                text: "Very important",
+                subtext: "I want my dog to be very obedient",
                 values: {
                     labrador: 5,
                     goldenRetriever: 5,
@@ -1107,7 +1125,8 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "Somewhat important – I want it to follow basic commands.",
+                text: "Somewhat important",
+                subtext: "I want it to follow basic commands",
                 values: {
                     labrador: 5,
                     goldenRetriever: 5,
@@ -1132,7 +1151,8 @@ export const questions = [
                 }
             },
             option3: {
-                text: "Not very important – I can handle a more stubborn dog.",
+                text: "Not very important",
+                subtext: "I can handle a more stubborn dog",
                 values: {
                     labrador: 3,
                     goldenRetriever: 3,
@@ -1161,10 +1181,11 @@ export const questions = [
     {
         question: "How would you describe your personality?",
         type: "checkbox",
+        display: "inline",
         subHeading: "Feel free to choose multiple options",
         answers: {
             option1: {
-                text: "Active and outgoing",
+                text: "Active",
                 values: {
                     labrador: 5,
                     goldenRetriever: 5,
@@ -1189,7 +1210,7 @@ export const questions = [
                 }
             }, 
             option2: {
-                text: "Calm and harmonious",
+                text: "Calm",
                 values: {
                     labrador: 4,
                     goldenRetriever: 4,
@@ -1214,7 +1235,7 @@ export const questions = [
                 }
             },
             option3: {
-                text: "Structured and goal-oriented",
+                text: "Focused",
                 values: {
                     labrador: 5,
                     goldenRetriever: 5,
@@ -1239,7 +1260,7 @@ export const questions = [
                 }
             },
             option4: {
-                text: "Flexible and laid-back",
+                text: "Flexible",
                 values: {
                     labrador: 4,
                     goldenRetriever: 4,
