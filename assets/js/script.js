@@ -137,8 +137,7 @@ function calculatePoints() {
         });
     
         return true; // Return true to show that function worked and progress can go on
-    } catch (error) {
-        console.error("There was an error when counting the points:", error);
+    } catch(err) {
         alert("Woops! Something went wrong while calculating points. Please try again.");
         return false; // Prevent progress if an error occurred
     }
