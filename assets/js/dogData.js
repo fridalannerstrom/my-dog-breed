@@ -30,7 +30,7 @@ export const dogBreeds = [
         temperament: "Friendly, loyal, patient",
         score: 0,
         description: "Golden Retrievers are friendly, loyal, and intelligent dogs that make excellent family pets and working dogs, often excelling as service or therapy dogs. Known for their golden coat and gentle nature, they are patient and great with children. Energetic and playful, they enjoy outdoor activities, especially swimming, and thrive in environments where they receive plenty of attention and exercise.",
-        shortDescription: "Golden Retrievers are friendly, loyal, and intelligent dogs that make excellent family pets and working dogs, often excelling as service or therapy dogs. ",
+        shortDescription: "Golden Retrievers are friendly, loyal, and intelligent dogs that make excellent family pets and working dogs. ",
         img: "assets/images/golden-retriever.webp",
         activity: 4,
         trainability: 4,

@@ -101,23 +101,20 @@ let steps = document.querySelectorAll(".step"); // Gives a list over all steps a
 
     //function for counting points
 
-    function calculatePoints() {
-        let currentStepElement = steps[currentStep]; // Get the current step
-        let selectedOptions = currentStepElement.querySelectorAll("input:checked"); // Get the selected option
-        let textInputs = currentStepElement.querySelectorAll("input[type='text']");
+function calculatePoints() {
+        try {
+            let currentStepElement = steps[currentStep]; // Get the current step
+            let selectedOptions = currentStepElement.querySelectorAll("input:checked"); // Get the selected option
+            let textInputs = currentStepElement.querySelectorAll("input[type='text']");
 
-        // Check it it's a text input
-        if (textInputs.length > 0) {
-            const nameInput = textInputs[0]; // One text input per question
-        if (!nameInput.value.trim()) {
-            alert("Please enter your name.");
-            return false;
-        }
-
-        /* 
-        // Save username - maybe later? 
-        sessionStorage.setItem("userName", nameInput.value.trim());  */
-        return true;
+            // Check it it's a text input
+            if (textInputs.length > 0) {
+                const nameInput = textInputs[0]; // One text input per question
+                if (!nameInput.value.trim()) {
+                    alert("Please enter your name.");
+                    return false;
+                }
+                return true;
     }
     
         // Check if option has been selected
@@ -140,7 +137,12 @@ let steps = document.querySelectorAll(".step"); // Gives a list over all steps a
         });
     
         return true; // Return true to show that function worked and progress can go on
+    } catch (error) {
+        console.error("There was an error when counting the points:", error);
+        alert("Woops! Something went wrong while calculating points. Please try again.");
+        return false; // Prevent progress if an error occurred
     }
+}
 
 
 
@@ -243,7 +245,7 @@ function displayResults() {
         });
 
         // Save recent results to localStorage
-        localStorage.setItem("recentResults", JSON.stringify(recentResults));
+        localStorage.setItem("recentResults", JSON.stringify(recentResults));  // Make the saved results into a string
 
         // Show result for other users
         let recentResultsContainer = document.getElementById("recent-results-container"); 
