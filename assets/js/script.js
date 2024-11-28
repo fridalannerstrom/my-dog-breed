@@ -1,7 +1,7 @@
-// Import dog breeds and questions from seperate js file
-import { dogBreeds } from './dogData.js'; 
-import { questions } from './questions.js'; 
+import { dogBreeds } from './dogData.js'; // Import list of dog breed objects with metadata
+import { questions } from './questions.js'; // Import list of questions objects with answer options and metadata
 
+// Set global variables
 const startButton = document.getElementById("start-button");
 const introContent = document.getElementById("intro");
 const quizContent = document.getElementById("quiz");
@@ -13,54 +13,53 @@ const recentResults = []; // Save the username and best match result
 let currentStep = 0;
 
 // Remove intro when start quiz is clicked
-
 startButton.addEventListener("click", function () {
 
-    intro.classList.add("display-none"); // adds display none to intro
-    quizContent.classList.remove("display-none"); // removes display none from quiz
+    intro.classList.add("display-none"); 
+    quizContent.classList.remove("display-none"); 
 
 });
 
+// Add and remove active class to steps to create multi step form
+function showStep(stepIndex) { 
+    steps.forEach((step, index) => { // forEach goes through each step, index shows number for relevant step
+        if (index === stepIndex) {
+            step.classList.add("active"); // adds active class to current step
+        } else {
+            step.classList.remove("active"); // removes active class from non current step
+        }
+    });
 
-    // Show/hide step based on "currentStep", adding active class to current step
-    function showStep(stepIndex) { // parameter stepIndex gives the number of the current step
-        steps.forEach((step, index) => { // forEach goes through each step, index shows number for relevant step
-            if (index === stepIndex) {
-                step.classList.add("active"); // adds active class to current step
-            } else {
-                step.classList.remove("active"); // removes active class from non current step
-            }
-        });
-
-        prevButton.style.display = stepIndex === 0 ? "none" : "inline-block"; // Hide prev button from first question
-        nextButton.textContent = stepIndex === steps.length - 1 ? "Submit" : "Next"; // Changes from "next" to "submit" on last step
-    }
-
+    // Hide and show navigation buttons from first and last step
+    prevButton.style.display = stepIndex === 0 ? "none" : "inline-block"; 
+    nextButton.textContent = stepIndex === steps.length - 1 ? "Submit" : "Next"; 
+}
 
 // Generate questions in HTML 
-
 const quizContainer = document.getElementById('questions-container');
 
 questions.forEach((questionObj, questionIndex) => { // Looping through all the questions and giving it an index
-    const questionDiv = document.createElement('div'); // Creating a new div
-    questionDiv.classList.add('step'); // Giving the div the class step
-    if (questionIndex === 0) questionDiv.classList.add('active'); // giving the first div the class active
+    const questionDiv = document.createElement('div'); 
+    questionDiv.classList.add('step'); 
+    if (questionIndex === 0) questionDiv.classList.add('active'); 
 
     const questionHeading = document.createElement('h2'); // Create a heading for the question
     questionHeading.textContent = questionObj.question; // Getting the question from the question object
-    questionDiv.appendChild(questionHeading); // Set the text in the h2 heading
+    questionDiv.appendChild(questionHeading); 
 
+    // Add sub heading if needed
     if (questionObj.subHeading) {
         const subHeading = document.createElement('h3');
-        subHeading.classList.add('subheading', 'quiz-subheading'); // Add the subheading classes
-        subHeading.textContent = questionObj.subHeading; // Set the subheading text
-        questionDiv.appendChild(subHeading); // Set the h3 subheading
+        subHeading.classList.add('subheading', 'quiz-subheading');
+        subHeading.textContent = questionObj.subHeading; 
+        questionDiv.appendChild(subHeading); 
     }
 
     // Create a div for answers
     const answersDiv = document.createElement('div');
 
     if (questionObj.type === "text") {
+
         // Create text input
         const input = document.createElement('input');
         input.type = 'text';
@@ -68,7 +67,7 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         input.placeholder = questionObj.placeholder;
 
         const label = document.createElement('label');
-        label.classList.add(`display-none`); // Add a class for styling
+        label.classList.add(`display-none`); // Add a class to hide label
         label.setAttribute('for', `text-${questionIndex}`);
         label.innerHTML = `Username`;
 
@@ -76,26 +75,28 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
         questionDiv.appendChild(label);
 
     } else if (questionObj.type === "radio" || questionObj.type === "checkbox") {
+
         // Create radio and checkboxes
         const answers = questionObj.answers;
         Object.keys(answers).forEach((key, index) => {
             const answer = answers[key];
             const display = questionObj.display;
 
+            // Create the input element
             const input = document.createElement('input');
             input.type = questionObj.type; // Check if radio or checkbox
             input.id = `${key}-${questionIndex}`;
-            input.name = `question-${questionIndex}`; // Needed for radio input
+            input.name = `question-${questionIndex}`; 
             input.dataset.points = JSON.stringify(answer.values);
 
+            // Create the label element
             const label = document.createElement('label');
             label.setAttribute('for', `${key}-${questionIndex}`);
-            label.classList.add(`${display}`); // Add a class for styling
+            label.classList.add(`${display}`); // 
             label.innerHTML = `
                 ${answer.image ? `<img src="${answer.image}" alt="" class="answer-image"><br>` : ''}
                 ${answer.text}
-                ${answer.subtext ? `<br><p class="subtext">${answer.subtext}</p>` : ''}`;
-
+                ${answer.subtext ? `<br><p class="subtext">${answer.subtext}</p>` : ''}`; // Add image and subtext if needed
 
             questionDiv.appendChild(input);
             questionDiv.appendChild(label);
@@ -106,36 +107,37 @@ questions.forEach((questionObj, questionIndex) => { // Looping through all the q
 
 });
 
-const steps = document.querySelectorAll(".step"); // Gives a list over all steps after they have been created
+const steps = document.querySelectorAll(".step"); // Gives a list over all steps after they have been generated
 
-    //function for counting points
-
+//function for counting points
 function calculatePoints() {
-        try {
-            const currentStepElement = steps[currentStep]; // Get the current step
-            const selectedOptions = currentStepElement.querySelectorAll("input:checked"); // Get the selected option
-            const textInputs = currentStepElement.querySelectorAll("input[type='text']");
 
-            // Check it it's a text input
-            if (textInputs.length > 0) {
-                const nameInput = textInputs[0]; // One text input per question
-                if (!nameInput.value.trim()) {
-                    alert("Please enter your name.");
-                    return false;
-                }
-                return true;
+    try { // Give error if function does not work
+        const currentStepElement = steps[currentStep]; // Get the current step
+        const selectedOptions = currentStepElement.querySelectorAll("input:checked"); // Get the selected option for radio and checkbox
+        const textInputs = currentStepElement.querySelectorAll("input[type='text']"); // Get the value in text field
+
+        // Check it it's a text input
+        if (textInputs.length > 0) {
+            const nameInput = textInputs[0]; // We only need 1 text input
+
+            if (!nameInput.value.trim()) {
+                alert("Please enter your name."); // Alert if no name has been entered
+                return false;
+            }
+
+        return true;
+
     }
-    
-        // Check if option has been selected
+
         if (selectedOptions.length === 0) {
             alert("Please select an option before proceeding."); // Warning if nothing has been selected
-            return false; // Stop function
+            return false; // Stop function 
         }
     
         // Go through all options
         selectedOptions.forEach(option => {
-            // Get score from data point in object
-            const points = JSON.parse(option.dataset.points);
+            const points = JSON.parse(option.dataset.points); // Get score from data point in object
     
             // Add the score in dog breeds
             dogBreeds.forEach(breed => {
@@ -146,47 +148,45 @@ function calculatePoints() {
         });
     
         return true; // Return true to show that function worked and progress can go on
+
     } catch(err) {
         alert("Woops! Something went wrong while calculating points. Please try again.");
         return false; // Prevent progress if an error occurred
     }
 }
 
+// Function for next button
+nextButton.addEventListener("click", function () {
 
-
-    // function for next button
-    nextButton.addEventListener("click", function () {
-
-            if (currentStep < steps.length - 1) { // checks if its not the last step
-                if (calculatePoints()) { // Controll that score has been calculated
-                    currentStep++; // Go to next step
-                    showStep(currentStep); // Show next step
-                }
-            } else {
-                quiz.classList.add("display-none"); // adds display none from quiz
-                result.classList.remove("display-none"); // removes display none from result
-                displayResults()
+    if (currentStep < steps.length - 1) { // Checks if its not the last step
+        if (calculatePoints()) { // Check that score has been calculated
+            currentStep++; 
+            showStep(currentStep); // Show next step
             }
-        });
-
-    // function for going back steps
-    prevButton.addEventListener("click", function () {
-        if (currentStep > 0) { // checks if its not the first step
-            currentStep--; // removes 1 from currentStep
-            showStep(currentStep); // Show prev step
+        } else {
+            quiz.classList.add("display-none"); // Quiz is done, hide quiz
+            result.classList.remove("display-none"); // Remove class to show how result
+            displayResults()
         }
-    });
-
-    // Show first step
-    showStep(currentStep); 
+});
 
 
-// function for showing the results
+// Function for prev button
+prevButton.addEventListener("click", function () {
+    if (currentStep > 0) { // Checks if its not the first step
+        currentStep--; 
+        showStep(currentStep); // Show prev step
+    }
+});
 
+// Show first step
+showStep(currentStep); 
+
+
+// Function for showing the results
 function displayResults() {
 
-    // Load recent results from localStorage if available
-    let recentResults = JSON.parse(localStorage.getItem("recentResults")) || [];
+    let recentResults = JSON.parse(localStorage.getItem("recentResults")) || []; // Load recent results from localStorage if available
 
     const nameInput = document.querySelector("input[type='text']"); // Get username from input
     const userName = nameInput ? nameInput.value.trim() : "Anonymous"; // Set Anonymous if no name
@@ -194,14 +194,15 @@ function displayResults() {
     const maxScore = Math.max(...dogBreeds.map(breed => breed.score)); // Finding the max score
     const bestMatch = dogBreeds.find(breed => breed.score === maxScore); // Finding the breed with max score
 
-    // Add the user name and result to recentResults
-    recentResults.unshift({ user: userName, breed: bestMatch.name, breedImage: bestMatch.img, breedDescription: bestMatch.shortDescription });
+        
+    recentResults.unshift({ user: userName, breed: bestMatch.name, breedImage: bestMatch.img, breedDescription: bestMatch.shortDescription }); // Add the user name and result to recentResults
 
-    // We only want the latest 3
-        if (recentResults.length > 3) {
-            recentResults.pop();
-        }
+    // We only want the 3 latest results
+    if (recentResults.length > 3) {
+        recentResults.pop();
+    }
 
+    // Get the result HTML elements
     const resultBreed = document.querySelector("#best-match-content h2"); // Get the breed H2 tag
     const resultBreedDescription = document.querySelector("#best-match-content p"); // Get the breed p tag
     const resultBreedSize = document.getElementById("size");
@@ -212,7 +213,7 @@ function displayResults() {
     const resultBreedTemperament = document.getElementById("temperament");
     const imageContainer = document.getElementById("best-match-image"); // Get the image container
 
-    // Create result content
+    // Generate result content
     resultBreed.textContent = `${bestMatch.name}`;
     resultBreedDescription.textContent = `${bestMatch.description}`;
     imageContainer.innerHTML = `<img src="${bestMatch.img}"> `;
@@ -223,7 +224,7 @@ function displayResults() {
     resultBreedLifespan.innerHTML = `<b>Lifespan:</b> ${bestMatch.lifespan}`;
     resultBreedTemperament.innerHTML = `<b>Temperament:</b> ${bestMatch.temperament}`;
 
-    // All functions for paw icon list
+    // All items for paw icon list
     setRating("activity", bestMatch.activity);
     setRating("trainability", bestMatch.trainability);
     setRating("friendliness", bestMatch.friendliness);
@@ -234,52 +235,52 @@ function displayResults() {
     setRating("independence", bestMatch.independence);
 
     // Top 3 other matches
-        let top3Container = document.getElementById("top-3-container"); // A new container in your HTML for top 3 matches
-        const sortedBreeds = dogBreeds
-            .filter(breed => breed !== bestMatch) // Exclude the best match
-            .sort((a, b) => b.score - a.score) // Sort by score descending
-            .slice(0, 3); // Get the top 3
+    let top3Container = document.getElementById("top-3-container"); // Get container in HTML for top 3 matches
+    const sortedBreeds = dogBreeds
+        .filter(breed => breed !== bestMatch) // Exclude the best match
+        .sort((a, b) => b.score - a.score) // Sort by score descending
+        .slice(0, 3); // Get the top 3
 
-        // Create cards for each top 3 breed
-        sortedBreeds.forEach(breed => {
-            const card = document.createElement("div");
-            card.classList.add("top-breed-card");
-            card.innerHTML = ` 
-                <div class="top-3-image"><img src="${breed.img}" alt="${breed.name}"></div>
-                <div class="top-3-description"><h3>${breed.name}</h3>
-                <p>${breed.shortDescription}</p></div>
+    // Create cards for each top 3 breed
+    sortedBreeds.forEach(breed => {
+        const card = document.createElement("div");
+        card.classList.add("top-breed-card");
+        card.innerHTML = ` 
+            <div class="top-3-image"><img src="${breed.img}" alt="${breed.name}"></div>
+            <div class="top-3-description"><h3>${breed.name}</h3>
+            <p>${breed.shortDescription}</p></div>
             `;  // Content in the top 3 breed card
-            top3Container.appendChild(card); // Show the card
-        });
+        top3Container.appendChild(card); // Show the card
+    });
 
-        // Save recent results to localStorage
-        localStorage.setItem("recentResults", JSON.stringify(recentResults));  // Make the saved results into a string
+    // Save recent results to localStorage
+    localStorage.setItem("recentResults", JSON.stringify(recentResults));  // Make the saved results into a string
 
-        // Show result for other users
-        let recentResultsContainer = document.getElementById("recent-results-container"); 
+    // Show result for other users
+    let recentResultsContainer = document.getElementById("recent-results-container"); 
 
-        // Clear previous results to avoid duplication
-        recentResultsContainer.innerHTML = "";
+    // Clear previous results to avoid duplication
+    recentResultsContainer.innerHTML = "";
 
-        // Loop through and add each result
-        recentResults.forEach(result => {
+    // Loop through på 3 breeds and add each result 
+    recentResults.forEach(result => {
         const resultItem = document.createElement("div");
         resultItem.classList.add("top-breed-card");
         resultItem.innerHTML = ` 
-            <div class="top-3-image"><img src="${result.breedImage}" alt="${result.breed}"></div>
+        <div class="top-3-image"><img src="${result.breedImage}" alt="${result.breed}"></div>
             <div class="top-3-description"><h3>${result.user} got a ${result.breed}</h3>
             <p>${result.breedDescription}</p></div>
             `;
         recentResultsContainer.appendChild(resultItem);
     });
 
-    // function for paw in icon list
+    // Function for paw in icon list
     function setRating(category, score) {
 
-        // Get all paws in the list
-        let pawIcons = document.querySelectorAll(`#${category} .fa-paw`);
+    // Get all paws in the list
+    let pawIcons = document.querySelectorAll(`#${category} .fa-paw`);
 
-        // Loop through each paw while less than score
+    // Loop through each paw while less than score
         pawIcons.forEach((paw, index) => {
             if (index < score) {
                 paw.classList.add("full"); // set full class
