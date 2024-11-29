@@ -1,5 +1,5 @@
 
-![Dog breed quiz Mockup](assets/images/documentation/responsive.png)
+![Dog Breed Quiz Mockup](assets/images/documentation/responsive.png)
 
 # Welcome to "Find your ideal dog breed" Quiz!
 This quiz is designed to help you discover the perfect dog breed for your lifestyle and personality. Developed by [Sunne Dogcare](https://fridalannerstrom.github.io/dogsitter/), it reflects our belief that choosing a dog is one of the most important decisions a future dog owner can make. By understanding your needs, habits, and preferences, we hope to guide you toward a breed that will thrive in your care.
@@ -56,7 +56,7 @@ This quiz is our way of promoting thoughtful dog ownership. By answering a serie
 
 ## Purpose of the Quiz
 
-This quiz has one simple goal: to help you discover which dog breed is the best match for your lifestyle and personality. There are no distractions, no unnecessary elements, and no clutter — just a clean and straightforward experience. A single clear button invites users to start the quiz, with concise, engaging text to guide them.
+This quiz has one simple goal: to help you discover which dog breed is the best match for your lifestyle and personality. There are no distractions, no unnecessary elements, and no clutter — just a clean and straightforward experience. A clear CTA button invites users to start the quiz, with concise, engaging text to guide them.
 
 While we provide a link back to Sunne Dogcare for those interested, this is not intended to act as an advertisement for the service. The focus remains solely on helping potential dog owners make thoughtful decisions about their future furry companions.
 
@@ -75,14 +75,14 @@ We’ve designed the quiz with simplicity and accessibility in mind, ensuring us
 | **Illustrations of beautiful dogs** | Eye-catching visuals enhance the user experience and make the quiz enjoyable. |
 | **Bold and clear text** | Short, simple instructions ensure users can easily follow along without confusion. | 
 | **Straightforward Call-to-Action** | A single, prominent button directs users to start the quiz. |
-| **Clear and Simple Questions** | Designed to be easy to understand, ensuring a smooth flow from start to finish. | 
-| **Overview of Top Dog Breed** | After completing the quiz, users are presented with their best match and receive clear, concise information about the breed. | 
-| **Discover Additional Matches** | Users can also see their other top three potential breeds for broader insights and more options. | 
+| **Clear and simple questions** | Designed to be easy to understand, ensuring a smooth flow from start to finish. | 
+| **Overview of top dog breed** | After completing the quiz, users are presented with their best match and receive clear, concise information about the breed. | 
+| **Discover additional matches** | Users can also see their other top three potential breeds for broader insights and more options. | 
 
 
 ## Graphic Design & Color Scheme
 
-The design of this quiz is intentionally simple, with a strong focus on text and illustrations. By avoiding distractions, the user can focus entirely on the content. The overall feel is warm, light, fresh, and trustworthy, brought to life through charming illustrations of various dog breeds.
+The design of this quiz is intentionally simple, with a strong focus on text and illustrations. By avoiding distractions, the user can focus entirely on the content. The overall feel is warm, light, and trustworthy, brought to life through charming illustrations of various dog breeds.
 
 ### Color Scheme
 
@@ -107,41 +107,41 @@ This pairing strikes the perfect balance, guiding the user’s eye naturally fro
 - **Caprasimo** for headings (H1, H2)
 - **Poppins** for paragraphs and H3 (Poppins used instead of Caprasimo for H3 due to better readability).
 - **Links** are styled in brown with an underline, maintaining a cohesive design that aligns with the overall aesthetic.
-- **Buttons** Large and brown buttons are used consistently throughout the quiz. Their prominent size and simplicity make them stand out, ensuring users can easily interact with the quiz.
+- **Buttons** are large and brown used consistently throughout the quiz. Their prominent size and simplicity make them stand out, ensuring users can easily interact with the quiz.
 
  ![Headings, text and buttons](assets/images/documentation/heading-text-buttons.png)
 
  ### Icons
 
-A single type of icon, a paw print from [Font Awesome](https://fontawesome.com/) is used to provide visual cues. For example, a breed’s energy level might be represented by five paw prints, with the number of filled paw prints indicating the level of activity. This simple visual system makes it quick and easy for users to interpret important information about each breed.
+A single type of icon, a paw print from [Font Awesome](https://fontawesome.com/) is used to provide visual information. For example, a breed’s energy level might be represented by five paw prints, with the number of filled paw prints indicating the level of activity. This simple visual system makes it quick and easy for users to interpret important information about each breed.
 
  ![Icons](assets/images/documentation/icons.png)
 
 ### Illustrations
 
-Instead of photographs, the quiz features illustrations of various dog breeds. These illustrations, sourced from [Flaticon.com](https://www.flaticon.com/) and created by [Maxim Kulikov](https://www.flaticon.com/authors/maxim-kulikov), bring a cohesive and playful touch to the design. The illustrations represent each breed accurately while maintaining a unified artistic style, enhancing the overall user experience.
+Instead of photographs, the quiz features illustrations of various dog breeds. These illustrations, sourced from [Flaticon.com](https://www.flaticon.com/) and created by [Maxim Kulikov](https://www.flaticon.com/authors/maxim-kulikov), bring a cohesive and playful touch to the design. The illustrations represent each breed accurately while maintaining an unified artistic style, enhancing the overall user experience.
 
  ![Illustrations](assets/images/documentation/illustrations.png)
 
 ## UI/UX Design
 
-The focus of the UI/UX design process for this quiz was to create a versatile and intuitive interface that accommodates different types of questions and results. Since the exact wording of the quiz questions is still being refined, the primary goal was to establish a design framework that supports various question formats. This includes:
+The focus of the UI/UX design process for this quiz was to create a versatile and intuitive interface that accommodates different types of questions and results. Since the exact wording of the quiz questions is still being refined at this point, the primary goal was to establish a design framework that supports various question formats. Each mockups also includes one or more selected options.
 
 | Purpose | Description | 🖥️ Desktop | 💻 Tablet | 📱 Mobile |
 | ------- | ----------- | ------- | ------ | ------ |
-| **Checkbox questions** | For questions where users can select multiple answers. | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **Radio Button question** | Information about services  | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **Image-Based answers** | Display of dog-related images | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **Text-Based answers with descriptions** | Information about the business | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **Text-Based answers without descriptions** | Contact form for inquiries | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **Checkbox questions** | For questions where users can select multiple answers | ![Checkbox Layout](assets/images/documentation/ui-mockup-desktop-checkbox.png) | ![Checkbox Layout](assets/images/documentation/ui-mockup-tablet-checkbox.png) | ![Checkbox Layout](assets/images/documentation/ui-mockup-mobile-checkbox.png) | 
+| **Radio Button question** | For questions where users can select only one option  | ![Radio Layout](assets/images/documentation/ui-mockup-desktop-radio.png) | ![Radio Layout](assets/images/documentation/ui-mockup-tablet-radio.png) | ![Radio Layout](assets/images/documentation/ui-mockup-mobile-radio.png) | 
+| **Image-Based answers** | For questions where users can select based on images | ![Image Layout](assets/images/documentation/ui-mockup-desktop-image.png) | ![Image Layout](assets/images/documentation/ui-mockup-tablet-image.png) | ![Image Layout](assets/images/documentation/ui-mockup-mobile-image.png) | 
+| **Text-Based answers with descriptions** | For questions where options require a description | ![With description Layout](assets/images/documentation/ui-mockup-desktop-with-description.png) | ![With description Layout](assets/images/documentation/ui-mockup-tablet-with-description.png) | ![With description Layout](assets/images/documentation/ui-mockup-mobile-with-description.png) | 
+| **Text-Based answers without descriptions** | For questions where options does not require a description | ![Without description Layout](assets/images/documentation/ui-mockup-desktop-without-desctiption.png) | ![Without description Layout](assets/images/documentation/ui-mockup-tablet-without-desctiption.png) | ![Without description Layout](assets/images/documentation/ui-mockup-mobile-without-desctiption.png) | 
 
 In addition to the question layouts, the quiz consists of three main page elements. Each page is designed for clarity and usability, ensuring a seamless experience. Below is an overview of their purpose:
 
 | Purpose | Description | 🖥️ Desktop | 💻 Tablet | 📱 Mobile |
 | ------- | ----------- | ------- | ------ | ------ |
-| **Intro page** | Landing page with a clear CTA to start the quiz. | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **Result page** | Displays the best match, additional breeds, and key details. | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **404** | Error page with a message and navigation back to the main page. | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | ![Index Layout](assets/images/documentation/homepage.png) | 
+| **Intro page** | Landing page with a clear CTA to start the quiz. | ![Intro Layout](assets/images/documentation/ui-mockup-desktop-intro.png) | ![Intro Layout](assets/images/documentation/ui-mockup-tablet-intro.png) | ![Intro Layout](assets/images/documentation/ui-mockup-mobile-intro.png) | 
+| **Result page** | Displays the best match, additional breeds, and key details. | ![Result Layout](assets/images/documentation/ui-mockup-desktop-result.png) | ![Result Layout](assets/images/documentation/ui-mockup-tablet-result.png) | ![Result Layout](assets/images/documentation/ui-mockup-mobile-result.png) | 
+| **404** | Error page with a message and navigation back to the main page. | ![404 Layout](assets/images/documentation/ui-mockup-desktop-404.png) | ![404 Layout](assets/images/documentation/ui-mockup-tablet-404.png) | ![404 Layout](assets/images/documentation/ui-mockup-mobile-404.png) | 
 
 The final design for the UI were created using [Adobe XD](https://adobexdplatform.com/). The overall goal was to create a clean, engaging, and accessible design that guides users seamlessly through the quiz while keeping the experience visually appealing and user-friendly. This structure ensures flexibility for adjustments as the content evolves, without compromising the design's functionality or aesthetics.
 
