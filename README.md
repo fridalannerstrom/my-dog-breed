@@ -13,15 +13,17 @@ This quiz is our way of promoting thoughtful dog ownership. By answering a serie
 # Table of content
 
 1. [User Experience (UX)](#user-experience-ux)
-   - [Goals](#Goals) 
+   - [Purpose of the Quiz](#Purpose-of-the-Quiz) 
    - [Graphic Design & Color Scheme](#graphic-design--color-scheme) 
    - [UI/UX Design](#uiux-design) 
 
 2. [Features](#features)
-   - [Page Elements](#page-elements)
-   - [Key Features](#key-features)
-   - [Feature Changes](#feature-changes)
-   - [Future Features](#future-features)
+   - [Pages](#pages)
+   - [Key Elements](#key-elements)
+   - [Additional Features](#Additional-Features)
+   - [Feature Changes](#Feature-changes)
+   - [Logic behind the quiz](#Logic-behind-the-quiz)
+   - [Future changes](#Future-changes)
    
 3. [Tools and Technologies](#tools-and-technologies)
    - [Languages](#languages)
@@ -34,10 +36,7 @@ This quiz is our way of promoting thoughtful dog ownership. By answering a serie
    - [Browser Compatibility](#browser-compatibility) 
    - [Responsiveness](#responsiveness) 
    - [Pagespeed Insights](#pagespeed-insights) 
-   - [User Story Testing](#user-story-testing) 
-   - [Bugs](#bugs) 
-   - [Goal Testing](#goal-testing) 
-   - [Other Testing](#other-testing) 
+   - [Bugs and result testing](#Bugs-and-result-testing) 
    - [Unfixed Bugs](#unfixed-bugs) 
    
 5. [Deployment](#deployment)
@@ -241,9 +240,6 @@ Throughout the development process, changes were made to the design and text. Th
 | **🎨Design change** | Result page | To accommodate the friends' results, your additional matching breeds had to be displayed in a different layout on the results page. | ![Other breeds](assets/images/documentation/element-desktop-other-breeds.png) |
 
 
----
-
-
 # Logic behind the quiz
 
 The quiz consists of **14 questions** that can lead to one of **20 possible dog breeds**. Both the questions and the dog breeds are structured as objects in separate JavaScript files, which are imported into script.js. The JavaScript code is designed to be dynamic, meaning that if you add new dog breeds or questions, they will automatically be incorporated into the quiz form and included as potential results.
@@ -314,6 +310,8 @@ This project is built using [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](ht
 - **[Page Insights](https://pagespeed.web.dev/)**  
   Used to test speed, SEO and preformance.
 
+- **[JSlint](https://www.jslint.com/)**  
+  Used to text JavaScript code
 ---
 
 ## Testing
@@ -437,8 +435,10 @@ The project is deployed on GitHub Pages. To deploy your own version, follow thes
 | Source      | Notes   | 
 | ----------- | ---------- | 
 | [CloudConvert](https://cloudconvert.com/) | Converted PNG images to WebP format | 
-| [W3Schools ](https://www.w3schools.com/) | Helped refresh my memory on CSS attributes and syntax when needed | 
+| [W3Schools ](https://www.w3schools.com/) | Helped guide me and remind me about HTML, CSS and JavaScript | 
+| [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) | Helped me understand localstorage | 
 | [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)  | Introduced me to a structured and meaningful way of writing commit messages, which I adopted halfway through the project | 
+
 
 ### Acknowledgements
 
