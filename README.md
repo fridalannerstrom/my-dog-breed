@@ -13,14 +13,14 @@ This quiz is our way of promoting thoughtful dog ownership. By answering a serie
 # Table of content
 
 1. [User Experience (UX)](#user-experience-ux)
-   - [Purpose of the Quiz](#Purpose-of-the-Quiz) 
+   - [Purpose of the Quiz](#purpose-of-the-Quiz) 
    - [Graphic Design & Color Scheme](#graphic-design--color-scheme) 
    - [UI/UX Design](#uiux-design) 
 
 2. [Features](#features)
    - [Pages](#pages)
    - [Key Elements](#key-elements)
-   - [Additional Features](#Additional-Features)
+   - [Additional Features](#additional-features)
    - [Feature Changes](#Feature-changes)
    - [Logic behind the quiz](#Logic-behind-the-quiz)
    - [Future changes](#Future-changes)
@@ -36,7 +36,7 @@ This quiz is our way of promoting thoughtful dog ownership. By answering a serie
    - [Browser Compatibility](#browser-compatibility) 
    - [Responsiveness](#responsiveness) 
    - [Pagespeed Insights](#pagespeed-insights) 
-   - [Bugs and result testing](#Bugs-and-result-testing) 
+   - [Bugs and result testing](#bugs-and-result-testing) 
    - [Unfixed Bugs](#unfixed-bugs) 
    
 5. [Deployment](#deployment)
@@ -48,8 +48,6 @@ This quiz is our way of promoting thoughtful dog ownership. By answering a serie
    - [Other](#other)
    - [Acknowledgements](#acknowledgements)
 
-
----
 
 # User Experience (UX)
 
@@ -312,7 +310,6 @@ This project is built using [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](ht
 
 - **[JSlint](https://www.jslint.com/)**  
   Used to text JavaScript code
----
 
 ## Testing
 
@@ -356,6 +353,9 @@ The website has been tested using **[Browserling](https://www.browserling.com/)*
 
 Throughout the project, I prioritized responsive design by continuously testing with Google Developer Tools. Each new feature was tested on both small and large screen sizes to ensure optimal performance. I tested all available screen sizes in Google Developer Tools, and the website displays correctly across all devices.
 
+- The design is optimized for extra-large screens, smaller desktop monitors, tablets, and phones.
+- On extra-small phones, the info box om the result page has been removed to ensure the layout remains functional and visually clean.
+
 ### Pagespeed Insights
 
 | Page      | Mobile   | Desktop | 
@@ -368,15 +368,13 @@ Throughout the project, I prioritized responsive design by continuously testing 
 
 | Bug       |  Description | Solution  |
 | --------- | --------- | ---------- | 
-| Dog breeds never showing up | - | I encountered an issue where small dogs appeared as results, even when I selected that I didn’t want small dogs. | To solve this, I assigned very high points to the size preference chosen by the user, ensuring it outweighs all other factors. Similarly, for breeds that should be excluded based on certain answers, like a beginner being matched with a German Shepherd, I assigned very low scores (e.g., -100) to push those breeds to the bottom of the ranking. | 
-| Balancing Dog Breeds in the Quiz | - | Some dog breeds, like Border Collie or Boxer, rarely appear as results during testing, even though they should. | To address this, I reviewed and adjusted the scoring system to ensure all breeds have a fair chance of being matched based on user preferences and quiz answers. However, this still needs more work. | 
+| Dog breeds never showing up | I encountered an issue where small dogs appeared as results, even when I selected that I didn’t want small dogs. | To solve this, I assigned very high points to the size preference chosen by the user, ensuring it outweighs all other factors. Similarly, for breeds that should be excluded based on certain answers, like a beginner being matched with a German Shepherd, I assigned very low scores (e.g., -100) to push those breeds to the bottom of the ranking. | 
+| Balancing Dog Breeds in the Quiz | Some dog breeds, like Border Collie or Boxer, rarely appear as results during testing, even though they should. | To address this, I reviewed and adjusted the scoring system to ensure all breeds have a fair chance of being matched based on user preferences and quiz answers. However, this still needs more work. | 
 
 
 ### Unfixed Bugs
 
 None that I know of - feel free to tell me if you find any!
-
----
 
 ## Deployment
 
