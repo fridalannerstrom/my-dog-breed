@@ -127,6 +127,9 @@ Instead of photographs, the quiz features illustrations of various dog breeds. T
 
 The focus of the UI/UX design process for this quiz was to create a versatile and intuitive interface that accommodates different types of questions and results. Since the exact wording of the quiz questions is still being refined at this point, the primary goal was to establish a design framework that supports various question formats. Each mockups also includes one or more selected options.
 
+<details>
+  <summary>🖥️ Click to view UI Mockups of questions</summary>
+
 | Purpose | Description | 🖥️ Desktop | 💻 Tablet | 📱 Mobile |
 | ------- | ----------- | ------- | ------ | ------ |
 | **Checkbox questions** | For questions where users can select multiple answers | ![Checkbox Layout](assets/images/documentation/ui-mockup-desktop-checkbox.png) | ![Checkbox Layout](assets/images/documentation/ui-mockup-tablet-checkbox.png) | ![Checkbox Layout](assets/images/documentation/ui-mockup-mobile-checkbox.png) | 
@@ -135,7 +138,17 @@ The focus of the UI/UX design process for this quiz was to create a versatile an
 | **Text-Based answers with descriptions** | For questions where options require a description | ![With description Layout](assets/images/documentation/ui-mockup-desktop-with-description.png) | ![With description Layout](assets/images/documentation/ui-mockup-tablet-with-description.png) | ![With description Layout](assets/images/documentation/ui-mockup-mobile-with-description.png) | 
 | **Text-Based answers without descriptions** | For questions where options does not require a description | ![Without description Layout](assets/images/documentation/ui-mockup-desktop-without-desctiption.png) | ![Without description Layout](assets/images/documentation/ui-mockup-tablet-without-desctiption.png) | ![Without description Layout](assets/images/documentation/ui-mockup-mobile-without-desctiption.png) | 
 
+
+</details>
+
+<br>
 In addition to the question layouts, the quiz consists of three main page elements. Each page is designed for clarity and usability, ensuring a seamless experience. Below is an overview of their purpose:
+
+<br>
+
+<details>
+  <summary>🖥️ Click to view UI Mockups of pages</summary>
+
 
 | Purpose | Description | 🖥️ Desktop | 💻 Tablet | 📱 Mobile |
 | ------- | ----------- | ------- | ------ | ------ |
@@ -143,7 +156,16 @@ In addition to the question layouts, the quiz consists of three main page elemen
 | **Result page** | Displays the best match, additional breeds, and key details. | ![Result Layout](assets/images/documentation/ui-mockup-desktop-result.png) | ![Result Layout](assets/images/documentation/ui-mockup-tablet-result.png) | ![Result Layout](assets/images/documentation/ui-mockup-mobile-result.png) | 
 | **404** | Error page with a message and navigation back to the main page. | ![404 Layout](assets/images/documentation/ui-mockup-desktop-404.png) | ![404 Layout](assets/images/documentation/ui-mockup-tablet-404.png) | ![404 Layout](assets/images/documentation/ui-mockup-mobile-404.png) | 
 
+
+
+</details>
+
+
+<br>
+
 The final design for the UI were created using [Adobe XD](https://adobexdplatform.com/). The overall goal was to create a clean, engaging, and accessible design that guides users seamlessly through the quiz while keeping the experience visually appealing and user-friendly. This structure ensures flexibility for adjustments as the content evolves, without compromising the design's functionality or aesthetics.
+
+⚠️ As the project progresses, the design will undergo changes, with new features being added and visual elements refined. Additionally, some text will be updated to improve clarity and enhance the overall user experience, ensuring the quiz remains intuitive and easy to navigate.
 
 ---
 
@@ -156,16 +178,16 @@ The website consists of a total of <strong>3 page sections</strong> and <strong>
 
 | Page | Purpose | 🖥️ Screenshot |
 | ---- | ------- | ----------- |
-| **Index** | Serves as the main landing page for the quiz. | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **404** | Redirects users from broken links back to index page. | ![Services Layout](assets/images/documentation/services.png) | 
+| **Index** | Serves as the main landing page for the quiz. | ![Index Layout](assets/images/documentation/ui-mockup-desktop-intro.png) | 
+| **404** | Redirects users from broken links back to index page. | ![Services Layout](assets/images/documentation/ui-mockup-desktop-404.png) | 
 
 ### Sections on index page
 
 | Page section | Purpose | 🖥️ Screenshot |
 | ------------ | ------- | ---------- | 
-| **Intro** | Welcomes users and introduces the quiz with a clear CTA. | ![Index Layout](assets/images/documentation/homepage.png) | 
-| **Quiz** | Displays interactive questions for users to determine their best dog match. | ![Services Layout](assets/images/documentation/services.png) | 
-| **Result** | Presents the user's top dog breed match, other breeds and friends breed match | ![Gallery Layout](assets/images/documentation/gallery.png) | 
+| **Intro** | Welcomes users and introduces the quiz with a clear CTA. | ![Intro Layout](assets/images/documentation/intro-element.png) | 
+| **Quiz** | Displays a list of questions for users to determine their best dog match. | ![Quiz Layout](assets/images/documentation/quiz-element.png) | 
+| **Result** | Presents the user's top dog breed match, other breeds and friends breed match | ![Result Layout](assets/images/documentation/result-element.png) | 
 
 ## Key Elements
 
@@ -175,7 +197,7 @@ The Intro section is designed to immediately capture the user's attention and se
 
 | Section | Description | 📱 Mobile | 💻 Tablet | 🖥️ Desktop |
 | ------- | ----------- | ------ | ------ | ------- |
-| **Intro** | The Intro immediately engages users with charming illustrations of various dog breeds, creating a welcoming and relevant atmosphere. A bold title, "Find your ideal dog breed," clearly communicates the purpose of the quiz, while a brief supporting text explains its goal: helping users discover the best dog breed for their lifestyle and personality. The design is centered around a clear call-to-action button, "Start Quiz," which stands out prominently, guiding users to begin their journey effortlessly. | ![Hero mobile](assets/images/documentation/hero-section-mobile.png) | ![Hero Desktop](assets/images/documentation/hero-image.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Intro** | The Intro immediately engages users with charming illustrations of various dog breeds, creating a welcoming and relevant atmosphere. A bold title, "Find your ideal dog breed," clearly communicates the purpose of the quiz, while a brief supporting text explains its goal: helping users discover the best dog breed for their lifestyle and personality. The design is centered around a clear call-to-action button, "Start Quiz," which stands out prominently, guiding users to begin their journey effortlessly. | ![Intro Layout](assets/images/documentation/ui-mockup-mobile-intro.png) | ![Intro Layout](assets/images/documentation/ui-mockup-tablet-intro.png) | ![Intro Layout](assets/images/documentation/ui-mockup-desktop-intro.png) | 
 
 ### Quiz
 
@@ -183,26 +205,30 @@ The quiz is designed with a consistent layout to ensure an intuitive and seamles
 
 | Section | Description | 📱 Mobile | 💻 Tablet | 🖥️ Desktop |
 | ------- | ----------- | --------- | ------ | ---------- |
-| **Text input** | Questions where users provide free-text answers, featuring a clean and simple layout. | ![Hero Mobile Subpage](assets/images/documentation/subpage-hero-mobile.png) | ![Hero Desktop Subpage](assets/images/documentation/subpage-hero-desktop.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
-| **Answers without description** | Questions with clear answer options but no additional descriptions. | ![Intro Mobile Subpage](assets/images/documentation/subpage-intro-mobile.png) | ![Intro Desktop Subpage](assets/images/documentation/subpage-intro-desktop.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
-| **Answers with description** | Questions offering answers with accompanying short descriptions for clarity. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
-| **Answers with images** | Visual questions where users select from image-based answer options. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Text input** | Questions where users provide free-text answers, featuring a clean and simple layout. | ![Text input](assets/images/documentation/element-mobile-text-input.png) | ![Text input](assets/images/documentation/element-tablet-text-input.png) | ![Text input](assets/images/documentation/quiz-element.png) | 
+| **Answers without description** | Questions with clear answer options but no additional descriptions shown with block layout | ![Block questions](assets/images/documentation/element-mobile-without-description.png) | ![Block questions](assets/images/documentation/element-tablet-without-description.png) | ![Block questions](assets/images/documentation/element-desktop-without-description.png) | 
+| **Answers with description** | Questions offering answers with accompanying short descriptions for clarity shown in inline layout | ![Inline questions](assets/images/documentation/element-mobile-with-description.png) | ![Inline questions](assets/images/documentation/element-tablet-with-description.png) | ![Inline questions](assets/images/documentation/element-desktop-with-description.png) | 
+| **Answers with images** | Visual questions where users select from image-based answer options. | ![Image questions](assets/images/documentation/element-mobile-image.png) | ![Image questions](assets/images/documentation/element-tablet-image.png) | ![Image questions](assets/images/documentation/element-desktop-image.png) | 
 
 ### Result
 
-The notification page does not include a hero section; instead, you are presented with the relevant information immediately. This page is designed to deliver messages without the need for persuasive content or elaborate design elements. The text is written in a playful, dog-themed tone to stay true to the brand and maintain a fun, engaging connection to the dog care business.
+The results page displays the dog breed that best matches you based on your answers. It provides essential information in a clear and visually engaging way, using icons to highlight key traits and characteristics that are useful for potential new dog owners. Additionally, the page suggests three other breeds that might suit you, giving you more options to explore. You can also view your friends’ results, adding a social and interactive element to the experience. There is also a button to redo the quiz.
 
 | Section | Description | 📱 Mobile | 💻 Tablet | 🖥️ Desktop |
 | ------- | ----------- | --------- | ------ | ---------- |
-| **Text input** | Questions where users provide free-text answers, featuring a clean and simple layout. | ![Hero Mobile Subpage](assets/images/documentation/subpage-hero-mobile.png) | ![Hero Desktop Subpage](assets/images/documentation/subpage-hero-desktop.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
-| **Answers without description** | Questions with clear answer options but no additional descriptions. | ![Intro Mobile Subpage](assets/images/documentation/subpage-intro-mobile.png) | ![Intro Desktop Subpage](assets/images/documentation/subpage-intro-desktop.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
-| **Answers with description** | Questions offering answers with accompanying short descriptions for clarity. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
-| **Answers with images** | Visual questions where users select from image-based answer options. | ![CTA Mobile Subpage](assets/images/documentation/cta-section-mobile.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | ![CTA Desktop Subpage](assets/images/documentation/cta-section.png) | 
+| **Result section overview** | The results page highlights your best-matched breed, additional suitable breeds, and friends' results, all presented with clear details and visual cues for easy understanding. | ![Overview](assets/images/documentation/element-mobile-result-overview.png) | ![Overview](assets/images/documentation/element-tablet-result-overview.png) | ![Overview](assets/images/documentation/element-desktop-result-overview.png) | 
+| **Best match** | This section highlights your best-matched dog breed, providing a detailed description, key traits, and an easy-to-read visual rating of its characteristics. | ![Best match](assets/images/documentation/element-mobile-best-match.png) | ![Best match](assets/images/documentation/element-tablet-best-match.png) | ![Best match](assets/images/documentation/element-desktop-best-match.png) | 
+| **Other breeds** | This section suggests three alternative dog breeds that align with your preferences, providing a brief description and illustration for each. | ![Other Breeds](assets/images/documentation/element-mobile-other-breeds.png) | ![Other Breeds](assets/images/documentation/element-tablet-other-breeds.png) | ![Other Breeds](assets/images/documentation/element-desktop-other-breeds.png) | 
+| **Friends results** | This section displays the results of your friends who have taken the quiz on the same device. The results are stored locally using browser local storage, allowing you to compare and view the dog breeds they were matched with. | ![Friends Breeds](assets/images/documentation/element-mobile-friends-breeds.png) | ![Friends Breeds](assets/images/documentation/element-tablet-friends-breeds.png) | ![Friends Breeds](assets/images/documentation/element-desktop-friends-breeds.png) | 
 
 
-## Key Features
+## Additional Features
 
 ### Services 
+
+
+- Rutan som dyker upp när man inte fyller i något
+- 
 
 | Section | Description | Mobile | Desktop |
 | ------- | ----------- | ------ | ------- |
