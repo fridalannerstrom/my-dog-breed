@@ -230,38 +230,16 @@ The results page displays the dog breed that best matches you based on your answ
 | **Saved Name Display** | The user's name, entered in the form, is saved and dynamically displayed on the results page. | ![Saved Name](assets/images/documentation/element-mobile-friends-breeds.png) | 
 
 
- OM DU HINNER 
 ## Feature Changes
 
 Throughout the development process, changes were made to the design and text. These adjustments were necessary to ensure a better user experience. The changes are listed below.
 
-| Action | Section | Reason | Before | After |
-| ------ | ------- | ------ | ------ | ----- |
-| **🗑️Removal** | Contact form | Having two contact forms was unnecessary and caused confusion. The contact form was removed and replaced with a CTA box. Now, only one form remains: the booking form. | ![Old Contact Form](assets/images/documentation/contact-form.png) | ![CTA-box](assets/images/documentation/cta-section.png) | 
-| **‍🎨Design Change** | Service Page | The service section felt cluttered with too many boxes. The large yellow box was removed, and instead, individual boxes were used for the list, resulting in a cleaner and lighter design. On desktop, a thin grey border was added to better separate the different sections. | ![Old Services](assets/images/documentation/services-old.png) | ![New Services](assets/images/documentation/services-page-desktop.png) | 
-| **🗑️Removal** | Service Button | Having a separate CTA button for booking each service was unnecessary, as the same booking form applies to all services. | ![Old Services Button](assets/images/documentation/services-old.png) | ![New Services Button](assets/images/documentation/services-page-desktop.png) | 
-| **✅Addition** | List | The section about the dog sitter felt dull with only paragraph text. A list was added to clearly highlight the sitter's experience, making the information more engaging and easier to absorb. | ![Old About](assets/images/documentation/old-about-dogsitter.png) | ![New About](assets/images/documentation/about-dogsitter-desktop.png) | 
-| **‍🎨Design Change** | Gallery | The original plan was to display two columns for gallery on the homepage for mobile devices. However, the images appeared too small, so I adjusted the layout to a single-column. | ![Old Gallery](assets/images/documentation/gallery-mockup.png) | ![New Gallery](assets/images/documentation/gallery-live.png) | 
-| **✅Addition** | Contact | Realized that adding contact information to the contact page was essential, of course. | ![Old Booking](assets/images/documentation/booking-without-contact.png) | ![New Booking](assets/images/documentation/booking-with-contact.png) | 
-| **‍🎨Design Change** | Navigation | Navigation dropdown changed fron left aligned text to right aligned text for easier thumb use on mobile | ![Old Navigation](assets/images/documentation/navigation-mockup.png) | ![New Navigation](assets/images/documentation/navigation-dropdown.png) | 
-| **✅Addition** | Gallery | Added a link to see more images below the gallery on homepage | ![Old Gallery](assets/images/documentation/gallery-mockup.png) | ![New Gallery](assets/images/documentation/gallery-live.png) | 
+| Action | Section | Reason | 🖥️ Screenshot | 
+| ------ | ------- | ------ | ------------- | 
+| **✅Addition** | Quiz | During the project, I chose to add a text field to the quiz to save the user's name. This allows for a more personalized experience, as the name can be displayed on the results page. | ![Text input](assets/images/documentation/quiz-element.png) | 
+| **✅Friends results** | Result page | I also decided to include the three most recent quiz results on the results page. This feature, saved locally on the user's device, allows for easy comparison and adds an interactive, social element to the quiz experience. | ![Friend Result](assets/images/documentation/element-desktop-friends-breeds.png) | 
+| **🎨Design change** | Result page | To accommodate the friends' results, your additional matching breeds had to be displayed in a different layout on the results page. | ![Other breeds](assets/images/documentation/element-desktop-other-breeds.png) |
 
-
-OM DU HINNER
-## Future Features
-Here are some ideas for expanding the website in future development phases. 
-
-1. **Booking calendar:** Implement a calendar system to allow users to select dates and times more intuitively, while also viewing availability. For example, fully booked days could be marked in red and nearly full days in orange. Additionally, a feature to search for availability on specific dates would enhance the booking process.
-
-2. **Review system:** Introduce a review system where dog owners can leave feedback after using the service. This could include star ratings and written reviews displayed on the website. An automated email could be sent to clients after they pick up their dog, encouraging them to submit a review.
-
-3. **Live chat/Customer support:** Add a chat feature or support system, allowing users to ask quick questions or get in touch directly from the website, ensuring faster communication and customer service.
-
-4. **Owner updates and reports:** Develop a system for sending updates, pictures, and reports directly to dog owners. This would allow tracking of activities like walks and feeding, keeping owners informed about their dog’s care in real-time.
-
-5. **Online payment integration:** Enable users to complete payments directly through the website during the booking process, offering a seamless and convenient checkout experience.
-
-6. **Booking calendar for new clients:** Allowing new clients to schedule an initial one-hour meeting. This meeting gives new dog owners the chance to meet me, interact with my dogs, and get a sense of how the service operates.
 
 ---
 
@@ -278,12 +256,33 @@ This combination of practical experience and external input ensures that the qui
 
 [View page in Notion](https://sedate-molybdenum-41d.notion.site/Dog-Breed-Quiz-14d284e4604f8023bdc2c8624cf3393a?pvs=4)
 
----
+## JavaScript changes
+
+### Move dog data to seperate file
+
+Initially, I had included all the dog breeds directly in the JavaScript file. However, as the number of breeds grew along with the amount of data, I decided to move the data to a separate file for better organization and maintainability.
+
+### Move questions to seperate file
+
+Initially, I had the questions and data points directly in the HTML. However, as the number of questions and breeds grew, it became increasingly difficult to manage them. Additionally, some answer options required descriptions or even images. To address this, I decided to move the questions to a separate file and generate the HTML quiz form dynamically using JavaScript.
+
+| Before | After - seperate file | After - generate code | 
+| ----- | ------- | ------- | 
+| ![JS Before](assets/images/documentation/javascript-questions-before.png) | ![JS After](assets/images/documentation/javascript-questions.png) | ![JS After](assets/images/documentation/javascript-generate-questions.png) | 
+
+## Future changes
+
+There are, of course, many improvements that could be made, such as adding more dog breeds and creating more engaging, interactive questions. However, there is one particular part of the code that I’m not entirely satisfied with. It’s the section where the result is generated, and the correct elements are placed in the appropriate spots in the HTML. This code should be refactored into a loop using keys, rather than the current implementation.
+
+![JS Result](assets/images/documentation/javascript-generate-result.png)
+
 
 # Tools and Technologies
 
+
+
 ## Languages
-This project is built using [HTML](https://en.wikipedia.org/wiki/HTML) and [CSS](https://en.wikipedia.org/wiki/CSS).
+This project is built using [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS) and [JavaScript](https://simple.wikipedia.org/wiki/JavaScript)
 
 ## Libraries
 - **[Google Fonts](https://fonts.google.com/)**  
@@ -325,24 +324,24 @@ I have validated my HTML code using **[HTML W3C Validator](https://validator.w3.
 
 #### HTML
 
-| Page      | Status   | Comment | Screenshot | 
+| Page      | Status   | Screenshot | 
 | --------- | -------- | ---------- | 
-| Index  | ✅ Pass | When questions are generated, the section will have a H2 |![Index-w3](assets/images/documentation/index-w3.png) | 
-| 404  | ✅ Pass | ![404-w3](assets/images/documentation/services-w3.png) | 
+| Index  | ✅ Pass |![Index-w3](assets/images/documentation/index-html-validator.png) | 
+| 404  | ✅ Pass | ![404-w3](assets/images/documentation/404-html-validator.png) | 
 
 #### CSS
 
 | File      | Status   | Screenshot | 
 | --------- | -------- | ---------- | 
-| style.css  | ✅ Pass | ![CSS Validation](assets/images/documentation/css-sunne-dogcare.png) | 
+| style.css  | ✅ Pass | ![CSS Validation](assets/images/documentation/css-validator.png) | 
 
 #### JS
 
 | File      | Status   | Screenshot | 
 | --------- | -------- | ---------- | 
-| script.js | ✅ Pass | ![JS Validation](assets/images/documentation/css-sunne-dogcare.png) | 
-| dogData.js | ✅ Pass | ![JS Validation](assets/images/documentation/css-sunne-dogcare.png) | 
-| questions.js | ✅ Pass | ![JS Validation](assets/images/documentation/css-sunne-dogcare.png) | 
+| script.js | ✅ Pass | ![JS Validation](assets/images/documentation/javascript-validator.png) | 
+| dogData.js | ✅ Pass | ![JS Validation](assets/images/documentation/javascript-validator-dogbreeds.png) | 
+| questions.js | ✅ Pass | ![JS Validation](assets/images/documentation/javascript-validator-questions.png) | 
 
 ### Browser Compatibility
 
@@ -357,64 +356,23 @@ The website has been tested using **[Browserling](https://www.browserling.com/)*
 
 ### Responsiveness
 
-Throughout the project, I prioritized responsive design by continuously testing with Google Developer Tools. Each new feature was tested on both small and large screen sizes to ensure optimal performance. I followed a mobile-first approach, carefully considering both extra-large and extra-small screens. I tested all available screen sizes in Google Developer Tools, and the website displays correctly across all devices.
+Throughout the project, I prioritized responsive design by continuously testing with Google Developer Tools. Each new feature was tested on both small and large screen sizes to ensure optimal performance. I tested all available screen sizes in Google Developer Tools, and the website displays correctly across all devices.
 
 ### Pagespeed Insights
 
-There are some performance issues across all pages, some of them are due to the large size of images. Future development of the site should focus on optimizing images for the web.
-
 | Page      | Mobile   | Desktop | 
 | --------- | -------- | ---------- | 
-| Homepage  | ![Page Insights Mobile Homepage](assets/images/documentation/pi-home-mobile.png) | ![Page Insights Desktop Homepage](assets/images/documentation/pi-home-desktop.png) | 
-| Services  | ![Page Insights Mobile Services](assets/images/documentation/pi-services-mobile.png) | ![Page Insights Desktop Services](assets/images/documentation/pi-services-desktop.png) | 
-| Gallery   | ![Page Insights Mobile Gallery](assets/images/documentation/pi-gallery-mobile.png) | ![Page Insights Desktop Gallery](assets/images/documentation/pi-gallery-desktop.png) | 
-| About     | ![Page Insights Mobile About](assets/images/documentation/pi-about-mobile.png) | ![Page Insights Desktop About](assets/images/documentation/pi-about-desktop.png) | 
-| Contact   | ![Page Insights Mobile Contact](assets/images/documentation/pi-contact-mobile.png) | ![Page Insights Desktop Contact](assets/images/documentation/pi-contact-desktop.png) | 
-| Thank you | ![Page Insights Mobile Thank You](assets/images/documentation/pi-thankyou-mobile.png) | ![Page Insights Desktop Thank You](assets/images/documentation/pi-thankyou-desktop.png) | 
-| 404       | ![Page Insights Mobile 404](assets/images/documentation/pi-404-mobile.png) | ![Page Insights Desktop 404](assets/images/documentation/pi-404-desktop.png) | 
+| Index  | ![Page Insights Mobile Homepage](assets/images/documentation/pi-mobile-index.png) | ![Page Insights Desktop Homepage](assets/images/documentation/pi-desktop-index.png) | 
+| 404 | ![Page Insights Mobile Services](assets/images/documentation/pi-mobile-404.png) | ![Page Insights Desktop Services](assets/images/documentation/pi-desktop-404.png) | 
 
-### User Story Testing
 
-| User Story      | User path   | Screenshot | 
-| --------- | -------- | ---------- | 
-| **As a dog owner,** I want to easily find information about the different dog-sitting services available, so I can choose the best option for my dog. | *Homepage > Services* | ![Service Page](assets/images/documentation/us-service.png) | 
-| **As a potential dog owner,** I want to learn about the dog-sitter and see photos of the farm, so I can feel confident that I have a reliable dog-sitting solution in place before deciding to get a dog. | *Homepage > About* | ![About Page](assets/images/documentation/us-about.png) | 
-| **As a busy dog owner,** I want a simple and clear booking process, so I can quickly schedule dog-sitting without filling out unnecessary forms. | *Homepage > Contact & Booking* | ![Booking Page](assets/images/documentation/us-contact.png) | 
-| **As a first-time visitor to the site,** I want to see the happy and welcoming environment through photos and descriptions, so I feel reassured about leaving my dog in good hands. | *Homepage > Gallery* | ![Gallery Page](assets/images/documentation/us-gallery.png) | 
-| **As a returning customer,** I want easy access to the booking page, so I can quickly schedule a service I already know and trust. | *Homepage > Contact & Booking* | ![Booking Page](assets/images/documentation/us-contact.png) | 
-| **As a dog owner,** I want to clearly see the prices for each service, so I can plan my budget without surprises. | *Homepage > Services* | ![Services Page](assets/images/documentation/us-service.png) | 
-| **As a dog owner,** I want to follow the dog-sitter’s social media to stay updated on the services and see more of the dogs being cared for, so I can feel connected to the service. | *Homepage (footer)* | ![Homepage (footer)](assets/images/documentation/us-footer.png) | 
-| **As a dog owner,** I want to feel confident that my dog is in safe hands, so I can relax knowing they are well cared for while I'm away. | *Homepage > About* | ![About Page](assets/images/documentation/us-about.png) | 
+### Bugs and result testing
 
-### Bugs
+| Bug       |  Description | Solution  |
+| --------- | --------- | ---------- | 
+| Dog breeds never showing up | - | I encountered an issue where small dogs appeared as results, even when I selected that I didn’t want small dogs. | To solve this, I assigned very high points to the size preference chosen by the user, ensuring it outweighs all other factors. Similarly, for breeds that should be excluded based on certain answers, like a beginner being matched with a German Shepherd, I assigned very low scores (e.g., -100) to push those breeds to the bottom of the ranking. | 
+| Balancing Dog Breeds in the Quiz | - | Some dog breeds, like Border Collie or Boxer, rarely appear as results during testing, even though they should. | To address this, I reviewed and adjusted the scoring system to ensure all breeds have a fair chance of being matched based on user preferences and quiz answers. However, this still needs more work. | 
 
-| Bug       | Screenshot | Description | Solution  |
-| --------- | --------- | ---------- | ---------- | 
-| Contrast Issue | ![Contrast in navigation](assets/images/documentation/low-contrast.png) | Low contrast on the active navigation link in the header resulted in poor accessibility. Found by testing site in [WAVE](https://wave.webaim.org/). | Improved accessibility by changing the active link color to a darker green and adding an underline. | 
-| Contrast Issue | ![Contrast in topic tag](assets/images/documentation/contrast-issue-2.png) | Low contrast on the topic tag caused poor accessibility, making the text hard to read, especially for users with visual impairments. Found by testing site in [WAVE](https://wave.webaim.org/). | Changed the tag’s background color to a darker green. | 
-| Contrast Issue | ![Contrast in CTA box](assets/images/documentation/background-issue.png) | Low contrast between white text and image background when testing site in [WAVE](https://wave.webaim.org/). | Applied a dark overlay with CSS instead of manually darkening the background in Photoshop, improving text visibility and accessibility. | 
-| Responsive Issue | ![Form bugg on small screens](assets/images/documentation/booking-form-small-screen.png) | The booking form displayed incorrectly on smaller screens, losing padding and causing a horizontal scroll due to oversized input fields. | Added responsive CSS for smaller screens, reducing padding and font size for form inputs. Also adjusted padding on the form container for better layout on mobile devices. | 
-| Responsive Issue | ![CTA bugg on small screens](assets/images/documentation/button-bugg.png) | The CTA button was getting cut off on smaller screens, resulting in awkward line breaks and poor user experience. | Reduced the button size and adjusted padding within the CTA box for smaller screens to prevent the cutoff and ensure proper alignment. | 
-| Responsive Issue | ![Overflow issue on small screens](assets/images/documentation/footer-bugg.png) | On screens smaller than 350px, the body content shrank, but an overflow issue caused the content to not align properly on the right side. | Identified the footer logo as the cause. Applied a max-width and width:100% to correct this. | 
-
-### Goal testing
-Let’s test if the website meets the goals we set at the beginning, both the user’s goals and the business objectives.
-
-| Goal      | Result | Notes |
-| --------- | ------ |------ |
-| **User Goals:** Read about services | ✅ Pass | Clear information about services, process and cost |
-| **User Goals:** Book a service | ✅ Pass | Simple booking form thats easy to find due to CTAs on almost all pages |
-| **User Goals:** Read about Sunne Dogcare | ✅ Pass | Clear navigation to about page with information about dogsitter etc. |
-| **Business Goals:** Provide clear information about services | ✅ Pass | Narrowed down to three clear and easy-to-understad services |
-| **Business Goals:** Enable easy booking | ✅ Pass | Booking form with easy navigation and easy to fill out form |
-| **Attract new customers** Attract new customers | ⚠️ Almost Pass | The website does attract new customers, but the content could be more directly aimed at new customers than it currently is, with special offer or something like that |
-| **Business Goals:** Build trust | ✅ Pass | Lots of happy photos and personal information that builds trust |
-
-### Other testing
-
-| Test       | Notes  | Screenshot | 
-| ---------- | ------ | ---------- | 
-| **Form submission testing**       | Tested the booking form with method="POST" and sent correct data. Changed it to a thank you page later on.  | ![Form Submission](assets/images/documentation/form-submission.png) | 
 
 ### Unfixed Bugs
 
@@ -454,7 +412,7 @@ cd your-repository
 
 The project is deployed on GitHub Pages. To deploy your own version, follow these steps:
 
-1. Log in to your GitHub account. navigate to https://github.com/fridalannerstrom/dogsitter
+1. Log in to your GitHub account. navigate to https://github.com/fridalannerstrom/my-dog-breed
 2. You can set up your own repository and copy or clone it, or you fork the repository.
 3. GitHub pages will update from the master branch by default.
 4. Go to the Settings page of the repository.
@@ -470,9 +428,8 @@ The project is deployed on GitHub Pages. To deploy your own version, follow thes
 
 | Source      | Notes   | 
 | ----------- | ---------- | 
-| [Unsplash](https://unsplash.com/)  | Photos used throughout the website (except for my own) | 
-| [ChatGPT](https://chatgpt.com/)  | Assisted with content creation and providing English wording for the README documentation | 
-| [Hot Mess by Sam Parrett](https://www.behance.net/gallery/79231099/Hot-Mess-SVG-Font)  | A fantastic font used for branding my Dog Care business | 
+| [Flaticon](https://www.flaticon.com/)  | Illustrations of dog breeds | 
+| [ChatGPT](https://chatgpt.com/)  | Assisted with content creation and quiz result counting | 
 | [Mockup Generator](https://techsini.com/multi-mockup/index.php)  | Used for generating mockup image in this README | 
 
 ### Other
@@ -480,12 +437,10 @@ The project is deployed on GitHub Pages. To deploy your own version, follow thes
 | Source      | Notes   | 
 | ----------- | ---------- | 
 | [CloudConvert](https://cloudconvert.com/) | Converted PNG images to WebP format | 
-| [Convertio](https://convertio.co/)  | Converted PNG images to WebP format | 
-| [Xconvert](https://www.xconvert.com/ )  | Resize and optimize webp images | 
 | [W3Schools ](https://www.w3schools.com/) | Helped refresh my memory on CSS attributes and syntax when needed | 
 | [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)  | Introduced me to a structured and meaningful way of writing commit messages, which I adopted halfway through the project | 
 
 ### Acknowledgements
 
 - A huge thank you to my mentor, [Rory Patrick](https://github.com/Ri-Dearg), for providing invaluable guidance throughout this project.
-- Special thanks to [Code Institute](https://codeinstitute.net/), particularly the "Love Runners" project, for helping me get started with GitHub and guiding me through the project process. 
+- Special thanks to [Code Institute](https://codeinstitute.net/), particularly the "Love Maths" project, for helping me get started with GitHub and guiding me through the project process. 
