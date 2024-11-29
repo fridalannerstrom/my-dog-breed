@@ -1,7 +1,7 @@
 
-![Sunne Dogcare Mockup](assets/images/documentation/responsive.png)
+![Dog breed quiz Mockup](assets/images/documentation/responsive.png)
 
-# Welcome to "Which Dog Breed is Right for You?" Quiz!
+# Welcome to "Find your ideal dog breed" Quiz!
 This quiz is designed to help you discover the perfect dog breed for your lifestyle and personality. Developed by [Sunne Dogcare](https://fridalannerstrom.github.io/dogsitter/), it reflects our belief that choosing a dog is one of the most important decisions a future dog owner can make. By understanding your needs, habits, and preferences, we hope to guide you toward a breed that will thrive in your care.
 
 As a dog sitter, I see firsthand the consequences of impulsive dog purchases. Too often, people choose a breed based on looks, trends, or recommendations from friends without considering the breed’s unique characteristics and compatibility with their lifestyle. While I love caring for these dogs, I can’t help but wish that more owners had made informed decisions from the start.
