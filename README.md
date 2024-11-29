@@ -224,42 +224,16 @@ The results page displays the dog breed that best matches you based on your answ
 
 ## Additional Features
 
-### Services 
+| Feature | Description | 🖥️ Screenshot |
+| ------- | ----------- | ------------- | 
+| **Empty Input Alert** | A notification appears when a field is left empty, prompting users to complete the input. | ![Alert](assets/images/documentation/feature-alert.png) | 
+| **Saved Name Display** | The user's name, entered in the form, is saved and dynamically displayed on the results page. | ![Saved Name](assets/images/documentation/element-mobile-friends-breeds.png) | 
 
 
-- Rutan som dyker upp när man inte fyller i något
-- 
-
-| Section | Description | Mobile | Desktop |
-| ------- | ----------- | ------ | ------- |
-| **Services** | Section describing our 3 services, including a title, descriptive subtitle, description, price, and a list of key details such as drop-off/pick-up, activities, meals, and location. | ![Services Mobile](assets/images/documentation/services-page-mobile.png) | ![Services Desktop](assets/images/documentation/services-page-desktop.png) | 
-| **CTA** | The Services page includes a dedicated CTA box that directs users straight to the booking page. | ![CTA Servoce Mobile](assets/images/documentation/cta-section-service-mobile.png) | ![CTA Service Desktop](assets/images/documentation/cta-section-service.png) | 
-| **FAQ** | Frequently asked questions and answers, especially relevant for those booking for the first time. | ![FAQ Mobile](assets/images/documentation/faq-mobile.png) | ![FAQ Desktop](assets/images/documentation/faq-desktop.png) | 
-
-### Gallery 
-
-| Section | Description | Mobile | Tablet | Desktop |
-| ------- | ----------- | ------ | ------ | ------- |
-| **Gallery** | Gallery section featuring images of happy dogs being cared for, designed to build trust and add a personal touch. | ![Gallery mobile](assets/images/documentation/gallery-section-mobile.png) | ![Gallery Tablet](assets/images/documentation/gallery-section-tablet.png) | ![Gallery Desktop](assets/images/documentation/gallery-section.png) | 
-
-### About
-
-| Section | Description | Mobile | Desktop |
-| ------- | ----------- | ------ | ------- | 
-| **About Dogsitter** | Section introducing the dog sitter to create a personal and trustworthy connection, including a list of experience details to build trust and confidence. | ![Dogsitter Mobile](assets/images/documentation/about-dogsitter.png) | ![Dogsitter Desktop](assets/images/documentation/about-dogsitter-desktop.png) | 
-| **About Dogs/Farm** | Section describing the property and the resident dogs, giving owners a glimpse of who their dog will interact with and the environment where their dog will stay. | ![Dogs/Farm Mobile](assets/images/documentation/about-dog-farm-mobile.png) | ![Dogs/Farm Desktop](assets/images/documentation/about-dog-farm-desktop.png) | 
-
-### Contact/Bookings
-
-| Section | Description | Mobile | Desktop |
-| ------- | ----------- | ------ | ------- | 
-| **Booking form** | Booking form for easily scheduling dog care, with required fields for name, email, service, drop-off, and pick-up. The message field is optional. Upon submission, users are redirected to a thank you page confirming their booking. | ![Booking Mobile](assets/images/documentation/booking-mobile.png) | ![Hero Desktop](assets/images/documentation/booking-desktop.png) | 
-
+ OM DU HINNER 
 ## Feature Changes
 
-Throughout the development process, changes were made to the design, content, sections, and features to enhance usability and clarity. These adjustments were necessary to ensure a better user experience. The changes are listed below.
-
-⚠️ Some images on the live site differ from those in the mockup. These changes were made based on personal preference during the development process, as I felt the new images were a better fit. The specific image changes are not listed below.
+Throughout the development process, changes were made to the design and text. These adjustments were necessary to ensure a better user experience. The changes are listed below.
 
 | Action | Section | Reason | Before | After |
 | ------ | ------- | ------ | ------ | ----- |
@@ -272,6 +246,8 @@ Throughout the development process, changes were made to the design, content, se
 | **‍🎨Design Change** | Navigation | Navigation dropdown changed fron left aligned text to right aligned text for easier thumb use on mobile | ![Old Navigation](assets/images/documentation/navigation-mockup.png) | ![New Navigation](assets/images/documentation/navigation-dropdown.png) | 
 | **✅Addition** | Gallery | Added a link to see more images below the gallery on homepage | ![Old Gallery](assets/images/documentation/gallery-mockup.png) | ![New Gallery](assets/images/documentation/gallery-live.png) | 
 
+
+OM DU HINNER
 ## Future Features
 Here are some ideas for expanding the website in future development phases. 
 
@@ -289,6 +265,21 @@ Here are some ideas for expanding the website in future development phases.
 
 ---
 
+
+# Logic behind the quiz
+
+The quiz consists of **14 questions** that can lead to one of **20 possible dog breeds**. Both the questions and the dog breeds are structured as objects in separate JavaScript files, which are imported into script.js. The JavaScript code is designed to be dynamic, meaning that if you add new dog breeds or questions, they will automatically be incorporated into the quiz form and included as potential results.
+
+The selection of the 20 dog breeds was carefully curated to represent a broad range of sizes, behaviors, and needs. This variety ensures that the quiz provides meaningful and diverse results that can match different lifestyles and preferences. Each answer option contributes points to one or more dog breeds, with more points awarded if the answer aligns strongly with a breed’s characteristics and fewer points if it aligns less.
+
+To organize the logic, I have used Notion to document the questions, calculations for matching breeds, and detailed information about the breeds themselves. The questions, information, and calculations are primarily based on my own experience as a dog sitter and my personal opinions on which dogs are best suited for different types of people and lifestyles. This hands-on knowledge was further complemented by ChatGPT, which helped refine questions and validate assumptions about how various breeds adapt to environments such as living with children, being alone often, or living in apartments.
+
+This combination of practical experience and external input ensures that the quiz provides accurate, thoughtful, and personalized recommendations for potential dog owners.
+
+[View page in Notion](https://sedate-molybdenum-41d.notion.site/Dog-Breed-Quiz-14d284e4604f8023bdc2c8624cf3393a?pvs=4)
+
+---
+
 # Tools and Technologies
 
 ## Languages
@@ -296,7 +287,7 @@ This project is built using [HTML](https://en.wikipedia.org/wiki/HTML) and [CSS]
 
 ## Libraries
 - **[Google Fonts](https://fonts.google.com/)**  
-  Used for the fonts *Work Sans* and *Lora*.
+  Used for the fonts *Caprasimo* and *Poppins*.
 
 - **[Font Awesome](https://fontawesome.com/)**  
   Used for icons.
@@ -321,31 +312,37 @@ This project is built using [HTML](https://en.wikipedia.org/wiki/HTML) and [CSS]
 - **[WAVE](https://wave.webaim.org/)**  
   Used to test accessibility in design and website.
 
+- **[Page Insights](https://pagespeed.web.dev/)**  
+  Used to test speed, SEO and preformance.
+
 ---
 
 ## Testing
 
 ### Code validation
 
-I have validated my HTML code using **[HTML W3C Validator](https://validator.w3.org/)** and CSS code using **[CSS Jigsaw Validator](https://validator.w3.org/)**
+I have validated my HTML code using **[HTML W3C Validator](https://validator.w3.org/)**, CSS code using **[CSS Jigsaw Validator](https://validator.w3.org/)** and JS code using **[JSHint](https://jshint.com/)**
 
 #### HTML
 
-| Page      | Status   | Screenshot | 
+| Page      | Status   | Comment | Screenshot | 
 | --------- | -------- | ---------- | 
-| Homepage  | ✅ Pass | ![Home-w3](assets/images/documentation/index-w3.png) | 
-| Services  | ✅ Pass | ![Services-w3](assets/images/documentation/services-w3.png) | 
-| Gallery   | ✅ Pass | ![Gallery-w3](assets/images/documentation/gallery-w3.png) | 
-| About     | ✅ Pass | ![About-w3](assets/images/documentation/about-w3.png) | 
-| Contact   | ✅ Pass | ![Contact-w3](assets/images/documentation/contact-w3.png) | 
-| Thank you | ✅ Pass | ![Thankyou-w3](assets/images/documentation/thankyou-w3.png) | 
-| 404       | ✅ Pass | ![404-w3](assets/images/documentation/404-w3.png) | 
+| Index  | ✅ Pass | When questions are generated, the section will have a H2 |![Index-w3](assets/images/documentation/index-w3.png) | 
+| 404  | ✅ Pass | ![404-w3](assets/images/documentation/services-w3.png) | 
 
 #### CSS
 
 | File      | Status   | Screenshot | 
 | --------- | -------- | ---------- | 
 | style.css  | ✅ Pass | ![CSS Validation](assets/images/documentation/css-sunne-dogcare.png) | 
+
+#### JS
+
+| File      | Status   | Screenshot | 
+| --------- | -------- | ---------- | 
+| script.js | ✅ Pass | ![JS Validation](assets/images/documentation/css-sunne-dogcare.png) | 
+| dogData.js | ✅ Pass | ![JS Validation](assets/images/documentation/css-sunne-dogcare.png) | 
+| questions.js | ✅ Pass | ![JS Validation](assets/images/documentation/css-sunne-dogcare.png) | 
 
 ### Browser Compatibility
 
